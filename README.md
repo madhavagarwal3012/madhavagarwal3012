@@ -15,7 +15,7 @@
 
 Sure, here's a revised version using the most suitable and best word:
 
-# 👩‍💻 I'm currently pursuing my BCA Honours from the renowned Jaypee Institute of Information Technology
+# 👩‍💻 I'm currently pursuing my BCA Honours from the renowned Jaypee Institute of Information Technology(JIIT, Noida)
 - 🚀 Taking my web development skills to the next level and exploring new technologies.
 - 💥 Excited to apply my expertise and creativity in building amazing and user-friendly web apps.
 
