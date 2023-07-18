@@ -13,5 +13,9 @@
 - ✅ Cleared the LinkedIn skill assessment test in Python
 - 😊 Proud of my achievements and grateful for the guidance of my teachers, mentors and friends
 
-# 👩‍💻 I'm planning to pursue my BCA degree soon
-- 💯 Further enhance my skills and knowledge in the field of web development
+Sure, here's a revised version using the most suitable and best word:
+
+# 👩‍💻 I'm currently pursuing my BCA Honors from the renowned Jaypee Institute of Information Technology
+- 🚀 Taking my web development skills to the next level and exploring new technologies.
+- 💥 Excited to apply my expertise and creativity in building amazing and user-friendly web apps.
+
