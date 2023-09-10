@@ -1,9 +1,6 @@
-<div align = "center">
-  
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=25&pause=1000&center=true&vCenter=true&width=330&height=30&lines=Hi+I'm+Madhav+Agarwal)](https://git.io/typing-svg)<img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="32px" alt="hi">
-  
-  <img src="https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif" >
-</div>
+![MasterHead](https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif)
+<h1 align="center">Hi 👋, I'm Madhav Agarwal</h1>
+
 <h3 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java, and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving, and continuous improvement as the keys to success. 🚀</h3>
 
 <h3 align="center">🎓 I have just finished my class 12th from GD Goenka Public School, where I spent my entire school life. I have always been an avid and curious learner, participating in various academic and co-curricular activities. I have earned certificates of excellence in Java from Coding Ninja, and certificates of completion in Python and SQL from SoloLearn. I have also aced the LinkedIn skill assessment test in Python. I’m proud of my achievements and thankful for the support of my teachers, mentors, and friends. 🙌</h3>
