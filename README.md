@@ -63,7 +63,7 @@
         Python
     </a>
     <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>
+        <img src="https://spinspire.com/sites/default/files/styles/medium/public/field/image/mysql-dolphin-logo.png?itok=utaJ6ZbU" alt="mysql" width="40" height="40"/>
         MySQL
     </a>
     <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
