@@ -1,4 +1,4 @@
-[![MasterHead](https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif)]
+![MasterHead](https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif)
 <h1 align="center">Hi 👋, I'm Madhav Agarwal</h1>
 <h3 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java, and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving, and continuous improvement as the keys to success. 🚀</h3>
 
