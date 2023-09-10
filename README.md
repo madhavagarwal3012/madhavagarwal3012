@@ -11,6 +11,11 @@
 
 <p align="left"> <a href="https://twitter.com/madhvagrwal3012" target="blank"><img src="https://img.shields.io/twitter/follow/madhvagrwal3012?logo=twitter&style=for-the-badge" alt="madhvagrwal3012" /></a> </p>
 
+- 🌱 I’m currently learning **Data Structures And Algorithm In Java**
+
+- 📫 How to reach me **madhavagarwal3584@hotmail.com**
+
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/madhvagrwal3012" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="madhvagrwal3012" height="30" width="40" /></a>
