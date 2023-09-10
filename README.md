@@ -5,7 +5,9 @@
 
 <h3 align="left">👩‍💻 I’m currently pursuing my BCA Honours from the prestigious Jaypee Institute of Information Technology (JIIT, Noida). Taking my web development skills to the next level and exploring new technologies. Excited to apply my expertise and creativity in building amazing and user-friendly web apps. 💯</h3>
 
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=madhavagarwal3012.madhavagarwal3012)
+<p align="left">
+    <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20views&color=0e75b6&style=flat" alt="madhavagarwal3012" />
+</p>
 
 - 📫 How to reach me **madhavaggarwal3584@hotmail.com**
 
