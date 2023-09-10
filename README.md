@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Madhav Chaudhary</h1>
+<h1 align="center">Hi 👋, I'm Madhav Agarwal</h1>
 <h3 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving and continuous improvement as the keys to success. 🚀
 
 🎓 I have just finished my class 12th from GD Goenka Public School, where I spent my entire school life. I have always been an avid and curious learner, participating in various academic and co-curricular activities. I have earned certificates of excellence in Java from Coding Ninja, and certificates of completion in Python and SQL from SoloLearn. I have also aced the LinkedIn skill assessment test in Python. I’m proud of my achievements and thankful for the support of my teachers, mentors and friends. 🙌
