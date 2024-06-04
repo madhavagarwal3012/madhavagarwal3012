@@ -81,7 +81,6 @@
    <h2 align="left">Support:</h2>
   <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210"         
    alt="https://buymeacoffee.com/madhavagarwal3012" /></a></p>
-  <br><br>
   <br/>
   <br/><br/>
 </div>
