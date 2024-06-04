@@ -1,5 +1,5 @@
 ![MasterHead](https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif)
-<p align="right"> <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20views&color=0e75b6&style=flat" alt="madhavagarwal3012" /> </p>
+<img align="right" src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20views&color=0e75b6&style=flat" alt="madhavagarwal3012" />
 
 <h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=030A0D&center=true&repeat=false&width=435&lines=%F0%9D%90%87%F0%9D%90%A2+%F0%9F%91%8B%2C+%F0%9D%90%88'%F0%9D%90%A6+%F0%9D%90%8C%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AF+%F0%9D%90%80%F0%9D%90%A0%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%B0%F0%9D%90%9A%F0%9D%90%A5" alt="Typing SVG" /></a></h1>
 
