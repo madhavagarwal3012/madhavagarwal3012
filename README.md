@@ -84,8 +84,7 @@
   <br/><br/><br/>
 </div>
 
-<br>
-<br>
+<br/><br/><br/>
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="madhavagarwal3012" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="madhavagarwal3012" /></p>
