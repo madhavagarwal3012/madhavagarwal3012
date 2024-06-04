@@ -1,4 +1,4 @@
-![MasterHead](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3FmeHRpNGIwYzVhdGxsZzcwOGttNzRtZzM1dnJseTJsbXBjazFxMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
+![MasterHead](https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif)
 <img align="right" src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20views&color=0e75b6&style=flat" alt="madhavagarwal3012" />
 
 <h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=35&duration=4000&pause=&color=03090C&center=true&vCenter=true&random=false&width=500&height=75&lines=Hi+There!+%F0%9F%91%8B;I'm+Madhav+Agarwal!+%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F;%E2%80%8E+Welcome+To+My+Profile+%F0%9F%A4%97" alt="Typing SVG" /></a></h1>
