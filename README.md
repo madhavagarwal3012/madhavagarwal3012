@@ -79,11 +79,12 @@
   <br>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
   
-  <br/><br/><br/>
+  <br/>
+  <br/><br/>
+  <h2 align="left">Support:</h2>
+  <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210"         
+   alt="https://buymeacoffee.com/madhavagarwal3012" /></a></p><br><br>
 </div>
-
-<h2 align="left">Support:</h2>
-<p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="https://buymeacoffee.com/madhavagarwal3012" /></a></p><br><br>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="madhavagarwal3012" /></p>
 
