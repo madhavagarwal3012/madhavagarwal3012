@@ -1,7 +1,9 @@
 ![MasterHead](https://raw.githubusercontent.com/Potential17/Potential17/master/user%20(2).gif)
 <img align="right" src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20views&color=0e75b6&style=flat" alt="madhavagarwal3012" />
 
-<h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=030A0D&center=true&repeat=false&width=435&lines=%F0%9D%90%87%F0%9D%90%A2+%F0%9F%91%8B%2C+%F0%9D%90%88'%F0%9D%90%A6+%F0%9D%90%8C%F0%9D%90%9A%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%AF+%F0%9D%90%80%F0%9D%90%A0%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%B0%F0%9D%90%9A%F0%9D%90%A5" alt="Typing SVG" /></a></h1>
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Madhav+Agarwal!;" />
+</h1>
 
 
 <h2 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java, and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving, and continuous improvement as the keys to success. 🚀</h2>
