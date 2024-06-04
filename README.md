@@ -2,7 +2,7 @@
 <img align="right" src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20views&color=0e75b6&style=flat" alt="madhavagarwal3012" />
 
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Madhav+Agarwal!;" />
+    <img src="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=35&duration=4000&pause=&color=03090C&center=true&vCenter=true&random=false&width=500&height=75&lines=Hi+There!+%F0%9F%91%8B;I'm+Madhav+Agarwal!+%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F;+Welcome+To+My+GitHub+Profile+%F0%9F%A4%97" />
 </h1>
 
 
