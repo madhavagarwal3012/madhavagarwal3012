@@ -17,9 +17,7 @@
 
 - 🌱 I’m currently learning **Data Structures And Algorithm In Java**
 
-- 📫 How to reach me **madhavagarwal3584@hotmail.com**
-
-  <div align="center"> 
+  <div align="left"> 
   <a href="mailto:madhavaggarwal3584@hotmail.com">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
   </a>
