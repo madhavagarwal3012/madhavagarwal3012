@@ -89,12 +89,12 @@ console.log(`Feel free to contribute`);
   <tr>
     <td>
       <a href="https://github.com/madhavagarwal3012/2D-Array-Operation-Executable-File-Application-">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=shravan20&repo=LearningResources&theme=algolia" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=2D-Array-Operation-Executable-File-Application-&theme=algolia" />
       </a>
     </td>
     <td>
       <a href="https://github.com/shravan20/Calcunite-Executable-File-Application">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=shravan20&repo=github-readme-quotes&theme=algolia" />
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=Calcunite-Executable-File-Application&theme=algolia" />
       </a>
     </td>
 </table>
