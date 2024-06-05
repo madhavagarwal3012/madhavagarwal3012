@@ -130,7 +130,7 @@ console.log(`Feel free to contribute`);
 </div>
 
 <h2 align="left">RandomDev Quote:</h2>
-![](https://github-readme-quotes-bay.vercel.app/quote?theme=maroongold&animation=grow_out_in&layout=churchill&font=Gabrielle&fontColor=black&bgColor=white)
+<img src="https://github-readme-quotes-bay.vercel.app/quote?theme=maroongold&animation=grow_out_in&layout=churchill&font=Gabrielle&fontColor=black&bgColor=white">
 
 
 
