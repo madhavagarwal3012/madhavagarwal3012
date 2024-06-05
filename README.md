@@ -91,7 +91,7 @@
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="readme stats" />
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
-  <img width =325 align="right" src="https://quotes-github-readme.vercel.app/api?type=verticall&theme=light"alt="Quote"/>
+  <img width =325 src="https://quotes-github-readme.vercel.app/api?type=verticall&theme=light"alt="Quote"/>
 </div>
 
 
