@@ -93,7 +93,7 @@ console.log(`Feel free to contribute`);
       </a>
     </td>
     <td>
-      <a href="https://github.com/shravan20/2D-Array-Operation-Executable-File-Application-">
+      <a href="https://github.com/madhavagarwal3012/2D-Array-Operation-Executable-File-Application-">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=2D-Array-Operation-Executable-File-Application-&theme=algolia" />
       </a>
     </td>
