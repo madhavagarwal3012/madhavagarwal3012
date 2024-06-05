@@ -73,7 +73,7 @@
     </a>
 </p>
 <p align="center">
-  <img src="header.png" alt="header"/>
+  <img width=390 src="header.png" alt="header"/>
 </p>
 
 <div align="left">
