@@ -72,6 +72,9 @@
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/>
     </a>
 </p>
+<p align="center">
+  <img src="header.png" alt="header"/>
+</p>
 
 <div align="left">
   <h2>🐍 My Contributions 🐍</h2>
@@ -91,7 +94,10 @@
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="readme stats" />
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
-  <img width =325 src="https://quotes-github-readme.vercel.app/api?type=verticall&theme=light"alt="Quote"/>
 </div>
+
+<h2 align="left">Dev Quote:</h2>
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
 
 
