@@ -88,8 +88,8 @@
 <br>
 <div align=left>
   <img width=390 src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="streak stats"/>
-  <img width=390 src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="readme stats" />
+  <img width=390 src="https://github-readme-streak-stats.herokuapp.com/?user=madhavagarwal3012& " alt="readme stats" />
   <br/>
-  <img width=325 align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=madhavagarwal3012&" alt="top langs" />
+  <img width=325 align="center" src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="top langs" />
 </div>
 
