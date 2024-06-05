@@ -77,6 +77,35 @@
   <img src="header.png" alt="header"/>
 </p>
 
+---
+
+#### <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> My OS Projects  
+
+```javascript
+console.log(`Feel free to contribute`);
+```
+
+<table style="width:100%" align="center">
+  <tr>
+    <td>
+      <a href="https://github.com/madhavagarwal3012/2D-Array-Operation-Executable-File-Application-">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=shravan20&repo=LearningResources&theme=algolia" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/shravan20/Calcunite-Executable-File-Application">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=shravan20&repo=github-readme-quotes&theme=algolia" />
+      </a>
+    </td>
+</table>
+
+
+<br>
+
+
+---
+
+
 <div align="left">
   <h2>🐍 My Contributions 🐍</h2>
   <br>
