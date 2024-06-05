@@ -88,13 +88,13 @@ console.log(`Feel free to contribute`);
 <table style="width:100%" align="center">
   <tr>
     <td>
-      <a href="https://github.com/madhavagarwal3012/2D-Array-Operation-Executable-File-Application-">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=2D-Array-Operation-Executable-File-Application-&theme=algolia" />
+      <a href="https://github.com/madhavagarwal3012/Calcunite-Executable-File-Application ">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=Calcunite-Executable-File-Application&theme=algolia" />
       </a>
     </td>
     <td>
-      <a href="https://github.com/shravan20/Calcunite-Executable-File-Application">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=Calcunite-Executable-File-Application&theme=algolia" />
+      <a href="https://github.com/shravan20/2D-Array-Operation-Executable-File-Application-">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=2D-Array-Operation-Executable-File-Application-&theme=algolia" />
       </a>
     </td>
 </table>
