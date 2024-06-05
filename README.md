@@ -72,8 +72,8 @@
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/>
     </a>
 </p>
-<p align="center">
-  <img width=390 src="header.png" alt="header"/>
+<p align="left">
+  <img width=500 src="header.png" alt="header"/>
 </p>
 
 <div align="left">
