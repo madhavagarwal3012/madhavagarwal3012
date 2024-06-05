@@ -97,6 +97,7 @@ console.log(`Feel free to contribute`);
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=2D-Array-Operation-Executable-File-Application-&theme=algolia" />
       </a>
     </td>
+    </tr>
 </table>
 
 
