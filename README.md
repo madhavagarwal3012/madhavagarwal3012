@@ -1,7 +1,7 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
 <img align="right" src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="madhavagarwal3012" />
-<a href="https://github.com/madhavagarwa3012">
-<img align="right" src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" />
+<a href="https://github.com/madhavagarwal3012">
+<img align="right" src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=flat" alt="madhavagarwal3012" />
 </a>
 
 
