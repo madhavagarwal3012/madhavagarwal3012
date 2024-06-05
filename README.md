@@ -84,6 +84,8 @@
 
 <br/><br/><br/>
 
+<h2 align="center">⚡ Stats ⚡</h2>
+<br>
 <div align=left>
   <img width=390 src="https://github-readme-streak-stats-salesp07.vercel.app/?user=madhavagarwal3012&count_private=true&theme=react&border_radius=10" alt="streak stats"/>
   <img width=390 src="https://github-readme-stats-salesp07.vercel.app/api?username=madhavagarwal3012&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="readme stats" />
