@@ -79,7 +79,7 @@
 
 ---
 
-#### <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> My OS Projects  
+ <h2 align="left">My Main Projects:</h2>
 
 ```javascript
 console.log(`Feel free to contribute`);
