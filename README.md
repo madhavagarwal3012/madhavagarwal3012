@@ -16,9 +16,7 @@
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=madhavagarwal3012" alt="madhavagarwal3012" /></a> </p>
 
 <p align="left"> <a href="https://twitter.com/madhvagrwal3012" target="blank"><img src="https://img.shields.io/twitter/follow/madhvagrwal3012?logo=twitter&style=for-the-badge" alt="madhvagrwal3012" /></a> </p>
-<a href="https://github.com/madhavagarwal3012">
-<img align="right" src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" />
-</a>
+<p align="left"> <a href="https://github.com/madhavagarwal3012"> <img src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" /></a> </p>
 
 - 🌱 I’m currently learning **Data Structures And Algorithm In Java**
 -  **📫 How to reach me**
