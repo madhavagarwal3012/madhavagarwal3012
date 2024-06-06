@@ -129,8 +129,12 @@ console.log(`Feel free to contribute`);
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
 </div>
 
-<h2 align="left">Random Dev Quote:</h2>
-<img src="https://github-readme-quotes-bay.vercel.app/quote?theme=maroongold&animation=grow_out_in&layout=churchill&font=Gabrielle&fontColor=black&bgColor=white">
+<div align="left">
+  <h2>Random Dev Quote:</h2>
+  <br>
+  <img src="https://github-readme-quotes-bay.vercel.app/quote?theme=maroongold&animation=grow_out_in&layout=churchill&font=Gabrielle&fontColor=black&bgColor=white">
+</div>
+
 
 
 
