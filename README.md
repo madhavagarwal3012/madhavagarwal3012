@@ -1,5 +1,5 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
-<p align="right"> <a href="https://github.com/madhavagarwal3012"> <img src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" /></a> <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="madhavagarwal3012" /> </p>
+<p align="right"> <a href="https://github.com/madhavagarwal3012"> <img src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" /></a> <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="madhavagarwal3012" /> </p> 
 
 
 <h1 align="center"><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=35&duration=4000&pause=&color=03090C&center=true&vCenter=true&random=false&width=500&height=75&lines=Hi+There!+%F0%9F%91%8B;I'm+Madhav+Agarwal!+%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8F;%E2%80%8E+Welcome+To+My+Profile+%F0%9F%A4%97" alt="Typing SVG" /></a></h1>
