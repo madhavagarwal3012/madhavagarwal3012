@@ -134,7 +134,7 @@ console.log(`Feel free to contribute`);
 <div align="left">
   <h2>Random Dev Quote:</h2>
   <br>
-  <img src="https://github-readme-quotes-bay.vercel.app/quote?theme=maroongold&animation=grow_out_in&layout=churchill&font=Gabrielle&fontColor=black&bgColor=white">
+  <img src="">
 </div>
 
 
