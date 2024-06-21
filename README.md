@@ -134,7 +134,7 @@ console.log(`Feel free to contribute`);
 <div align="left">
   <h2>Random Dev Quote:</h2>
   <br>
-  <img src="">
+  <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg">
 </div>
 
 
