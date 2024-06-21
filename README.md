@@ -131,10 +131,11 @@ console.log(`Feel free to contribute`);
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
 </div>
 
-<div align="left">
+<div>
   <h2>Random Dev Quote:</h2>
   <br>
-  <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg">
+  <img align="left" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg">
+  <img align="right" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg">
 </div>
 
 
