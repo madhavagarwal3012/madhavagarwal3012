@@ -131,20 +131,13 @@ console.log(`Feel free to contribute`);
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
 </div>
 
-<table>
-  <tr>
-    <th colspan="2"><h2>Random Dev Quotes:</h2></th>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" width="100%" alt="Quote 1">
-    </td>
-    <td width="50%">
-      <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" width="100%" alt="Quote 2">
-    </td>
-  </tr>
-</table>
-
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <h2>Random Dev Quotes:</h2>
+  <div style="display: flex; justify-content: space-between; width: 100%;">
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 1">
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 2">
+  </div>
+</div>
 
 
 
