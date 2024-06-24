@@ -1,5 +1,5 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
-<p align="right"> <a href="https://github.com/madhavagarwal3012"> <img src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" /></a> <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="madhavagarwal3012" /> <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="madhavagarwal3012" /></p>
+<p align="right"> <a href="https://github.com/madhavagarwal3012"> <img src="https://img.shields.io/github/followers/madhavagarwal3012?label=Follow%20Me&style=social" alt="madhavagarwal3012" /></a> <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="madhavagarwal3012" /> <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="madhavagarwal3012" /> </p>
 
 
 <h1 align="center"><img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/central%20text.svg" alt="Typing SVG" /></a></h1>
