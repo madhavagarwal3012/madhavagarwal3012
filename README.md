@@ -23,19 +23,20 @@
 - 🌱 I’m currently learning **Data Structures And Algorithm In Java**
 -  **📫 How to reach me**
 
-<div style="text-align: left;">
+<div style="text-align: left; display: flex; gap: 5px;">
   <a href="mailto:madhavaggarwal3584@hotmail.com" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
-  </a><!--
-  -->
+  </a>
+
   <a href="https://madhavagarwal3012.github.io/Portfolio/index.html" target="_blank" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" />
-  </a><!--
-  -->
+  </a>
+
   <a href="https://madhav-resume.tiiny.site/" target="_blank" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/%F0%9F%A7%BE%20Resume-333333?style=for-the-badge&color=#90EE90" />
+    <img src="https://img.shields.io/badge/%F0%9F%A7%BE%20Resume-333333?style=for-the-badge&color=%2390EE90" />
   </a>
 </div>
+
 
 
 
