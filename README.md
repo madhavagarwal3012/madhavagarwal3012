@@ -7,7 +7,7 @@
     <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow me" />
   </a>
   <a href="https://github.com/sponsors/madhavagarwal3012">
-    <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" />
+    <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4" alt="Sponsor" />
   </a>
 </p>
 
