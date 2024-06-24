@@ -6,8 +6,11 @@
   <a href="https://github.com/madhavagarwal3012">
     <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow me" />
   </a>
-  <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" />
+  <a href="https://github.com/sponsors/madhavagarwal3012/dashboard">
+    <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" />
+  </a>
 </p>
+
 
 
 
