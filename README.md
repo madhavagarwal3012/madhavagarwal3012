@@ -1,5 +1,12 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
-<p align="right"> <a href="https://github.com/madhavagarwal3012"> <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="madhavagarwal3012" /></a> <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="madhavagarwal3012" /> <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="madhavagarwal3012" /> </p>
+<p align="right">
+  <a href="https://github.com/madhavagarwal3012">
+    <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow me" />
+  </a>
+  <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" />
+  <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
+</p>
+
 
 
 <h1 align="center"><img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/central%20text.svg" alt="Typing SVG" /></a></h1>
