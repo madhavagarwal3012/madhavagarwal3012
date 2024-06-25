@@ -122,7 +122,7 @@ console.log(`Feel free to contribute`);
   
   <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" 
    width="210"alt="https://buymeacoffee.com/madhavagarwal3012" /></a><a href="https://github.com/sponsors/madhavagarwal3012"> <img align="left" 
-   src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/sponsor.jpg" height="50" 
+   src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/sponsor.jpeg" height="50" 
    width="210" alt="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/sponsor.jpg" /></a></p>
 
 
