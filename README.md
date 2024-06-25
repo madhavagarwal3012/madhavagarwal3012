@@ -140,13 +140,20 @@ console.log(`Feel free to contribute`);
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
 </div>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h2>Random Dev Quotes:</h2>
-  <div style="display: flex; justify-content: space-between; width: 100%;">
-    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 1">
-    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 2">
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <h2 style="text-align: center;">Random Dev Quotes:</h2>
+  <div style="display: flex; flex-direction: column; align-items: center; max-width: 100%;">
+
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" 
+         style="width: 100%; max-width: 400px; height: auto; object-fit: cover; margin-bottom: 10px;" 
+         alt="Quote 1">
+
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" 
+         style="width: 100%; max-width: 400px; height: auto; object-fit: cover;" 
+         alt="Quote 2">
   </div>
 </div>
+
 
 
 
