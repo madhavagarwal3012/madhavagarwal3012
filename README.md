@@ -121,7 +121,8 @@ console.log(`Feel free to contribute`);
   <h2 align="left">Support:</h2>
   
   <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210"         
-  alt="https://buymeacoffee.com/madhavagarwal3012" /></a></p>
+  alt="https://buymeacoffee.com/madhavagarwal3012" /></a><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://github.com/sponsors/madhavagarwal3012" height="50" 
+  width="210" alt="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/sponsor.jpg" /></a></p>
 
 
 </div>
