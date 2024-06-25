@@ -140,15 +140,26 @@ console.log(`Feel free to contribute`);
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
 </div>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h2>Random Dev Quotes:</h2>
-  <div style="display: flex; justify-content: space-between; width: 100%;">
-    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 1">
+## Random Dev Quotes:
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+  
+  <!-- First Quote -->
+  <div style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" 
+         style="width: 100%; height: auto; object-fit: cover;" 
+         alt="Quote 1">
   </div>
-  <div style="display: flex; justify-content: space-between; width: 100%;">
-    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 2">
+
+  <!-- Second Quote -->
+  <div style="width: 100%; max-width: 600px;">
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" 
+         style="width: 100%; height: auto; object-fit: cover;" 
+         alt="Quote 2">
   </div>
+
 </div>
+
 
 
 
