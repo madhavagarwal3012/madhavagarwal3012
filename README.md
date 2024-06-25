@@ -147,18 +147,19 @@ console.log(`Feel free to contribute`);
   <!-- First Quote -->
   <div style="width: 100%; max-width: 600px; margin-bottom: 20px;">
     <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" 
-         style="width: 100%; height: auto; object-fit: cover;" 
+         style="max-width: 100%; height: auto; object-fit: contain;" 
          alt="Quote 1">
   </div>
 
   <!-- Second Quote -->
   <div style="width: 100%; max-width: 600px;">
     <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" 
-         style="width: 100%; height: auto; object-fit: cover;" 
+         style="max-width: 100%; height: auto; object-fit: contain;" 
          alt="Quote 2">
   </div>
 
 </div>
+
 
 
 
