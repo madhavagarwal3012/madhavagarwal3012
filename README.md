@@ -148,9 +148,10 @@ console.log(`Feel free to contribute`);
   </div>
 </div>
 
-<h2 align="left">🏆 Hacktoberfest 2023 Badges</h2>
 <div align="left">
-  <img src="https://holopin.me/madhavagarwal3012" alt="@madhavagarwal3012's Holopin board" />
+  <a href="https://holopin.io/@madhavagarwal3012" target="_blank">
+    <img src="https://img.shields.io/badge/Hacktoberfest%202023-5%20Badges%20Earned-blue?style=for-the-badge&logo=digitalocean&logoColor=white" alt="Hacktoberfest 2023 Badges"/>
+  </a>
 </div>
 
 
