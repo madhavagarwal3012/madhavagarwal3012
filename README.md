@@ -148,6 +148,25 @@ console.log(`Feel free to contribute`);
   </div>
 </div>
 
+<h2 align="left">🏆 Hacktoberfest 2023 Badges</h2>
+<div align="left">
+  <a href="https://www.holopin.io/hacktoberfest2023/userbadge/cln604caq207810gmjg807yfjh">
+    <img src="https://www.holopin.io/hacktoberfest2023/userbadge/cln604caq207810gmjg807yfjh" width="100" height="100" alt="Hacktoberfest 2023 Registration Badge"/>
+  </a>
+  <a href="https://www.holopin.io/hacktoberfest2023/userbadge/clnpgtqnx58890fkvvehfsmkt">
+    <img src="https://www.holopin.io/hacktoberfest2023/userbadge/clnpgtqnx58890fkvvehfsmkt" width="100" height="100" alt="Hacktoberfest 2023 Level 1"/>
+  </a>
+  <a href="https://www.holopin.io/hacktoberfest2023/userbadge/clnpgu09k33590fm9azfv417r">
+    <img src="https://www.holopin.io/hacktoberfest2023/userbadge/clnpgu09k33590fm9azfv417r" width="100" height="100" alt="Hacktoberfest 2023 Level 2"/>
+  </a>
+  <a href="https://www.holopin.io/hacktoberfest2023/userbadge/clnyzbksj22810fme2drotb99">
+    <img src="https://www.holopin.io/hacktoberfest2023/userbadge/clnyzbksj22810fme2drotb99" width="100" height="100" alt="Hacktoberfest 2023 Level 3"/>
+  </a>
+  <a href="https://www.holopin.io/hacktoberfest2023/userbadge/clnyzbksj22810fme2drotb99">
+    <img src="https://www.holopin.io/hacktoberfest2023/userbadge/clnyzbksj22810fme2drotb99" width="100" height="100" alt="Hacktoberfest 2023 Level 4"/>
+  </a>
+</div>
+
 
 
 
