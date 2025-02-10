@@ -1,17 +1,15 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
 <p align="right">
-  <img src="https://files.codingninjas.in/ninjas-running-24084-1-min-1736334057.gif" alt="Coding Ninjas" style="background-color: white; width: 50px; display: inline-block;">
   <a href="https://github.com/madhavagarwal3012"><img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views"></a>
   <a href="https://github.com/madhavagarwal3012?tab=followers"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20Me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow Me"></a>
   <a href="https://github.com/sponsors/madhavagarwal3012"><img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor"></a>
-  <img src="https://files.codingninjas.in/ninjas-running-24084-1-min-1736334057.gif" alt="Coding Ninjas" style="background-color: white; width: 50px; display: inline-block;">
 </p>
 
 
 <h1 align="center"><img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/central%20text.svg" alt="Typing SVG" /></a></h1>
 
 
-<h2 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java, and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving, and continuous improvement as the keys to success. 🚀</h2>
+<h2 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java, and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving, and continuous improvement as the keys to success. 🚀<img src="https://files.codingninjas.in/ninjas-running-24084-1-min-1736334057.gif" alt="Coding Ninjas" style="background-color: white; width: 50px; display: inline-block;"></h2>
 
 <h2 align="center">🎓 I have finished my class 12th from GD Goenka Public School in 2023, where I spent my entire school life. I have always been an avid and curious learner, participating in various academic and co-curricular activities. I have earned certificates of excellence in Java from Coding Ninja, and certificates of completion in Python and SQL from SoloLearn. I have also aced the LinkedIn skill assessment test in Python. I’m proud of my achievements and thankful for the support of my teachers, mentors, and friends. 🙌</h2>
 
