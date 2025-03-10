@@ -134,7 +134,7 @@ console.log(`Feel free to contribute`);
 <h2 align="left">Stats:</h2>
 <br>
 <div align=left>
-  <img width=390 src="https://streak-stats.demolab.com/?user=madhavagarwal3012" alt="streak stats"/>
+  <img width=390 src="https://streak-stats.demolab.com?user=madhavagarwal3012&theme=default&hide_border=true" alt="streak stats"/>
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="readme stats" />
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
