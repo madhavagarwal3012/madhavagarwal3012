@@ -1,6 +1,5 @@
-<div align="center">
-
-```
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <pre style="font-family: monospace; white-space: pre-wrap; text-align: center; word-wrap: break-word; max-width: 100%; font-size: 2vw;">
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                              │
 │       ██████    ██    ████████    ██   ██    ██    ██    ██████      ██     ▒▒▒▒▒            │
@@ -10,10 +9,9 @@
 │       ██████    ██       ██       ██   ██     ██████     ██████      ██     ▒▒▒▒▒            │
 │                                                                                              │
 └──────────────────────────────────────────────────────────────────────────────────────────────┘
-```
-
-
+    </pre>
 </div>
+
 
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
 <p align="right">
