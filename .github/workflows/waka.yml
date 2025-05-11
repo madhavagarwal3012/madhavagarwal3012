@@ -23,7 +23,7 @@ jobs:
           SHOW_TIMEZONE: "True"
           SHOW_EDITORS: "True"
           SHOW_LANGUAGE_PER_REPO: "True"
-          SHOW_LINES_OF_CODE: "True"
+          SHOW_LINES_OF_CODE: "False"
           SHOW_TOTAL_CODE_TIME: "False"
           SHOW_UPDATED_DATE: "True"
           UPDATED_DATE_FORMAT: "%d/%m/%Y %H:%M:%S"
