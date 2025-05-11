@@ -126,9 +126,6 @@ console.log(`Feel free to contribute`);
    width="150"alt="https://buymeacoffee.com/madhavagarwal3012" /></a><a href="https://github.com/sponsors/madhavagarwal3012"> <img align="left" 
    src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/sponsor badge.jpg" height="50" 
    width="150" alt="https://github.com/sponsors/madhavagarwal3012" /></a></p>
-
-
-
 </div>
 
 <br/><br/><br/>
@@ -141,70 +138,7 @@ console.log(`Feel free to contribute`);
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" /><br><br>
   <!--START_SECTION:waka-->
-**🐱 My GitHub Data** 
-
-> 📦 35.8 kB Used in GitHub's Storage 
- > 
-> 🏆 464 Contributions in the Year 2025
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 17 Public Repositories 
- > 
-> 🔑 2 Private Repositories 
- > 
-**I'm a Night 🦉** 
-
-```text
-🌞 Morning                324 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.70 % 
-🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.11 % 
-🌃 Evening                1235 commits        █████████░░░░░░░░░░░░░░░░   36.96 % 
-🌙 Night                  1344 commits        ██████████░░░░░░░░░░░░░░░   40.23 % 
-```
-📅 **I'm Most Productive on Sunday** 
-
-```text
-Monday                   497 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.88 % 
-Tuesday                  510 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.26 % 
-Wednesday                239 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   07.15 % 
-Thursday                 316 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.46 % 
-Friday                   585 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.51 % 
-Saturday                 553 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.55 % 
-Sunday                   641 commits         █████░░░░░░░░░░░░░░░░░░░░   19.19 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Kolkata
-
-💬 Programming Languages: 
-No Activity Tracked This Week
-
-🔥 Editors: 
-No Activity Tracked This Week
-```
-
-**I Mostly Code in Python** 
-
-```text
-Python                   3 repos             ████████░░░░░░░░░░░░░░░░░   30.00 % 
-HTML                     3 repos             ████████░░░░░░░░░░░░░░░░░   30.00 % 
-Java                     2 repos             █████░░░░░░░░░░░░░░░░░░░░   20.00 % 
-C                        1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
-C++                      1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
-```
-
-
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
-
-
- Last Updated on 11/05/2025 23:17:39 UTC
-<!--END_SECTION:waka-->
+  <!--END_SECTION:waka-->
 </div>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
