@@ -141,7 +141,74 @@ console.log(`Feel free to contribute`);
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
   <!--START_SECTION:waka-->
-  <!--END_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-53-blue)
+
+**🐱 My GitHub Data** 
+
+> 📦 35.8 kB Used in GitHub's Storage 
+ > 
+> 🏆 464 Contributions in the Year 2025
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 17 Public Repositories 
+ > 
+> 🔑 2 Private Repositories 
+ > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                324 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.71 % 
+🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.13 % 
+🌃 Evening                1235 commits        █████████░░░░░░░░░░░░░░░░   37.01 % 
+🌙 Night                  1340 commits        ██████████░░░░░░░░░░░░░░░   40.16 % 
+```
+📅 **I'm Most Productive on Sunday** 
+
+```text
+Monday                   493 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.77 % 
+Tuesday                  510 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.28 % 
+Wednesday                239 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   07.16 % 
+Thursday                 316 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.47 % 
+Friday                   585 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.53 % 
+Saturday                 553 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.57 % 
+Sunday                   641 commits         █████░░░░░░░░░░░░░░░░░░░░   19.21 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Kolkata
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+```
+
+**I Mostly Code in Python** 
+
+```text
+Python                   3 repos             ████████░░░░░░░░░░░░░░░░░   30.00 % 
+HTML                     3 repos             ████████░░░░░░░░░░░░░░░░░   30.00 % 
+Java                     2 repos             █████░░░░░░░░░░░░░░░░░░░░   20.00 % 
+C                        1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
+C++                      1 repo              ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
+```
+
+
+
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
+
+
+ Last Updated on 11/05/2025 23:02:35 UTC
+<!--END_SECTION:waka-->
 </div>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
