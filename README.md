@@ -205,6 +205,13 @@ C++                      1 repo              ██░░░░░░░░░�
 <!--END_SECTION:waka-->
 </div>
 
+<h2 align="left">🏆 Hacktoberfest Badges</h2>
+<div align="left">
+  <a href="https://www.holopin.io/@madhavagarwal3012#badges">
+    <img src="https://www.holopin.io/api/user/board?user=madhavagarwal3012" alt="@madhavagarwal3012's Holopin board"/>
+  </a>
+</div>
+
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h2>Random Dev Quotes:</h2>
    <div style="display: flex; justify-content: space-between; width: 100%;">
@@ -213,12 +220,6 @@ C++                      1 repo              ██░░░░░░░░░�
   </div>
 </div>
 
-<h2 align="left">🏆 Hacktoberfest Badges</h2>
-<div align="left">
-  <a href="https://www.holopin.io/@madhavagarwal3012#badges">
-    <img src="https://www.holopin.io/api/user/board?user=madhavagarwal3012" alt="@madhavagarwal3012's Holopin board"/>
-  </a>
-</div>
 <div>
   <img align="left" width="70%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" alt="GitHub Graph Wavy Art"/>
   <img align="right" width="29%" src="https://private-user-images.githubusercontent.com/99337968/313450464-2bd05422-3a3b-4d7c-94a1-7cdb584c09d7.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDY5Nzc1MjgsIm5iZiI6MTc0Njk3NzIyOCwicGF0aCI6Ii85OTMzNzk2OC8zMTM0NTA0NjQtMmJkMDU0MjItM2EzYi00ZDdjLTk0YTEtN2NkYjU4NGMwOWQ3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA1MTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNTExVDE1MjcwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQxODk3N2VlNDVhNzFiNjQyZWIxN2IxOTc1NTVmMjcwMGU4Y2ZjMDAzNWI5ZTg4YmVlMjRmYmFmMzdkMGQwMzImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.2mRLkbLTi9-iqcvxCe0DImWMONnbv-YMkEQVNEgYfcE" alt="Typing Person GIF"/>
