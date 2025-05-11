@@ -119,7 +119,6 @@ console.log(`Feel free to contribute`);
   <br>
   <img alt="name on contribution graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/contribution%20name%20graph.svg"/>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
-  <img alt ="github graphy wavy art" src ="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" />
   <h2 align="left">Support:</h2>
   
   <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" 
@@ -155,6 +154,7 @@ console.log(`Feel free to contribute`);
   <a href="https://www.holopin.io/@madhavagarwal3012#badges">
     <img src="https://holopin.io/api/user/board?user=madhavagarwal3012" alt="@madhavagarwal3012's Holopin board"/>
   </a>
+  <img alt ="github graphy wavy art" src ="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" />
 </div>
 
 
