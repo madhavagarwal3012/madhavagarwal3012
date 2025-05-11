@@ -140,6 +140,8 @@ console.log(`Feel free to contribute`);
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="readme stats" />
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
+  <!--START_SECTION:waka-->
+  <!--END_SECTION:waka-->
 </div>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
