@@ -119,7 +119,7 @@ console.log(`Feel free to contribute`);
   <br>
   <img alt="name on contribution graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/contribution%20name%20graph.svg"/>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=madhavagarwal3012&bg_color=ffffff&color=24292e&title_color=216e39&line=40c463&point=30a14e&area=true&area_color=9be9a8&hide_border=true&custom_title=Contribution%20Graph" />
+  <img alt="contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=madhavagarwal3012&bg_color=ffffff&color=24292e&line=40c463&point=30a14e&area=true&area_color=9be9a8&hide_border=true&hide_title=true" />
   <h2 align="left">Support:</h2>
   
   <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" 
