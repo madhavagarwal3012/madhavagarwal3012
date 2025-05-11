@@ -31,7 +31,7 @@
   <a href="https://madhavagarwal3012.github.io./Portfolio/index.html" target="_blank">
      <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" target="_blank" /> <!-- sqlite, safari, google-chrome are other good icon options -->
   </a>
-  <a href="https://madhav-resume.tiiny.site/" target="_blank">
+  <a href="https://madhav-agarwal.tiiny.site/" target="_blank">
      <img src="https://img.shields.io/badge/%F0%9F%A7%BE%20Resume-333333?style=for-the-badge&color=#90EE90" />
   </a>
 </div>
