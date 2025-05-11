@@ -152,7 +152,7 @@ console.log(`Feel free to contribute`);
 <h2 align="left">🏆 Hacktoberfest Badges</h2>
 <div align="left">
   <a href="https://www.holopin.io/@madhavagarwal3012#badges">
-    <img src="https://holopin.io/api/user/board?user=madhavagarwal3012" alt="@madhavagarwal3012's Holopin board"/>
+    <img src="[https://holopin.io/api/user/board?user=madhavagarwal3012](https://www.holopin.io/api/user/board?user=madhavagarwal3012)" alt="@madhavagarwal3012's Holopin board"/>
   </a>
   <img alt ="github graphy wavy art" src ="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" />
 </div>
