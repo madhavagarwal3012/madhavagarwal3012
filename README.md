@@ -119,6 +119,7 @@ console.log(`Feel free to contribute`);
   <br>
   <img alt="name on contribution graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/contribution%20name%20graph.svg"/>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
   <h2 align="left">Support:</h2>
   
   <p><a href="https://buymeacoffee.com/madhavagarwal3012"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" 
