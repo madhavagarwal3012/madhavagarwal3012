@@ -110,10 +110,6 @@ console.log(`Feel free to contribute`);
 
 <br>
 
-
----
-
-
 <div align="left">
   <h2>🐍 My Contributions 🐍</h2>
   <br>
@@ -126,9 +122,6 @@ console.log(`Feel free to contribute`);
    width="150"alt="https://buymeacoffee.com/madhavagarwal3012" /></a><a href="https://github.com/sponsors/madhavagarwal3012"> <img align="left" 
    src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/sponsor badge.jpg" height="50" 
    width="150" alt="https://github.com/sponsors/madhavagarwal3012" /></a></p>
-
-
-
 </div>
 
 <br/><br/><br/>
