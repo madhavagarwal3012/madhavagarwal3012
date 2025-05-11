@@ -141,15 +141,13 @@ console.log(`Feel free to contribute`);
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" />
   <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
-
-![Profile Views](http://img.shields.io/badge/Profile%20Views-53-blue)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-102.4%20thousand%20lines%20of%20code-blue)
 
 **🐱 My GitHub Data** 
 
 > 📦 35.8 kB Used in GitHub's Storage 
  > 
-> 🏆 464 Contributions in the Year 2025
+> 🏆 460 Contributions in the Year 2025
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -161,20 +159,20 @@ console.log(`Feel free to contribute`);
 
 ```text
 🌞 Morning                324 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.71 % 
-🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.13 % 
-🌃 Evening                1235 commits        █████████░░░░░░░░░░░░░░░░   37.01 % 
-🌙 Night                  1340 commits        ██████████░░░░░░░░░░░░░░░   40.16 % 
+🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.12 % 
+🌃 Evening                1235 commits        █████████░░░░░░░░░░░░░░░░   37.00 % 
+🌙 Night                  1341 commits        ██████████░░░░░░░░░░░░░░░   40.17 % 
 ```
 📅 **I'm Most Productive on Sunday** 
 
 ```text
-Monday                   493 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.77 % 
+Monday                   494 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.80 % 
 Tuesday                  510 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.28 % 
 Wednesday                239 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   07.16 % 
 Thursday                 316 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.47 % 
 Friday                   585 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.53 % 
 Saturday                 553 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.57 % 
-Sunday                   641 commits         █████░░░░░░░░░░░░░░░░░░░░   19.21 % 
+Sunday                   641 commits         █████░░░░░░░░░░░░░░░░░░░░   19.20 % 
 ```
 
 
@@ -207,7 +205,7 @@ C++                      1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 11/05/2025 23:02:35 UTC
+ Last Updated on 11/05/2025 23:10:19 UTC
 <!--END_SECTION:waka-->
 </div>
 
