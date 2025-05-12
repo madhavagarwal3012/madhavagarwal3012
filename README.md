@@ -1,7 +1,7 @@
 ![Github](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Github%20Ascii%20Art%20Text.png)
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
 
-<div style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; align-items: center;">
+<div align="right"; style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; align-items: center;">
   <a href="https://github.com/madhavagarwal3012">
     <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" style="max-width: 150px;"/>
   </a>
