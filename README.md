@@ -199,8 +199,10 @@ C++                      1 repo              ██░░░░░░░░░�
 <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/marquee.svg" width=100% />
 <br clear="both">
 
-<img src="https://user-images.githubusercontent.com/43545812/144035120-1ad5169b-91c7-4078-bef9-6a82c733f373.png"/>
-## 🎵 Spotify Vibes 🎧
+<p>
+  <img src="https://user-images.githubusercontent.com/43545812/144035120-1ad5169b-91c7-4078-bef9-6a82c733f373.png" width="30"/>
+  <strong>🎵 Spotify Vibes 🎧</strong>
+</p>
 <div align="center">
   <!-- Now Playing Widget -->
   <h3>Currently Spinning 💿</h3>
