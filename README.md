@@ -227,3 +227,91 @@ C++                      1 repo              ██░░░░░░░░░�
 </div>
 <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/marquee.svg" width=100% />
 <br clear="both">
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> 
+    <!-- Programming Languages -->
+    <a href="https://www.java.com" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java"/> 
+    </a> 
+    <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/> 
+    </a> 
+    <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C"/> 
+    </a> 
+    
+    <!-- Web Development -->
+    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML"/> 
+    </a> 
+    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS"/> 
+    </a> 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/> 
+    </a> 
+    
+    <!-- Databases -->
+    <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/> 
+    </a> 
+    
+    <!-- Cloud & Security -->
+    <a href="https://cloud.google.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud Platform"/> 
+    </a> 
+    <a href="https://aws.amazon.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/> 
+    </a> 
+    <a href="https://www.microsoft.com/en-us/security" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Security-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Cloud Security"/> 
+    </a> 
+
+    <!-- AI/ML -->
+    <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/AI-000000?style=for-the-badge&logo=openai&logoColor=white" alt="Artificial Intelligence"/> 
+    </a> 
+    <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Machine%20Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Machine Learning"/> 
+    </a> 
+    
+    <!-- Version Control -->
+    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/> 
+    </a> 
+    <a href="https://github.com" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/> 
+    </a>
+
+    <!-- AI Assistants -->
+    <a href="https://openai.com/chatgpt" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT"/> 
+    </a> 
+    <a href="https://gemini.google.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white" alt="Google Gemini"/> 
+    </a> 
+    <a href="https://www.anthropic.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Claude-000000?style=for-the-badge&logoColor=white" alt="Claude"/> 
+    </a> 
+    
+    <!-- Office Tools -->
+    <a href="https://www.microsoft.com/en-us/microsoft-365/word" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Word-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white" alt="Microsoft Word"/> 
+    </a> 
+    <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Microsoft Excel"/> 
+    </a> 
+    <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/PowerPoint-B7472A?style=for-the-badge&logo=microsoftpowerpoint&logoColor=white" alt="Microsoft PowerPoint"/> 
+    </a> 
+    <a href="https://www.microsoft.com/en-us/microsoft-365/outlook" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white" alt="Microsoft Outlook"/> 
+    </a> 
+    
+    <!-- Video Editing -->
+    <a href="https://www.capcut.com/" target="_blank" rel="noreferrer"> 
+        <img src="https://img.shields.io/badge/CapCut-000000?style=for-the-badge&logo=bytedance&logoColor=white" alt="CapCut"/> 
+    </a> 
+</p>
+
