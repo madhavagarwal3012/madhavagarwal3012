@@ -4,7 +4,7 @@
   <a href="https://github.com/madhavagarwal3012"><img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views"></a>
   <a href="https://github.com/madhavagarwal3012?tab=followers"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20Me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow Me"></a>
   <a href="https://github.com/sponsors/madhavagarwal3012"><img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor"></a>
-  <a href="https://www.naukri.com/code360/profile/madhvagrwal3012"><img src="https://img.shields.io/badge/coding%20ninjas-DD6620?style=for-the-badge&logo=codingninjas&logoColor=white" alt="Coding Ninjas"></a>
+  <a href="https://www.naukri.com/code360/profile/madhvagrwal3012"><img src="https://img.shields.io/badge/code360-DD6620?style=flat&logo=codingninjas&logoColor=white" alt="Coding 360 Profile"></a>
 </p>
 
 
