@@ -2,23 +2,20 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
 <p align="right">
     <a href="https://github.com/madhavagarwal3012">
-        <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" width="22%" />
+        <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" width="110px" />
     </a>
     <a href="https://github.com/madhavagarwal3012?tab=followers">
-        <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20Me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow Me" width="22%" />
+        <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20Me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow Me" width="90px" />
     </a>
     <a href="https://github.com/sponsors/madhavagarwal3012">
-        <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" width="22%" />
+        <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" width="80px" />
     </a>
     <a href="https://www.naukri.com/code360/profile/madhvagrwal3012">
-        <img src="https://img.shields.io/badge/code360-DD6620?style=flat&logo=codingninjas&logoColor=white" alt="Coding 360 Profile" width="22%" />
+        <img src="https://img.shields.io/badge/code360-DD6620?style=flat&logo=codingninjas&logoColor=white" alt="Coding 360 Profile" width="70px" />
     </a>
 </p>
 
-
-
 <h1 align="center"><img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/central%20text.svg" alt="Typing SVG" /></a></h1>
-
 
 <h2 align="center">I’m a web developer in the making, learning from Coding Ninja’s full stack web development course. I have a solid foundation in Python, SQL, Java, and DSA. I enjoy discovering new tools and techniques to make awesome web apps. I’m looking for opportunities to apply my skills and creativity to real-world projects. I value teamwork, problem-solving, and continuous improvement as the keys to success. 🚀</h2>
 
