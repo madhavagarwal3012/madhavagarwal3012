@@ -139,12 +139,9 @@ console.log(`Feel free to contribute`);
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" /><br><br>
   <!--START_SECTION:waka-->
-  
 **🐱 My GitHub Data** 
 
-> 📦 35.9 kB Used in GitHub's Storage 
- > 
-> 🏆 473 Contributions in the Year 2025
+> 📦 36.3 kB Used in GitHub's Storage 
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -152,39 +149,6 @@ console.log(`Feel free to contribute`);
  > 
 > 🔑 2 Private Repositories 
  > 
-**I'm a Night 🦉** 
-
-```text
-🌞 Morning                324 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.68 % 
-🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.09 % 
-🌃 Evening                1235 commits        █████████░░░░░░░░░░░░░░░░   36.91 % 
-🌙 Night                  1349 commits        ██████████░░░░░░░░░░░░░░░   40.32 % 
-```
-📅 **I'm Most Productive on Sunday** 
-
-```text
-Monday                   502 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.00 % 
-Tuesday                  510 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.24 % 
-Wednesday                239 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   07.14 % 
-Thursday                 316 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.44 % 
-Friday                   585 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.48 % 
-Saturday                 553 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.53 % 
-Sunday                   641 commits         █████░░░░░░░░░░░░░░░░░░░░   19.16 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Kolkata
-
-💬 Programming Languages: 
-No Activity Tracked This Week
-
-🔥 Editors: 
-No Activity Tracked This Week
-```
-
 **I Mostly Code in Python** 
 
 ```text
@@ -202,7 +166,7 @@ C++                      1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 11/05/2025 23:54:12 UTC
+ Last Updated on 12/05/2025 18:50:01 UTC
 <!--END_SECTION:waka-->
 </div>
 
