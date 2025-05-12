@@ -231,9 +231,8 @@ C++                      1 repo              ██░░░░░░░░░�
 <div align="center">
   <!-- Now Playing Widget -->
   <h3>Currently Spinning 💿</h3>
-  <a href="https://github.com/kittinan/spotify-github-profile">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&bar_color_cover=true" alt="Now Playing" />
-  </a>
+  [![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&bar_color=53b14f&bar_color_cover=true)](https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&redirect=true)
+
   
   <!-- Recently Played Widget -->
   <h3>Recently Played 🎼</h3>
