@@ -216,8 +216,7 @@ C++                      1 repo              ██░░░░░░░░░�
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h2>Random Dev Quotes:</h2>
    <div style="display: flex; justify-content: space-between; width: 100%;">
-    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote.jpg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 1">
-    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/quote%202.jpeg" width="48%" height="400px" style="object-fit: cover;" alt="Quote 2">
+    <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/random%20dev%20quote.png" alt="Developer Quotes" width="100%">
   </div>
 </div>
 
