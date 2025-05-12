@@ -2,16 +2,16 @@
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
 <p align="right">
     <a href="https://github.com/madhavagarwal3012">
-        <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" width="130px" />
+        <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" width="120px" />
     </a>
     <a href="https://github.com/madhavagarwal3012?tab=followers">
-        <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20Me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow Me" width="110px" />
+        <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Follow%20Me&query=followers&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fmadhavagarwal3012&logo=GitHub" alt="Follow Me" width="100px" />
     </a>
     <a href="https://github.com/sponsors/madhavagarwal3012">
-        <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" width="100px" />
+        <img src="https://img.shields.io/github/sponsors/madhavagarwal3012?label=Sponsor&logo=GitHub" alt="Sponsor" width="90px" />
     </a>
     <a href="https://www.naukri.com/code360/profile/madhvagrwal3012">
-        <img src="https://img.shields.io/badge/code360-DD6620?style=flat&logo=codingninjas&logoColor=white" alt="Coding 360 Profile" width="90px" />
+        <img src="https://img.shields.io/badge/code360-DD6620?style=flat&logo=codingninjas&logoColor=white" alt="Coding 360 Profile" width="80px" />
     </a>
 </p>
 
