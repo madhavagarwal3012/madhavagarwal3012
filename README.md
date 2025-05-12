@@ -1,5 +1,6 @@
 ![Github](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Github%20Ascii%20Art%20Text.png)
-![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
+<img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif" alt="MasterHead" style="width= 100%;" />
+
 <p align="right">
     <a href="https://github.com/madhavagarwal3012">
         <img src="https://komarev.com/ghpvc/?username=madhavagarwal3012&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" width="24%" />
