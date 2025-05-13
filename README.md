@@ -191,7 +191,6 @@ C++                      1 repo              ██░░░░░░░░░�
       />
     </picture>
   </a>
-  <p><strong>Click the badge to view my full Holopin profile!</strong></p>
 </div>
 
 
