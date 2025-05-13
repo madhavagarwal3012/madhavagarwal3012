@@ -181,7 +181,7 @@ C++                      1 repo              ██░░░░░░░░░�
 
 <h2 align="left">🏆 Hacktoberfest Badges</h2>
 <div align="left">
-  <a href="https://holopin.io/madhavagarwal3012" target="_blank" rel="noopener noreferrer">
+  <a href="https://holopin.io/madhavagarwal3012#" target="_blank" rel="noopener noreferrer">
     <picture>
       <source media="(max-width: 600px)" srcset="https://holopin.me/madhavagarwal3012?size=small">
       <img
