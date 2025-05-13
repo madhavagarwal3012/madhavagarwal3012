@@ -198,7 +198,9 @@ C++                      1 repo              ██░░░░░░░░░�
   <img align="right" width="29%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/typing.gif" alt="Typing Person GIF"/>
 </div>
 <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/marquee.svg" width=100% />
-<a href="https://info.flagcounter.com/dmsY"><img src="https://s05.flagcounter.com/countxl/dmsY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+Counting of visitors to this page started on <strong>May 13, 2025</strong>
+
+<img src="https://s05.flagcounter.com/countxl/dmsY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter showing number of visitors by country" border="0">
 <br clear="both">
 
 ## 🎵 Spotify Vibes 🎧
