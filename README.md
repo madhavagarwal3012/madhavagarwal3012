@@ -147,10 +147,13 @@ console.log(`Feel free to contribute`);
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" /><br><br>
   <!--START_SECTION:waka-->
-  
+![Profile Views](http://img.shields.io/badge/Profile%20Views-356-blue)
+
 **🐱 My GitHub Data** 
 
 > 📦 36.3 kB Used in GitHub's Storage 
+ > 
+> 🏆 581 Contributions in the Year 2025
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -158,6 +161,45 @@ console.log(`Feel free to contribute`);
  > 
 > 🔑 2 Private Repositories 
  > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                329 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.53 % 
+🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.68 % 
+🌃 Evening                1270 commits        █████████░░░░░░░░░░░░░░░░   36.77 % 
+🌙 Night                  1417 commits        ██████████░░░░░░░░░░░░░░░   41.02 % 
+```
+📅 **I'm Most Productive on Sunday** 
+
+```text
+Monday                   519 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.03 % 
+Tuesday                  555 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.07 % 
+Wednesday                239 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   06.92 % 
+Thursday                 329 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.53 % 
+Friday                   618 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.89 % 
+Saturday                 553 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.01 % 
+Sunday                   641 commits         █████░░░░░░░░░░░░░░░░░░░░   18.56 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Kolkata
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+```
+
 **I Mostly Code in Python** 
 
 ```text
@@ -175,7 +217,7 @@ C++                      1 repo              ██░░░░░░░░░�
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 12/05/2025 18:50:01 UTC
+ Last Updated on 16/05/2025 18:21:43 UTC
 <!--END_SECTION:waka-->
 </div>
 
