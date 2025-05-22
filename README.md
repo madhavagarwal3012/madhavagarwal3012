@@ -157,12 +157,48 @@ console.log(`Feel free to contribute`);
  > 
 > 🔑 2 Private Repositories 
  > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                329 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.28 % 
+🌆 Daytime                438 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.36 % 
+🌃 Evening                1307 commits        █████████░░░░░░░░░░░░░░░░   36.88 % 
+🌙 Night                  1470 commits        ██████████░░░░░░░░░░░░░░░   41.48 % 
+```
+📅 **I'm Most Productive on Sunday** 
+
+```text
+Monday                   527 commits         ████░░░░░░░░░░░░░░░░░░░░░   14.87 % 
+Tuesday                  595 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.79 % 
+Wednesday                241 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   06.80 % 
+Thursday                 329 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.28 % 
+Friday                   620 commits         ████░░░░░░░░░░░░░░░░░░░░░   17.49 % 
+Saturday                 566 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.97 % 
+Sunday                   666 commits         █████░░░░░░░░░░░░░░░░░░░░   18.79 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Kolkata
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+```
+
 **Timeline**
 
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 21/05/2025 18:50:17 UTC
+ Last Updated on 22/05/2025 18:50:22 UTC
 <!--END_SECTION:waka-->
 </div>
 
