@@ -146,7 +146,7 @@ console.log(`Feel free to contribute`);
   <img width=390 src="https://github-readme-stats.vercel.app/api?username=madhavagarwal3012&show_icons=true&locale=en" alt="readme stats" />
   <br/>
   <img width=325 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=madhavagarwal3012&show_icons=true&locale=en&layout=compact" alt="top langs" /><br><br>
-  <!--START_SECTION:waka-->
+  <!--START_SECTION:waka--><br>
 **🐱 My GitHub Data** 
 
 > 📦 36.6 kB Used in GitHub's Storage 
