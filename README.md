@@ -149,9 +149,7 @@ console.log(`Feel free to contribute`);
   <!--START_SECTION:waka-->
 **🐱 My GitHub Data** 
 
-> 📦 43.8 kB Used in GitHub's Storage 
- > 
-> 🏆 705 Contributions in the Year 2025
+> 📦 43.7 kB Used in GitHub's Storage 
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -200,7 +198,7 @@ No Activity Tracked This Week
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 22/06/2025 18:48:36 UTC
+ Last Updated on 23/06/2025 18:52:14 UTC
 <!--END_SECTION:waka-->
 </div>
 
