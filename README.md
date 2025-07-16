@@ -1,3 +1,5 @@
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=171&color=gradient"/>
+
 📢 Nominate ([@madhavagarwal3012](https://github.com/madhavagarwal3012/)) as **[GitHub Star](https://stars.github.com/nominate)**. If you appreciate his hard work and dedication to open source.
 ![Github](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Github%20Ascii%20Art%20Text.png)
 ![MasterHead](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Black%20Background.gif)
@@ -246,3 +248,5 @@ Counting of visitors to this page started on <strong>May 13, 2025</strong>
   <h3>Recently Played 🎼</h3>
   <img src="https://spotify-recently-played-readme.vercel.app/api?user=31q27rypvnbypdgwqqzr3unsvyrq&count=10&unique=true">
 </div>
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=wave&height=300&color=gradient&section=footer"/>
