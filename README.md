@@ -160,6 +160,8 @@ console.log(`Feel free to contribute`);
 
 > 📦 44.7 kB Used in GitHub's Storage 
  > 
+> 🏆 780 Contributions in the Year 2025
+ > 
 > 🚫 Not Opted to Hire
  > 
 > 📜 19 Public Repositories 
@@ -207,7 +209,7 @@ No Activity Tracked This Week
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 06/08/2025 18:55:36 UTC
+ Last Updated on 07/08/2025 18:58:11 UTC
 <!--END_SECTION:waka-->
 </div>
 
