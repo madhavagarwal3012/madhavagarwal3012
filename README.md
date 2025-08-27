@@ -27,11 +27,7 @@
 
 <h2 align="center">👩‍💻 I’m currently pursuing my BCA Honours from the prestigious Jaypee Institute of Information Technology (JIIT, Noida). Taking my web development skills to the next level and exploring new technologies. Excited to apply my expertise and creativity in building amazing and user-friendly web apps. 💯</h2>
 
----
-
-
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=madhavagarwal3012" alt="madhavagarwal3012" /></a> </p>
-
 <p align="left"> <a href="https://twitter.com/madhvagrwal3012" target="blank"><img src="https://img.shields.io/twitter/follow/madhvagrwal3012?logo=twitter&style=for-the-badge" alt="madhvagrwal3012" /></a> </p>
 
 - 🌱 I’m currently learning **Data Structures And Algorithm In Java**
