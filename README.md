@@ -248,8 +248,6 @@ No Activity Tracked This Week
   </div>
 </div>
 
----
-
 <div>
   <img align="left" width="70%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" alt="GitHub Graph Wavy Art"/>
   <img align="right" width="29%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/typing.gif" alt="Typing Person GIF"/>
