@@ -223,6 +223,8 @@ No Activity Tracked This Week
 <!--END_SECTION:waka-->
 </div>
 
+---
+
 <h2 align="left">🏆 Hacktoberfest Badges</h2>
 <div align="left">
   <a href="https://www.holopin.io/@madhavagarwal3012#" target="_blank" rel="noopener noreferrer">
@@ -230,13 +232,14 @@ No Activity Tracked This Week
       <source media="(max-width: 600px)" srcset="https://holopin.me/madhavagarwal3012?size=small">
       <img
         src="https://holopin.me/madhavagarwal3012"
-        alt="Holopin Badges of @madhavagarwal3012"
+        alt="Holopin Badges of @madhavagarwl3012"
         style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"
       />
     </picture>
   </a>
 </div>
 
+---
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h2>Random Dev Quotes:</h2>
@@ -244,6 +247,8 @@ No Activity Tracked This Week
     <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/random%20dev%20quote.png" alt="Developer Quotes" width="100%">
   </div>
 </div>
+
+---
 
 <div>
   <img align="left" width="70%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" alt="GitHub Graph Wavy Art"/>
@@ -254,6 +259,8 @@ Counting of visitors to this page started on <strong>May 13, 2025</strong>
 
 <img src="https://s05.flagcounter.com/countxl/dmsY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter showing number of visitors by country" border="0">
 <br clear="both">
+
+---
 
 ## 🎵 Spotify Vibes 🎧
 <div align="center">
