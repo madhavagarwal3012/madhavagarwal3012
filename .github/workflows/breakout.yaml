@@ -23,8 +23,8 @@ jobs:
 
       - name: Move generated SVG
         run: |
-          mkdir -p images
-          mv output/light.svg images/breakout.svg
+          mkdir -p assets
+          mv output/light.svg assets/breakout.svg
 
       - name: Configure git
         run: |
@@ -33,6 +33,6 @@ jobs:
 
       - name: Commit and push SVG
         run: |
-          git add images/breakout.svg
+          git add assets/breakout.svg
           git commit -m "chore: update breakout SVG (light)" || echo "No changes to commit"
           git push
