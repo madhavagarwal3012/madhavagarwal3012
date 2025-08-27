@@ -130,16 +130,14 @@ console.log(`Feel free to contribute`);
 
 
 ---
-
 <div align="left">
   <h2>🐍 My Contributions 🐍</h2>
   <br>
   <img alt="name on contribution graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/contribution%20name%20graph.svg"/>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
   <img alt="contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=madhavagarwal3012&bg_color=f6f8fa&color=24292e&line=40c463&point=30a14e&area=true&area_color=9be9a8&hide_border=true&hide_title=true" />
-  <img alt="breakout game graph" src="https://github.com/madhavagarwal3012/madhavagarwal3012/actions/workflows/breakout.yml/badge.svg"/>
-  </div>
-  
+  <img alt="breakout game graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/breakout.svg"/>
+</div>
   ---
   <div>
   <h2 align="left">Support:</h2>
