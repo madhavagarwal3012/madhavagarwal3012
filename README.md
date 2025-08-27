@@ -239,14 +239,14 @@ No Activity Tracked This Week
   </a>
 </div>
 
----
-
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <h2>Random Dev Quotes:</h2>
    <div style="display: flex; justify-content: space-between; width: 100%;">
     <img src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/random%20dev%20quote.png" alt="Developer Quotes" width="100%">
   </div>
 </div>
+
+---
 
 <div>
   <img align="left" width="70%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" alt="GitHub Graph Wavy Art"/>
