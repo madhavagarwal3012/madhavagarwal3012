@@ -255,7 +255,7 @@ No Activity Tracked This Week
 <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/marquee.svg" width=100% />
 Counting of visitors to this page started on <strong>May 13, 2025</strong>
 
-<img src="https://s05.flagcounter.com/countxl/dmsY/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter showing number of visitors by country" border="0">
+<a href="https://info.flagcounter.com/U4AI"><img src="https://s01.flagcounter.com/countxl/U4AI/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_250/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 <br clear="both">
 
 ---
