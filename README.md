@@ -227,16 +227,7 @@ No Activity Tracked This Week
 
 <h2 align="left">🏆 Hacktoberfest Badges</h2>
 <div align="left">
-  <a href="https://www.holopin.io/@madhavagarwal3012#" target="_blank" rel="noopener noreferrer">
-    <picture>
-      <source media="(max-width: 600px)" srcset="https://holopin.me/madhavagarwal3012?size=small">
-      <img
-        src="https://holopin.me/madhavagarwal3012"
-        alt="Holopin Badges of @madhavagarwl3012"
-        style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;"
-      />
-    </picture>
-  </a>
+  [![Holopin Badges](https://holopin.me/madhavagarwal3012)](https://www.holopin.io/@madhavagarwal3012)
 </div>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
