@@ -265,8 +265,7 @@ Counting of visitors to this page started on <strong>August 28, 2025</strong>
   <!-- Now Playing Widget -->
   <h3>Currently Spinning 💿</h3>
   <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&redirect=true" target="_blank">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&bar_color_cover=true"/>
-    alt="Spotify Current Song Playing Card"
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&bar_color_cover=true" alt="Spotify Current Song Playing Card"/>
   </a>
   
   <!-- Recently Played Widget -->
