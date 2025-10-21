@@ -1,4 +1,4 @@
-📢 Nominate ([@madhavagarwal3012](https://github.com/madhavagarwal3012/)) as **[GitHub Star](https://stars.github.com/nominate)**. If you appreciate his hard work and dedication to open source.
+📢 Nominate ([@madhavagarwal3012](https://github.com/madhavagarwal3012/)) as **[GitHub Star ★](https://stars.github.com/nominate)**. If you appreciate his hard work and dedication to open source.
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=171&color=gradient"/>
 
 ![Github](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/Github%20Ascii%20Art%20Text.png)
