@@ -156,7 +156,7 @@ def board_to_markdown(board):
             square = file_index + (rank_index * 8)
             
             # Determine the square color using the chess library
-            is_dark = chess.square_color(square)
+            is_dark = board.color_at(square) == chess.BLACK
             bg_color = DARK_SQUARE_COLOR if is_dark else LIGHT_SQUARE_COLOR
             
             # Embed the image within a styled <div> to set the background color of the cell
@@ -173,3 +173,4 @@ def board_to_markdown(board):
         markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
 
     return markdown
+
