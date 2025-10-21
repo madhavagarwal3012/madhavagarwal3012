@@ -101,6 +101,11 @@ def board_to_markdown(board):
     board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
     markdown = ""
 
+    # --- ADDED: Define your custom colors here ---
+    LIGHT_SQUARE_COLOR = "#EDEAD8"  # Light: (Very Light Cream)
+    DARK_SQUARE_COLOR = "#A78C6F"   # Dark: (Faded Sepia Brown)
+    # ---------------------------------------------
+
     images = {
         "r": "img/black/rook.svg",
         "n": "img/black/knight.svg",
@@ -121,32 +126,50 @@ def board_to_markdown(board):
 
     # Write header in Markdown format
     if board.turn == chess.BLACK:
-        markdown += "|   | H | G | F | E | D | C | B | A |   |\n"
+        markdown += "|   | H | G | F | E | D | C | B | A |   |\n"
     else:
-        markdown += "|   | A | B | C | D | E | F | G | H |   |\n"
+        markdown += "|   | A | B | C | D | E | F | G | H |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
 
     # Get Rows
     rows = range(1, 9)
+    # The 'rank_index' is used to correlate with the 'board_list'
+    rank_indexes = range(0, 8) 
+    
     if board.turn == chess.BLACK:
         rows = reversed(rows)
+        rank_indexes = reversed(rank_indexes)
 
     # Write board
-    for row in rows:
+    for rank_index, row in zip(rank_indexes, rows):
         markdown += "| **" + str(9 - row) + "** | "
-        columns = board_list[row - 1]
+        
+        columns = board_list[rank_index]
+        file_indexes = range(0, 8)
+        
         if board.turn == chess.BLACK:
             columns = reversed(columns)
+            file_indexes = reversed(file_indexes)
 
-        for elem in columns:
-            markdown += "<img src=\"{}\" width=50px> | ".format(images.get(elem, "???"))
+        for file_index, elem in zip(file_indexes, columns):
+            # Calculate the chess square index (0 to 63)
+            square = file_index + (rank_index * 8)
+            
+            # Determine the square color using the chess library
+            is_dark = chess.square_color(square)
+            bg_color = DARK_SQUARE_COLOR if is_dark else LIGHT_SQUARE_COLOR
+            
+            # Embed the image within a styled <div> to set the background color of the cell
+            # The style="background-color:..." is applied to the cell content
+            markdown += "<div style=\"background-color:{};\">".format(bg_color)
+            markdown += "<img src=\"{}\" width=50px></div> | ".format(images.get(elem, "???"))
 
         markdown += "**" + str(9 - row) + "** |\n"
 
     # Write footer in Markdown format
     if board.turn == chess.BLACK:
-        markdown += "|   | **H** | **G** | **F** | **E** | **D** | **C** | **B** | **A** |   |\n"
+        markdown += "|   | **H** | **G** | **F** | **E** | **D** | **C** | **B** | **A** |   |\n"
     else:
-        markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
+        markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
 
     return markdown
