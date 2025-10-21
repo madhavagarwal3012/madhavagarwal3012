@@ -1,0 +1,7 @@
+[Event "Madhav Agarwal's Profile Chess Game"]
+[Site "https://github.com/madhavagarwal3012/madhavagarwal3012"]
+[Date "2025.10.22"]
+[Round "1"]
+[White "?"]
+[Black "?"]
+[Result "*"]
