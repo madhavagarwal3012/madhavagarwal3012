@@ -174,9 +174,10 @@ def main():
         with open(README_FILE, 'r+') as f:
             content = f.read()
             
-            # CRITICAL FIX: Use the correct, non-greedy regex to prevent file bloat
+            # CRITICAL FIX: Use the correct, non-greedy regex to prevent file bloat 
+            # and ensure ONLY the game section is replaced.
             new_content = re.sub(
-                r'.*?',
+                r'.*?', # <--- CORRECT REGEX
                 f'\n{markdown_board}\n',
                 content,
                 flags=re.DOTALL
