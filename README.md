@@ -327,20 +327,20 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 ## ❌⭕ Community Tic-Tac-Toe Game Status
 
-This is a live, community-driven game of Tic-Tac-Toe. To play, click an empty square below.
+This is a live, community-driven game of Tic-Tac-Toe. To play, **open a new GitHub Issue** and put your move command in the **Issue Title**.
 
-**Current Status:** **X** to move.
+**Current Status:** **X** to move. (This line will be updated by the bot)
 
-| Action | Command | Who Can Use |
+| Action | Command (in Issue Title) | Who Can Use |
 | :--- | :--- | :--- |
-| **Make a Move** | `TicTacToe: <Square>` (e.g., `B2`) | Any GitHub User |
+| **Make a Move** | `TicTacToe: <Square>` (e.g., `TicTacToe: B2`) | Any GitHub User |
 | **Reset Game** | `TicTacToe: RESET` | Repository Owner Only |
 
 | | | |
 |:-:|:-:|:-:|
-| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A1&body=Click%20Submit%20to%20make%20your%20move%20to%20A1"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B1&body=Click%20Submit%20to%20make%20your%20move%20to%20B1"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C1&body=Click%20Submit%20to%20make%20your%20move%20to%20C1"><img src='img/empty.svg' width='100px'></a> |
-| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A2&body=Click%20Submit%20to%20make%20your%20move%20to%20A2"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B2&body=Click%20Submit%20to%20make%20your%20move%20to%20B2"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C2&body=Click%20Submit%20to%20make%20your%20move%20to%20C2"><img src='img/empty.svg' width='100px'></a> |
-| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A3&body=Click%20Submit%20to%20make%20your%20move%20to%20A3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B3&body=Click%20Submit%20to%20make%20your%20move%20to%20B3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C3&body=Click%20Submit%20to%20make%20your%20move%20to%20C3"><img src='img/empty.svg' width='100px'></a> |
+| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A1"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B1"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C1"><img src='img/empty.svg' width='100px'></a> |
+| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A2"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B2"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C2"><img src='img/empty.svg' width='100px'></a> |
+| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C3"><img src='img/empty.svg' width='100px'></a> |12/madhavagarwal3012/issues/new?title=TicTacToe:%20C3&body=Click%20Submit%20to%20make%20your%20move%20to%20C3"><img src='img/empty.svg' width='100px'></a> |
 
 ---
 
