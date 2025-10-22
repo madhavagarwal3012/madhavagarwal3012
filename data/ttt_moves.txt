@@ -1,0 +1,1 @@
+# Initial TTT Move History. Moves will be added on a new line: X:B2, O:A1, etc.
