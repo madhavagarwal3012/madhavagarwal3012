@@ -114,7 +114,7 @@ def board_to_markdown(board):
         "q": "img/black/queen.svg",
         "p": "img/black/pawn.svg",
 
-        "R": "img/white/rook tester.svg",
+        "R": "img/white/rook.svg",
         "N": "img/white/knight.svg",
         "B": "img/white/bishop.svg",
         "K": "img/white/king.svg",
@@ -179,5 +179,6 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
