@@ -8,14 +8,7 @@ jobs:
   run_ttt_game:
     runs-on: ubuntu-latest
     
-    # Restricts the action to run only on valid TTT commands and ensures RESET is owner-only.
-    if: |
-      github.event_name == 'issues' && 
-      github.actor != 'github-actions[bot]' && 
-      (
-        contains(github.event.issue.title, 'TicTacToe: ') && !contains(github.event.issue.title, 'TicTacToe: RESET') ||
-        (contains(github.event.issue.title, 'TicTacToe: RESET') && github.event.issue.user.login == 'madhavagarwal3012')
-      )
+    if: startsWith(github.event.issue.title, 'TicTacToe:')
       
     steps:
       - name: Checkout Repository
