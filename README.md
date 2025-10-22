@@ -399,3 +399,4 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 </div>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=wave&height=300&color=gradient&section=footer"/>
+<img width=100% src="https://github.com/madhavagarwal3012/madhavagarwal3012/blob/main/techy.PNG" alt = "Techy Image"/>
