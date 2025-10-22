@@ -27,8 +27,13 @@ def record_move(player, move):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     move_entry = f"{timestamp} - {player}:{move}"
     
-    with open(MOVE_HISTORY_FILE, 'a') as f:
-        f.write(move_entry + '\n')
+    # Ensure the file exists before appending
+    if not os.path.exists(MOVE_HISTORY_FILE):
+        with open(MOVE_HISTORY_FILE, 'w') as f:
+            f.write(move_entry + '\n')
+    else:
+        with open(MOVE_HISTORY_FILE, 'a') as f:
+            f.write(move_entry + '\n')
 
 def get_last_5_moves():
     """Reads the last 5 moves for the README display."""
@@ -40,15 +45,24 @@ def get_last_5_moves():
         
         last_moves = []
         for line in lines[-5:]:
-            parts = line.split(' - ')
-            move_data = parts[-1].split(':')
-            last_moves.append({'player': move_data[0], 'move': move_data[1], 'timestamp': parts[0]})
+            try:
+                # Example line: 2023-10-25 10:00:00 - X:B2
+                parts = line.split(' - ')
+                timestamp = parts[0]
+                player_move = parts[-1].split(':')
+                player = player_move[0]
+                move = player_move[1]
+                last_moves.append({'player': player, 'move': move, 'timestamp': timestamp})
+            except IndexError:
+                # Skip badly formatted lines
+                continue 
         return last_moves
 
 
 # --- 3. Parsing and Game Logic ---
 def get_move_from_command(command):
     """Converts a move string (A1-C3) into a board index (0-8) and returns the move string."""
+    # Pattern looks for 'TicTacToe:' followed by optional spaces and the move (e.g., B2)
     match = re.search(r'TicTacToe:\s*([A-C][1-3])', command, re.IGNORECASE)
     if match:
         move_str = match.group(1).upper()
@@ -61,9 +75,9 @@ def get_move_from_command(command):
 def check_for_winner(board):
     """Checks the 8 winning lines."""
     lines = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],
-        [0, 4, 8], [2, 4, 6]
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], # Rows
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], # Columns
+        [0, 4, 8], [2, 4, 6]            # Diagonals
     ]
     for line in lines:
         a, b, c = line
@@ -75,6 +89,8 @@ def is_board_full(board):
     return "" not in board
 
 def process_move(state, index, move_str):
+    """Updates the game state with a valid move."""
+    # Check for game over or occupied square
     if state['winner'] or state['board'][index] != "":
         return False
         
@@ -89,6 +105,7 @@ def process_move(state, index, move_str):
     elif is_board_full(state['board']):
         state['winner'] = "DRAW"
         
+    # Switch turns if game is still active
     if not state['winner']:
         state['turn'] = 'O' if state['turn'] == 'X' else 'X'
         
@@ -96,6 +113,7 @@ def process_move(state, index, move_str):
     
 # --- 4. Board to Markdown Conversion (Renders the Board and Move History) ---
 def board_to_markdown(board, state):
+    # This uses os.environ.get('GITHUB_REPOSITORY') from the Action context
     repo = os.environ.get('GITHUB_REPOSITORY', REPO_OWNER + '/' + REPO_OWNER)
     
     # Status Header
@@ -109,21 +127,20 @@ def board_to_markdown(board, state):
     # Generate the 3x3 table
     markdown_table = "| | | |\n|:-:|:-:|:-:|\n" 
     for i in range(9):
+        # Convert index (0-8) to Cell ID (A1-C3)
         cell_id = chr(ord('A') + (i % 3)) + str(1 + (i // 3))
         content = board[i]
         
-        # Determine image source and link status
         if content == "X":
             cell_markdown = f"<img src='{ASSET_PATH}/x.svg' width='100px'>"
         elif content == "O":
             cell_markdown = f"<img src='{ASSET_PATH}/o.svg' width='100px'>"
         elif state['winner']:
-            # If game is over, render empty tiles without links (freeze board)
+            # If game is over, render empty tiles without links
             cell_markdown = f"<img src='{ASSET_PATH}/empty.svg' width='100px'>"
         else: 
-            # Render empty tiles with links if game is active
-            issue_link = (f"https://github.com/{repo}/issues/new?title=TicTacToe:%20{cell_id}"
-                          f"&body=Click%20Submit%20to%20make%20your%20move%20to%20{cell_id}")
+            # Render empty tiles with links (Issue Title trigger)
+            issue_link = f"https://github.com/{repo}/issues/new?title=TicTacToe:%20{cell_id}"
             cell_markdown = f"<a href='{issue_link}'><img src='{ASSET_PATH}/empty.svg' width='100px'></a>"
         
         markdown_table += f"| {cell_markdown} "
@@ -141,7 +158,7 @@ def board_to_markdown(board, state):
     return final_output
 
 # --- Main Execution Block ---
-if __name__ == "__main__":
+def main():
     state = load_game_state()
     
     command = os.environ.get('MOVE_COMMAND', '').strip()
@@ -150,26 +167,31 @@ if __name__ == "__main__":
     is_reset_command = re.search(r'TicTacToe:\s*RESET', command, re.IGNORECASE)
     move_index, move_str = get_move_from_command(command)
 
+    # Function to update the README (used by both move and reset)
+    def update_readme(current_state):
+        markdown_board = board_to_markdown(current_state['board'], current_state)
+        
+        with open(README_FILE, 'r+') as f:
+            content = f.read()
+            
+            # CRITICAL FIX: Use the correct, non-greedy regex to prevent file bloat
+            new_content = re.sub(
+                r'.*?',
+                f'\n{markdown_board}\n',
+                content,
+                flags=re.DOTALL
+            )
+            
+            f.seek(0)
+            f.write(new_content)
+            f.truncate()
+            
     if is_reset_command:
         if state['winner'] and comment_username == REPO_OWNER:
             # --- RESET LOGIC ---
             state = {"board": [""] * 9, "turn": "X", "winner": None}
             save_game_state(state)
-            
-            markdown_board = board_to_markdown(state['board'], state)
-            
-            with open(README_FILE, 'r+') as f:
-                content = f.read()
-                # Use the correct marker regex
-                new_content = re.sub(
-                    r'.*?',
-                    f'\n{markdown_board}\n',
-                    content,
-                    flags=re.DOTALL
-                )
-                f.seek(0)
-                f.write(new_content)
-                f.truncate()
+            update_readme(state)
             print("Tic-Tac-Toe game has been reset by the owner and a new game has started.")
         elif state['winner'] and comment_username != REPO_OWNER:
             print(f"Reset command received, but only the repository owner ({REPO_OWNER}) can reset a finished game.")
@@ -180,22 +202,12 @@ if __name__ == "__main__":
         # --- NORMAL MOVE LOGIC ---
         if process_move(state, move_index, move_str):
             save_game_state(state)
-            
-            markdown_board = board_to_markdown(state['board'], state)
-            
-            with open(README_FILE, 'r+') as f:
-                content = f.read()
-                # Use the correct marker regex
-                new_content = re.sub(
-                    r'.*?',
-                    f'\n{markdown_board}\n',
-                    content,
-                    flags=re.DOTALL
-                )
-                f.seek(0)
-                f.write(new_content)
-                f.truncate()
+            update_readme(state)
+            print(f"Move {move_str} processed successfully. Game state saved and README updated.")
         else:
             print("Illegal move (square occupied or game over). Skipping update.")
     else:
-        print("Comment found but does not contain a valid TicTacToe move command. Skipping.")
+        print("Issue title found but does not contain a valid TicTacToe move command. Skipping.")
+
+if __name__ == "__main__":
+    main()
