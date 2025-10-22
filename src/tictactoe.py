@@ -136,10 +136,8 @@ def board_to_markdown(board, state):
         elif content == "O":
             cell_markdown = f"<img src='{ASSET_PATH}/o.svg' width='100px'>"
         elif state['winner']:
-            # If game is over, render empty tiles without links
             cell_markdown = f"<img src='{ASSET_PATH}/empty.svg' width='100px'>"
         else: 
-            # Render empty tiles with links (Issue Title trigger)
             issue_link = f"https://github.com/{repo}/issues/new?title=TicTacToe:%20{cell_id}"
             cell_markdown = f"<a href='{issue_link}'><img src='{ASSET_PATH}/empty.svg' width='100px'></a>"
         
@@ -147,15 +145,24 @@ def board_to_markdown(board, state):
         if (i + 1) % 3 == 0:
             markdown_table += "|\n"
             
-    final_output = f"{status_header}\n{markdown_table}"
-    
-    # Move History Table
-    final_output += "\n\n<details>\n  <summary>Last 5 Moves</summary>\n\n| Player | Move | Timestamp |\n| :----: | :--: | :--------: |\n"
-    for move in get_last_5_moves():
-        final_output += f"| {move['player']} | {move['move']} | {move['timestamp']} |\n"
-    final_output += "\n</details>"
+    # NOTE: We return only the board/status content here. History is separate.
+    return f"\n{status_header}\n{markdown_table}\n"
 
-    return final_output
+def history_to_markdown():
+    """Generates the markdown table for the last 5 moves."""
+    
+    history_md = "\n\n| Player | Move | Timestamp |\n| :----: | :--: | :--------: |\n"
+    
+    moves = get_last_5_moves()
+    if not moves:
+        history_md += "| - | - | - |\n"
+    else:
+        for move in moves:
+            history_md += f"| {move['player']} | {move['move']} | {move['timestamp']} |\n"
+            
+    history_md += "\n"
+    return history_md
+
 
 # --- Main Execution Block ---
 def main():
@@ -167,29 +174,38 @@ def main():
     is_reset_command = re.search(r'TicTacToe:\s*RESET', command, re.IGNORECASE)
     move_index, move_str = get_move_from_command(command)
 
-    # Function to update the README (used by both move and reset)
+    # Function to update the README 
     def update_readme(current_state):
-        markdown_board = board_to_markdown(current_state['board'], current_state)
+        # 1. Generate the content to insert
+        board_content = board_to_markdown(current_state['board'], current_state)
+        history_content = history_to_markdown()
         
         with open(README_FILE, 'r+') as f:
             content = f.read()
             
-            # CRITICAL FIX: Use the correct, non-greedy regex to prevent file bloat 
-            # and ensure ONLY the game section is replaced.
+            # 2. Replace the Game Board Section
             new_content = re.sub(
-                r'.*?', # <--- CORRECT REGEX
-                f'\n{markdown_board}\n',
+                r'.*?',
+                board_content,
                 content,
                 flags=re.DOTALL
             )
             
+            # 3. Replace the History Section
+            new_content = re.sub(
+                r'.*?',
+                history_content,
+                new_content,
+                flags=re.DOTALL
+            )
+            
+            # 4. Write the final content back to the file
             f.seek(0)
             f.write(new_content)
             f.truncate()
             
     if is_reset_command:
         if state['winner'] and comment_username == REPO_OWNER:
-            # --- RESET LOGIC ---
             state = {"board": [""] * 9, "turn": "X", "winner": None}
             save_game_state(state)
             update_readme(state)
@@ -200,7 +216,6 @@ def main():
             print("Reset command received, but the game is not yet finished. Skipping reset.")
             
     elif move_index is not None:
-        # --- NORMAL MOVE LOGIC ---
         if process_move(state, move_index, move_str):
             save_game_state(state)
             update_readme(state)
