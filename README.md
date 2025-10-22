@@ -325,11 +325,11 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 ---
 
-## ❌⭕ Community Tic-Tac-Toe Game Status
+## ❌⭕ Tic-Tac-Toe Game
 
 This is a live, community-driven game of Tic-Tac-Toe. To play, **open a new GitHub Issue** and put your move command in the **Issue Title**.
 
-**Current Status:** **X** to move. (This line will be updated by the bot)
+**Current Status:** **X** to move.
 
 | Action | Command (in Issue Title) | Who Can Use |
 | :--- | :--- | :--- |
