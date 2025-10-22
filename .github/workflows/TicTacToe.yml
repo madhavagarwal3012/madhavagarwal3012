@@ -13,9 +13,7 @@ jobs:
       github.event_name == 'issues' && 
       github.actor != 'github-actions[bot]' && 
       (
-        # Standard move: Check Issue Title for 'TicTacToe: ' and ensure it's NOT a RESET command
         contains(github.event.issue.title, 'TicTacToe: ') && !contains(github.event.issue.title, 'TicTacToe: RESET') ||
-        # RESET move: Check Issue Title for 'TicTacToe: RESET' AND ensure the user is the owner
         (contains(github.event.issue.title, 'TicTacToe: RESET') && github.event.issue.user.login == 'madhavagarwal3012')
       )
       
