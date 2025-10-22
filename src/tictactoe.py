@@ -27,7 +27,6 @@ def record_move(player, move):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     move_entry = f"{timestamp} - {player}:{move}"
     
-    # Ensure the file exists before appending
     if not os.path.exists(MOVE_HISTORY_FILE):
         with open(MOVE_HISTORY_FILE, 'w') as f:
             f.write(move_entry + '\n')
@@ -46,7 +45,6 @@ def get_last_5_moves():
         last_moves = []
         for line in lines[-5:]:
             try:
-                # Example line: 2023-10-25 10:00:00 - X:B2
                 parts = line.split(' - ')
                 timestamp = parts[0]
                 player_move = parts[-1].split(':')
@@ -54,7 +52,6 @@ def get_last_5_moves():
                 move = player_move[1]
                 last_moves.append({'player': player, 'move': move, 'timestamp': timestamp})
             except IndexError:
-                # Skip badly formatted lines
                 continue 
         return last_moves
 
@@ -62,7 +59,6 @@ def get_last_5_moves():
 # --- 3. Parsing and Game Logic ---
 def get_move_from_command(command):
     """Converts a move string (A1-C3) into a board index (0-8) and returns the move string."""
-    # Pattern looks for 'TicTacToe:' followed by optional spaces and the move (e.g., B2)
     match = re.search(r'TicTacToe:\s*([A-C][1-3])', command, re.IGNORECASE)
     if match:
         move_str = match.group(1).upper()
@@ -90,7 +86,6 @@ def is_board_full(board):
 
 def process_move(state, index, move_str):
     """Updates the game state with a valid move."""
-    # Check for game over or occupied square
     if state['winner'] or state['board'][index] != "":
         return False
         
@@ -105,7 +100,6 @@ def process_move(state, index, move_str):
     elif is_board_full(state['board']):
         state['winner'] = "DRAW"
         
-    # Switch turns if game is still active
     if not state['winner']:
         state['turn'] = 'O' if state['turn'] == 'X' else 'X'
         
@@ -113,10 +107,8 @@ def process_move(state, index, move_str):
     
 # --- 4. Board to Markdown Conversion (Renders the Board and Move History) ---
 def board_to_markdown(board, state):
-    # This uses os.environ.get('GITHUB_REPOSITORY') from the Action context
     repo = os.environ.get('GITHUB_REPOSITORY', REPO_OWNER + '/' + REPO_OWNER)
     
-    # Status Header
     if state['winner'] == "DRAW":
         status_header = "**GAME OVER! It's a DRAW!**"
     elif state['winner']:
@@ -124,10 +116,8 @@ def board_to_markdown(board, state):
     else:
         status_header = f"**Current Turn: {state['turn']}**"
         
-    # Generate the 3x3 table
     markdown_table = "| | | |\n|:-:|:-:|:-:|\n" 
     for i in range(9):
-        # Convert index (0-8) to Cell ID (A1-C3)
         cell_id = chr(ord('A') + (i % 3)) + str(1 + (i // 3))
         content = board[i]
         
@@ -145,7 +135,7 @@ def board_to_markdown(board, state):
         if (i + 1) % 3 == 0:
             markdown_table += "|\n"
             
-    # NOTE: We return only the board/status content here. History is separate.
+    # Returns content wrapped in the new markers for the board
     return f"\n{status_header}\n{markdown_table}\n"
 
 def history_to_markdown():
@@ -174,16 +164,14 @@ def main():
     is_reset_command = re.search(r'TicTacToe:\s*RESET', command, re.IGNORECASE)
     move_index, move_str = get_move_from_command(command)
 
-    # Function to update the README 
     def update_readme(current_state):
-        # 1. Generate the content to insert
         board_content = board_to_markdown(current_state['board'], current_state)
         history_content = history_to_markdown()
         
         with open(README_FILE, 'r+') as f:
             content = f.read()
             
-            # 2. Replace the Game Board Section
+            # 1. Replace the Game Board Section using the correct regex
             new_content = re.sub(
                 r'.*?',
                 board_content,
@@ -191,7 +179,7 @@ def main():
                 flags=re.DOTALL
             )
             
-            # 3. Replace the History Section
+            # 2. Replace the History Section
             new_content = re.sub(
                 r'.*?',
                 history_content,
@@ -199,7 +187,6 @@ def main():
                 flags=re.DOTALL
             )
             
-            # 4. Write the final content back to the file
             f.seek(0)
             f.write(new_content)
             f.truncate()
