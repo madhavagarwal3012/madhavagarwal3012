@@ -8,15 +8,14 @@ jobs:
   run_ttt_game:
     runs-on: ubuntu-latest
     
-    # CRITICAL: The if condition must now check the Issue Title, not the Comment Body.
-    # The RESET check also moves to the issue title.
+    # This 'if' condition checks the Issue Title for the command and restricts RESET to the owner.
     if: |
       github.event_name == 'issues' && 
       github.actor != 'github-actions[bot]' && 
       (
-        # Allow any user for standard moves (checking issue title)
+        # Standard move: Check Issue Title for 'TicTacToe: ' and ensure it's NOT a RESET command
         contains(github.event.issue.title, 'TicTacToe: ') && !contains(github.event.issue.title, 'TicTacToe: RESET') ||
-        # Only allow the owner for the RESET command (checking issue title and user login)
+        # RESET move: Check Issue Title for 'TicTacToe: RESET' AND ensure the user is the owner
         (contains(github.event.issue.title, 'TicTacToe: RESET') && github.event.issue.user.login == 'madhavagarwal3012')
       )
       
@@ -31,9 +30,9 @@ jobs:
 
       - name: Run Tic-Tac-Toe Game Logic
         env:
-          # CHANGED: Now uses the Issue Title for the command
+          # Now uses the Issue Title for the command
           MOVE_COMMAND: ${{ github.event.issue.title }} 
-          # CHANGED: Now uses the Issue Author for the actor check
+          # Now uses the Issue Author for the actor check
           GITHUB_ACTOR: ${{ github.event.issue.user.login }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }} 
