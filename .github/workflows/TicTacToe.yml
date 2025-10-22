@@ -1,0 +1,38 @@
+name: Tic-Tac-Toe Game Runner
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  run_ttt_game:
+    runs-on: ubuntu-latest
+    
+    # Check for the TTT command and prevent the bot from triggering itself
+    if: |
+      github.event_name == 'issue_comment' && 
+      contains(github.event.comment.body, 'TicTacToe: ') && 
+      github.actor != 'github-actions[bot]'
+      
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Tic-Tac-Toe Game Logic
+        env:
+          MOVE_COMMAND: ${{ github.event.comment.body }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }} 
+        run: python src/tictactoe.py
+
+      - name: Commit and Push Changes (Update README and State)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Tic-Tac-Toe: new move processed"
+          # COMMIT ALL TTT-RELATED FILES
+          files: README.md data/ttt_state.json data/ttt_moves.txt
