@@ -131,6 +131,66 @@ console.log(`Feel free to contribute`);
 
 ---
 
+## 📂 My Repository Structure & Workflows 📂
+
+```
+├── .github
+    ├── FUNDING.yml
+    └── workflows
+    │   ├── Chess.yml
+    │   ├── breakout.yaml
+    │   ├── main.yml
+    │   └── waka.yml
+├── Black Background.gif
+├── Github Ascii Art Text.png
+├── Github Graph Wavy Art.svg
+├── README.md
+├── White Background.gif
+├── assets
+    ├── bar_graph.png
+    └── breakout.svg
+├── central text.svg
+├── contribution name graph.svg
+├── data
+    ├── last_moves.txt
+    ├── settings.yaml
+    └── top_moves.txt
+├── games
+    └── current.pgn
+├── header.png
+├── img
+    ├── black
+    │   ├── bishop.svg
+    │   ├── king.svg
+    │   ├── knight.svg
+    │   ├── pawn.svg
+    │   ├── queen.svg
+    │   └── rook.svg
+    ├── blank.png
+    └── white
+    │   ├── bishop.svg
+    │   ├── king.svg
+    │   ├── knight.svg
+    │   ├── pawn.svg
+    │   ├── queen.svg
+    │   └── rook.svg
+├── main.py
+├── random dev quote.png
+├── requirements.txt
+├── sponsor badge.jpg
+├── src
+    ├── __pycache__
+    │   ├── markdown.cpython-310.pyc
+    │   ├── mockGithub.cpython-310.pyc
+    │   └── selftest.cpython-310.pyc
+    ├── markdown.py
+    ├── mockGithub.py
+    └── selftest.py
+└── typing.gif
+```
+
+---
+
 <div align="left">
   <h2>🐍 My Contributions 🐍</h2>
   <br>
