@@ -186,6 +186,7 @@ console.log(`Feel free to contribute`);
     ├── markdown.py
     ├── mockGithub.py
     └── selftest.py
+├── techy.PNG
 └── typing.gif
 ```
 
