@@ -324,22 +324,20 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 ---
 
-## ❌⭕ Tic-Tac-Toe Game
+## ❌⭕ Tic-Tac-Toe Status
 
-This is a live, community-driven game of Tic-Tac-Toe. To play, **open a new GitHub Issue** and put your move command in the **Issue Title**.
-
-**Current Status:** **X** to move.
-
-| Action | Command (in Issue Title) | Who Can Use |
-| :--- | :--- | :--- |
-| **Make a Move** | `TicTacToe: <Square>` (e.g., `TicTacToe: B2`) | Any GitHub User |
-| **Reset Game** | `TicTacToe: RESET` | Repository Owner Only |
+**Current Status:** Game is initializing. Please open a new issue with 'TicTacToe: A1' to start.
 
 | | | |
 |:-:|:-:|:-:|
 | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A1"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B1"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C1"><img src='img/empty.svg' width='100px'></a> |
 | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A2"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B2"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C2"><img src='img/empty.svg' width='100px'></a> |
-| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C3"><img src='img/empty.svg' width='100px'></a> |12/madhavagarwal3012/issues/new?title=TicTacToe:%20C3&body=Click%20Submit%20to%20make%20your%20move%20to%20C3"><img src='img/empty.svg' width='100px'></a> |
+| <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20A3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20B3"><img src='img/empty.svg' width='100px'></a> | <a href="https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=TicTacToe:%20C3"><img src='img/empty.svg' width='100px'></a> |
+### 📜 Game History
+
+| Player | Move | Timestamp |
+| :----: | :--: | :--------: |
+| - | - | - |
 
 ---
 
