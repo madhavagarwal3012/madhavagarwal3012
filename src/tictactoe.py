@@ -36,12 +36,10 @@ def get_last_5_moves():
         return []
         
     with open(MOVE_HISTORY_FILE, 'r') as f:
-        # Read all non-empty, non-comment lines
         lines = [line.strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
         
         last_moves = []
         for line in lines[-5:]:
-            # Format: "2025-10-22 22:15:00 - X:B2"
             parts = line.split(' - ')
             move_data = parts[-1].split(':')
             last_moves.append({'player': move_data[0], 'move': move_data[1], 'timestamp': parts[0]})
