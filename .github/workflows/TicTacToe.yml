@@ -8,14 +8,12 @@ jobs:
   run_ttt_game:
     runs-on: ubuntu-latest
     
-    # CRITICAL: This 'if' condition restricts the RESET command to the repository owner (madhavagarwal3012).
+    # This 'if' condition allows standard moves by any user but restricts the RESET command to 'madhavagarwal3012'.
     if: |
       github.event_name == 'issue_comment' && 
       github.actor != 'github-actions[bot]' && 
       (
-        # Allow any user for standard moves (e.g., B2)
         contains(github.event.comment.body, 'TicTacToe: ') && !contains(github.event.comment.body, 'TicTacToe: RESET') ||
-        # Only allow the owner for the RESET command
         (contains(github.event.comment.body, 'TicTacToe: RESET') && github.event.comment.user.login == 'madhavagarwal3012')
       )
       
@@ -31,6 +29,8 @@ jobs:
       - name: Run Tic-Tac-Toe Game Logic
         env:
           MOVE_COMMAND: ${{ github.event.comment.body }}
+          # The GITHUB_ACTOR environment variable is used inside the Python script to check the username
+          GITHUB_ACTOR: ${{ github.event.comment.user.login }} 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }} 
         run: python src/tictactoe.py
