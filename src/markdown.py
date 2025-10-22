@@ -123,6 +123,7 @@ def board_to_markdown(board):
 
         ".": "img/blank.png"
     }
+    # ---------------------------------
 
     # Write header in Markdown format
     if board.turn == chess.BLACK:
@@ -133,8 +134,7 @@ def board_to_markdown(board):
 
     # Get Rows
     rows = range(1, 9)
-    # The 'rank_index' is used to correlate with the 'board_list'
-    rank_indexes = range(0, 8) 
+    rank_indexes = range(0, 8)
     
     if board.turn == chess.BLACK:
         rows = reversed(rows)
@@ -142,7 +142,8 @@ def board_to_markdown(board):
 
     # Write board
     for rank_index, row in zip(rank_indexes, rows):
-        markdown += "| **" + str(9 - row) + "** | "
+        # NOTE: Using inline style for coordinates to match the color aesthetic
+        markdown += "| <span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> | "
         
         columns = board_list[rank_index]
         file_indexes = range(0, 8)
@@ -155,22 +156,26 @@ def board_to_markdown(board):
             # Calculate the chess square index (0 to 63)
             square = file_index + (rank_index * 8)
             
-            # Determine the square color using the chess library
-            is_dark = board.color_at(square) == chess.BLACK
+            # 🎯 FIX 1: Robust Color Check (Based on Square Index Parity)
+            # This correctly determines the square's intrinsic color regardless of its content.
+            is_dark = (square % 2) != (rank_index % 2)
             bg_color = DARK_SQUARE_COLOR if is_dark else LIGHT_SQUARE_COLOR
             
-            # Embed the image within a styled <div> to set the background color of the cell
-            # The style="background-color:..." is applied to the cell content
-            markdown += "<div style=\"background-color:{};\">".format(bg_color)
-            markdown += "<img src=\"{}\" width=50px></div> | ".format(images.get(elem, "???"))
+            # FIX 2: GitHub Styling Hack (Force DIV to cover the whole cell)
+            # This ensures the background color is not overridden by the cell's default white.
+            base_style = "background-color:{};".format(bg_color)
+            full_cell_style = base_style + " display: block; height: 100%; margin: -8px -10px; padding: 8px 10px;"
+            
+            markdown += "<div style=\"{}\">".format(full_cell_style)
+            # NOTE: Use the correct width (218px) for your custom pieces
+            markdown += "<img src=\"{}\" width=218px></div> | ".format(images.get(elem, "???"))
 
-        markdown += "**" + str(9 - row) + "** |\n"
+        markdown += "<span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> |\n"
 
     # Write footer in Markdown format
     if board.turn == chess.BLACK:
-        markdown += "|   | **H** | **G** | **F** | **E** | **D** | **C** | **B** | **A** |   |\n"
+        markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> |   |\n"
     else:
-        markdown += "|   | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** |   |\n"
+        markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
-
