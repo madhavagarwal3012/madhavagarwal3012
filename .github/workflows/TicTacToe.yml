@@ -28,9 +28,7 @@ jobs:
 
       - name: Run Tic-Tac-Toe Game Logic
         env:
-          # Now uses the Issue Title for the command
           MOVE_COMMAND: ${{ github.event.issue.title }} 
-          # Now uses the Issue Author for the actor check
           GITHUB_ACTOR: ${{ github.event.issue.user.login }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }} 
@@ -40,4 +38,19 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🤖 Tic-Tac-Toe: new move processed"
-          files: README.md data/ttt_state.json data/ttt_moves.txt
+          file_pattern: README.md data/ttt_state.json data/ttt_moves.txt
+
+      # ----------------------------------------------------
+      # New Step to Close the Issue
+      # ----------------------------------------------------
+      - name: Close Issue
+        uses: actions/github-script@v7
+        with:
+          # This runs the GitHub API to close the issue that triggered the workflow
+          script: |
+            github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            })
