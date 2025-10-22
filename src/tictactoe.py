@@ -48,15 +48,15 @@ def get_last_5_moves():
 
 # --- 3. Parsing and Game Logic ---
 def get_move_from_command(command):
-    """Converts a move string (A1-C3) into a board index (0-8)."""
+    """Converts a move string (A1-C3) into a board index (0-8) and returns the move string."""
     match = re.search(r'TicTacToe:\s*([A-C][1-3])', command, re.IGNORECASE)
     if match:
         move_str = match.group(1).upper()
         col = ord(move_str[0]) - ord('A')
         row = int(move_str[1]) - 1
         index = row * 3 + col
-        return index if 0 <= index < 9 else None
-    return None
+        return index, move_str if 0 <= index < 9 else (None, None)
+    return None, None
 
 def check_for_winner(board):
     """Checks the 8 winning lines."""
@@ -98,8 +98,16 @@ def process_move(state, index, move_str):
 def board_to_markdown(board, state):
     repo = os.environ.get('GITHUB_REPOSITORY', REPO_OWNER + '/' + REPO_OWNER)
     
+    # Status Header
+    if state['winner'] == "DRAW":
+        status_header = "**GAME OVER! It's a DRAW!**"
+    elif state['winner']:
+        status_header = f"**GAME OVER! Winner: {state['winner']}**"
+    else:
+        status_header = f"**Current Turn: {state['turn']}**"
+        
     # Generate the 3x3 table
-    markdown = "| | | |\n|:-:|:-:|:-:|\n" 
+    markdown_table = "| | | |\n|:-:|:-:|:-:|\n" 
     for i in range(9):
         cell_id = chr(ord('A') + (i % 3)) + str(1 + (i // 3))
         content = board[i]
@@ -118,19 +126,11 @@ def board_to_markdown(board, state):
                           f"&body=Click%20Submit%20to%20make%20your%20move%20to%20{cell_id}")
             cell_markdown = f"<a href='{issue_link}'><img src='{ASSET_PATH}/empty.svg' width='100px'></a>"
         
-        markdown += f"| {cell_markdown} "
+        markdown_table += f"| {cell_markdown} "
         if (i + 1) % 3 == 0:
-            markdown += "|\n"
+            markdown_table += "|\n"
             
-    # Status Header
-    if state['winner'] == "DRAW":
-        status_header = "**GAME OVER! It's a DRAW!**"
-    elif state['winner']:
-        status_header = f"**GAME OVER! Winner: {state['winner']}**"
-    else:
-        status_header = f"**Current Turn: {state['turn']}**"
-
-    final_output = f"{status_header}\n{markdown}"
+    final_output = f"{status_header}\n{markdown_table}"
     
     # Move History Table
     final_output += "\n\n<details>\n  <summary>Last 5 Moves</summary>\n\n| Player | Move | Timestamp |\n| :----: | :--: | :--------: |\n"
@@ -145,13 +145,14 @@ if __name__ == "__main__":
     state = load_game_state()
     
     command = os.environ.get('MOVE_COMMAND', '').strip()
-    comment_username = os.environ.get('GITHUB_ACTOR') # Gets the username from the Action context
+    comment_username = os.environ.get('GITHUB_ACTOR') 
     
     is_reset_command = re.search(r'TicTacToe:\s*RESET', command, re.IGNORECASE)
+    move_index, move_str = get_move_from_command(command)
 
     if is_reset_command:
         if state['winner'] and comment_username == REPO_OWNER:
-            # --- RESET LOGIC: Only runs if game is over AND user is the owner ---
+            # --- RESET LOGIC ---
             state = {"board": [""] * 9, "turn": "X", "winner": None}
             save_game_state(state)
             
@@ -159,6 +160,7 @@ if __name__ == "__main__":
             
             with open(README_FILE, 'r+') as f:
                 content = f.read()
+                # Use the correct marker regex
                 new_content = re.sub(
                     r'.*?',
                     f'\n{markdown_board}\n',
@@ -174,31 +176,26 @@ if __name__ == "__main__":
         else:
             print("Reset command received, but the game is not yet finished. Skipping reset.")
             
-    else:
+    elif move_index is not None:
         # --- NORMAL MOVE LOGIC ---
-        match = re.search(r'TicTacToe:\s*([A-C][1-3])', command, re.IGNORECASE)
-        
-        if match:
-            move_str = match.group(1).upper()
-            move_index = get_move_from_command(command)
+        if process_move(state, move_index, move_str):
+            save_game_state(state)
             
-            if move_index is not None and process_move(state, move_index, move_str):
-                save_game_state(state)
-                
-                markdown_board = board_to_markdown(state['board'], state)
-                
-                with open(README_FILE, 'r+') as f:
-                    content = f.read()
-                    new_content = re.sub(
-                        r'.*?',
-                        f'\n{markdown_board}\n',
-                        content,
-                        flags=re.DOTALL
-                    )
-                    f.seek(0)
-                    f.write(new_content)
-                    f.truncate()
-            else:
-                print("No valid move found or game is over. Skipping update.")
+            markdown_board = board_to_markdown(state['board'], state)
+            
+            with open(README_FILE, 'r+') as f:
+                content = f.read()
+                # Use the correct marker regex
+                new_content = re.sub(
+                    r'.*?',
+                    f'\n{markdown_board}\n',
+                    content,
+                    flags=re.DOTALL
+                )
+                f.seek(0)
+                f.write(new_content)
+                f.truncate()
         else:
-            print("Comment found but does not contain a valid TicTacToe move command. Skipping.")
+            print("Illegal move (square occupied or game over). Skipping update.")
+    else:
+        print("Comment found but does not contain a valid TicTacToe move command. Skipping.")
