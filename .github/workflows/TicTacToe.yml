@@ -8,11 +8,16 @@ jobs:
   run_ttt_game:
     runs-on: ubuntu-latest
     
-    # Check for the TTT command and prevent the bot from triggering itself
+    # CRITICAL: This 'if' condition restricts the RESET command to the repository owner (madhavagarwal3012).
     if: |
       github.event_name == 'issue_comment' && 
-      contains(github.event.comment.body, 'TicTacToe: ') && 
-      github.actor != 'github-actions[bot]'
+      github.actor != 'github-actions[bot]' && 
+      (
+        # Allow any user for standard moves (e.g., B2)
+        contains(github.event.comment.body, 'TicTacToe: ') && !contains(github.event.comment.body, 'TicTacToe: RESET') ||
+        # Only allow the owner for the RESET command
+        (contains(github.event.comment.body, 'TicTacToe: RESET') && github.event.comment.user.login == 'madhavagarwal3012')
+      )
       
     steps:
       - name: Checkout Repository
@@ -34,5 +39,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🤖 Tic-Tac-Toe: new move processed"
-          # COMMIT ALL TTT-RELATED FILES
+          # Commit all TTT-related files
           files: README.md data/ttt_state.json data/ttt_moves.txt
