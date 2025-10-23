@@ -336,7 +336,7 @@ This is an open chess tournament where ANYONE can play. That's the fun part.
 Before making your move, here's a quick refresher on how each piece can move and capture.
 
 | Piece | Image | Movement | Capturing | Key Rule |
-| :---: | :---: | :--- | :--- | :--- |
+| :---: | :---: | :---: | :---: | :---: |
 | **King** | <img src="img/pieces/king.PNG" width="40px"> | Moves **one square** in any direction (horizontal, vertical, or diagonal). | Captures like it moves (1 square in any direction). | **Must never** move into a square where it can be captured (check). |
 | **Queen** | <img src="img/pieces/queen.PNG" width="40px"> | Moves any number of squares **horizontally, vertically, or diagonally**. | Captures on any square along its line of movement. | The most powerful piece on the board. |
 | **Rook (Elephant)** | <img src="img/pieces/rook.PNG" width="40px"> | Moves any number of squares **horizontally** (across files) or **vertically** (up/down ranks). | Captures on any square along its straight line of movement. | Cannot jump over other pieces. |
