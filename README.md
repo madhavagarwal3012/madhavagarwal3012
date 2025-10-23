@@ -330,7 +330,6 @@ Counting of visitors to this page started on <strong>August 28, 2025</strong>
 
 ## ♟️ Chess Game ♟️
 This is an open chess tournament where ANYONE can play. That's the fun part.  
-It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.
 
 ### 🗺️ Guide to Chess Piece Movement
 
@@ -344,6 +343,8 @@ Before making your move, here's a quick refresher on how each piece can move and
 | **Bishop** | <img src="img/pieces/bishop.PNG" width="40px"> | Moves any number of squares **diagonally**. | Captures on any square along its diagonal line of movement. | Stays on its original color square for the entire game. |
 | **Knight (Horse)** | <img src="img/pieces/knight.PNG" width="40px"> | Moves in an **"L" shape** (two squares in one cardinal direction and then one square perpendicular). | Captures only on the square it lands on. | **The only piece that can jump** over other pieces. |
 | **Pawn** | <img src="img/pieces/pawn.PNG" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
+
+**It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.**
 
 <!-- BEGIN CHESS BOARD -->
 |   | H | G | F | E | D | C | B | A |   |
