@@ -116,13 +116,13 @@ console.log(`Feel free to contribute`);
       </a>
     </td>
     </tr>
-  <tr>
+  <!-- <tr>
     <td>
       <a href="https://github.com/madhavagarwal3012/Game-Arena-Board-Verse-GameHub">
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=madhavagarwal3012&repo=Game-Arena-Board-Verse-GameHub&theme=algolia" />
       </a>
     </td>
-  </tr>
+  </tr> -->
 </table>
 
 
