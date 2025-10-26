@@ -144,6 +144,7 @@ console.log(`Feel free to contribute`);
 ├── Black Background.gif
 ├── Github Ascii Art Text.png
 ├── Github Graph Wavy Art.svg
+├── LICENSE.md
 ├── README.md
 ├── White Background.gif
 ├── assets
