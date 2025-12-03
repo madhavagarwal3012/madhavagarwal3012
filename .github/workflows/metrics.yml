@@ -1,51 +1,24 @@
-name: GitHub Metrics
-
-# Allow pushing changes
-permissions:
-  contents: write
-
+name: Metrics
 on:
-  schedule:
-    - cron: "0 * * * *"  # runs every hour
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # Run workflow manually
   workflow_dispatch:
-
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
-      # Step 1: Checkout the repo
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # Step 2: Generate Metrics SVG
-      - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
+          # Your GitHub token
+          # The contents permission is required
           token: ${{ secrets.METRICS_TOKEN }}
-          plugin_calendar: yes
-          plugin_calendar_limit: 0
-          template: default        # keep default template
-          config_display: regular  # keeps "Last updated"
 
-      # Step 3: Remove version footer
-      - name: Remove version footer
-        run: |
-          sed -i '/with lowlighter\/metrics@/d' github-metrics.svg
-
-      # Step 4: Optimize the SVG
-      - name: Optimize SVG
-        run: |
-          npm install -g svgo
-          svgo github-metrics.svg --multipass
-
-      # Step 5: Commit and push changes
-      - name: Commit and push SVG
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: 'github-actions[bot]'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          message: 'Update GitHub metrics SVG'
-          add: 'github-metrics.svg'
-          push: true
-          force: true
+          # Options
+          user: ${{ github.repository_owner }}
+          template: classic
+          config_timezone: Asia/Kolkata # Set your timezone
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
