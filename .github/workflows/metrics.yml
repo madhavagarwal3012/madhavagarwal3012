@@ -1,18 +1,22 @@
-
 name: Metrics
 on:
-  schedule: 
+  schedule:
     - cron: "0 * * * *"  # Update every hour
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push the resulting SVG
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }} # Use GITHUB_TOKEN if you don't have a custom METRICS_TOKEN
 
-          # Calendar plugin
+          config_octicon: yes 
+          config_metadata: no 
+
+          # Calendar plugin (You might need to adjust your token name, GITHUB_TOKEN is recommended for profile repos)
           plugin_calendar: yes
           plugin_calendar_limit: 0
