@@ -1,24 +1,18 @@
+
 name: Metrics
 on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # Run workflow manually
+  schedule: 
+    - cron: "0 * * * *"  # Update every hour
   workflow_dispatch:
+
 jobs:
-  github-metrics:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Your GitHub token
-          # The contents permission is required
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # Options
-          user: ${{ github.repository_owner }}
-          template: classic
-          config_timezone: Asia/Kolkata # Set your timezone
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          # Calendar plugin
+          plugin_calendar: yes
+          plugin_calendar_limit: 0
