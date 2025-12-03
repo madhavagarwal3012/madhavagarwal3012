@@ -14,8 +14,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # Use GITHUB_TOKEN if you don't have a custom METRICS_TOKEN
 
-          config_octicon: yes 
-          config_metadata: no 
+          config_display: minimal 
+          config_octicon: no
 
           # Calendar plugin (You might need to adjust your token name, GITHUB_TOKEN is recommended for profile repos)
           plugin_calendar: yes
