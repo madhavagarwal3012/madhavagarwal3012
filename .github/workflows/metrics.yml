@@ -14,4 +14,4 @@ jobs:
 
           # Calendar plugin
           plugin_calendar: yes
-          plugin_calendar_limit: 1
+          plugin_calendar_limit: 0
