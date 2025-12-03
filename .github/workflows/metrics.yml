@@ -11,7 +11,7 @@ jobs:
       - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          config_omit: metadata
+          base_skip: metadata
           
           # Calendar plugin
           plugin_calendar: yes
