@@ -1,4 +1,4 @@
-name: chess
+name: Chess
 
 on:
   issues:
