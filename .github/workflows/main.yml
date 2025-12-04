@@ -22,6 +22,8 @@ jobs:
       group: 'contribution_graph_update'
       cancel-in-progress: true
 
+    permissions:
+      contents: write # Required for the push action
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
