@@ -12,7 +12,7 @@ on:
       - main
 
 jobs:
-  generate:
+  build:
     concurrency:
       group: 'contribution_graph_update'
       cancel-in-progress: true
