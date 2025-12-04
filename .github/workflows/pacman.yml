@@ -1,0 +1,52 @@
+# This workflow generates the Pac-Man contribution graph SVG
+# and pushes it to the 'output' branch non-destructively.
+name: Generate Pac-Man Game
+
+on:
+  schedule:
+    # Run automatically every 12 hours
+    - cron: "0 */12 * * *"
+  workflow_dispatch: # Allows manual triggering
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    concurrency:
+      group: 'contribution_graph_update'
+      cancel-in-progress: true
+      
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Create 'dist' directory
+        run: mkdir -p dist
+
+      # 1. Generate the Pac-Man file
+      # The action generates the SVGs into its default location, usually ./output/
+      - name: Generate Pac-Man Game SVG
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2. Move the generated files to the target 'dist' folder
+      - name: Move generated files to dist/
+        run: |
+          # Move the default output files into 'dist' for deployment.
+          mv output/pacman-contribution-graph.svg dist/
+          mv output/pacman-contribution-graph-dark.svg dist/
+
+      # 3. PUSH: Commit and push the files to the 'output' branch.
+      - name: Push generated Pac-Man SVG to output branch
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: output
+          file_pattern: 'dist/*'
+          commit_message: "chore: Update Pac-Man contribution graph"
