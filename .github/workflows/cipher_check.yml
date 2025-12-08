@@ -46,12 +46,13 @@ jobs:
           
       - name: Close Issue on Success
         if: success()
-        uses: actions-cool/issue-close@v3 
+        # 💡 FIX: Using the highly reliable peter-evans action instead
+        uses: peter-evans/close-issue@v3 
         with:
           issue-number: ${{ github.event.issue.number }}
-          # 💡 SECURED COMMENT: Now uses the environment variable, 
-          # which contains the secret value but keeps the YAML file clean.
           comment: |
             ✅ **CORRECT!** The secret phrase was: **${{ env.CIPHER_SOLUTION_CLEAN }}**
             
             The GitHub README has been updated to feature you as the winner!
+          # Ensure you use 'closed' state here
+          issue-state: closed
