@@ -1,26 +1,31 @@
 import os
+import pathlib
 
 # --- Configuration (SECURELY READ FROM ENVIRONMENT) ---
-# This value is passed by the GitHub Action from your repository secrets.
 CORRECT_ANSWER = os.environ.get("CIPHER_SOLUTION", "") 
 if not CORRECT_ANSWER:
-    # This prevents the action from running if the secret is missing
     print("Error: CIPHER_SOLUTION environment variable not set in the workflow.")
     exit()
 
-# Get data about the issue that triggered the action
 issue_title = os.environ.get("ISSUE_TITLE", "")
 issue_creator = os.environ.get("ISSUE_AUTHOR", "a fan")
+
+# Define the absolute path to the README file
+# GitHub Actions typically runs from the root of the repository.
+# pathlib ensures cross-platform compatibility.
+REPO_ROOT = pathlib.Path(__file__).parent.parent
+README_PATH = REPO_ROOT / "README.md"
 
 
 # Function to handle README file updates
 def update_readme(winner=None):
     """Reads README, updates the cipher section based on winner, and writes back."""
     try:
-        with open("README.md", "r") as f:
+        # 1. Read the content from the guaranteed location
+        with open(README_PATH, "r") as f:
             content = f.read()
     except FileNotFoundError:
-        print("Error: README.md not found.")
+        print(f"Error: README.md not found at {README_PATH}.")
         return
 
     # Markers MUST exist in your README.md
@@ -28,7 +33,7 @@ def update_readme(winner=None):
     END_MARKER = ""
 
     if START_MARKER not in content or END_MARKER not in content:
-        print("Error: README markers not found. Please add and .")
+        print("Error: README markers not found. Please verify placement.")
         return
 
     start_index = content.find(START_MARKER) + len(START_MARKER)
@@ -47,7 +52,7 @@ The secret phrase was: **{CORRECT_ANSWER}**
         
 """
     else:
-        # Challenge text (if no winner or wrong guess)
+        # Challenge text
         new_content = f"""
         
 ### 🧩 The Cipher:
@@ -66,16 +71,19 @@ Do you have the solution? Be the first to submit the correct answer to be featur
     
     updated_content = content[:start_index] + new_content + content[end_index:]
 
-    with open("README.md", "w") as f:
-        f.write(updated_content)
+    # 2. Write the content back to the guaranteed location
+    try:
+        with open(README_PATH, "w") as f:
+            f.write(updated_content)
+        print(f"Successfully updated README.md at {README_PATH}")
+    except Exception as e:
+        print(f"Error writing to README.md: {e}")
 
 
 # --- Main Verification Logic ---
 def main():
     # 1. Extract the guess from the issue title
     try:
-        # Example title: "Atbash Solution: Message"
-        # We take the part after the colon and convert to uppercase for safe comparison.
         guess = issue_title.split(":")[1].strip().upper()
     except IndexError:
         print("Issue title not in correct format. Skipping.")
