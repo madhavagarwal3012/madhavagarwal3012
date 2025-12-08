@@ -409,6 +409,23 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 ---
 
+## 👑 The Atbash Code Challenge 👑
+
+I've hidden a secret message about one of my key programming languages. Can you reveal it?
+
+### 🧩 The Cipher:
+This is an **Atbash Cipher**. (A ↔ Z, B ↔ Y, C ↔ X, etc.)
+*The solution is a common programming phrase (3 words).*
+
+### 📜 Encoded Message:
+> **QZIZ RH KLDUUEFO**
+
+Do you have the solution? Be the first to submit the correct answer to be featured!
+
+[Submit Your Solution Here!](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Atbash%20Solution:%20[Your%20Decoded%20Phrase]&body=I%20solved%20the%20code!%20My%20answer%20is:%20)
+
+---
+
 ## 🎵 Spotify Vibes 🎧
 <div align="center">
   <!-- Now Playing Widget -->
