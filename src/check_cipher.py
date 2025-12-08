@@ -80,21 +80,38 @@ Do you have the solution? Be the first to submit the correct answer to be featur
         print(f"Error writing to README.md: {e}")
 
 
-# --- Main Verification Logic ---
+# --- Main Verification Logic (Final Diagnostic Version) ---
 def main():
-    # 1. Extract the guess from the issue title
-    try:
-        guess = issue_title.split(":")[1].strip().upper()
-    except IndexError:
-        print("Issue title not in correct format. Skipping.")
+    # 1. Look for the exact starting phrase to isolate the guess part
+    if not issue_title.startswith("Atbash Solution:"):
+        print("Title format is incorrect. Skipping verification.")
         return
 
-    # 2. Compare guess with the secure answer
-    if guess == CORRECT_ANSWER:
-        print(f"✅ Correct answer submitted by {issue_creator}!")
+    # 2. Extract the guess robustly
+    try:
+        guess_raw = issue_title.split(":", 1)[1].strip()
+        guess_clean = re.sub(r'[\s\[\]#\d]+$', '', guess_raw).upper()
+        
+    except IndexError:
+        print("Could not parse guess from issue title.")
+        return
+        
+    print("--- DIAGNOSTIC START ---")
+    print(f"Parsed Guess (Cleaned): '{guess_clean}'")
+    print(f"Expected Answer (Secret): '{CORRECT_ANSWER}'")
+    print(f"Guess is empty: {guess_clean == ''}")
+    print(f"Secret is empty: {CORRECT_ANSWER == ''}")
+    print("--- DIAGNOSTIC END ---")
+
+    # 3. Compare the cleaned guess with the secure answer
+    if guess_clean == CORRECT_ANSWER:
+        print(f"✅ SUCCESS! Correct answer submitted by {issue_creator}!")
         update_readme(winner=issue_creator)
     else:
-        print(f"❌ Incorrect guess: {guess}. No changes to README.")
+        print(f"❌ FAILURE. Incorrect guess: {guess_clean}. No changes to README.")
+        
+if __name__ == "__main__":
+    main()
 
 if __name__ == "__main__":
     main()
