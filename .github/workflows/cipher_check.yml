@@ -1,4 +1,4 @@
-name: cipher challenge bot
+name: Cipher Challenge Bot
 
 on:
   issues:
@@ -6,15 +6,17 @@ on:
 
 jobs:
   solve_cipher:
+    # Only run the job if the issue title starts with our expected format
     if: startsWith(github.event.issue.title, 'Atbash Solution:')
     runs-on: ubuntu-latest
     
-    # Permissions remain the same
+    # Permissions are crucial for committing the README change and closing the issue
     permissions:
       contents: write 
       issues: write   
 
-    # 💡 NEW: Set the secret as an environment variable for the entire job
+    # 💡 FIX: Set the secret as an environment variable for the entire job 
+    # to be used securely in the final comment.
     env:
       CIPHER_SOLUTION_CLEAN: ${{ secrets.CIPHER_SOLUTION }}
 
@@ -27,26 +29,27 @@ jobs:
           python-version: '3.x'
           
       - name: Run Cipher Verification Script
-        # IMPORTANT: Pass the job's env variable into the run step. 
-        # This is where the Python script reads the secret from.
+        # 💡 FIX: Added ID to reference this step's outcome for conditional running
+        id: verification 
+        # Pass the issue data and the SECRET to the Python script
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-          CIPHER_SOLUTION: ${{ secrets.CIPHER_SOLUTION }} # Still needed for Python script
-
-        # Note: The Python script needs the CIPHER_SOLUTION defined locally 
-        # as it is a required part of the script's logic.
+          CIPHER_SOLUTION: ${{ secrets.CIPHER_SOLUTION }} # Passes the secret securely
+        # The Python script must now include 'import re' and use 'exit(1)' on failure
         run: python src/check_cipher.py
         
       - name: Commit and Push Changes
+        # 💡 FIX: Only run if the verification script succeeded (non-zero exit code means failure)
+        if: success() && steps.verification.outcome == 'success'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: '🤖 BOT: Atbash Cipher Solved! Congrats @${{ github.event.issue.user.login }}'
           
       - name: Close Issue on Success
-        if: success()
-        # 💡 FIX: Using the highly reliable peter-evans action instead
+        # 💡 FIX: Only run if the verification script succeeded 
+        if: success() && steps.verification.outcome == 'success'
         uses: peter-evans/close-issue@v3 
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -54,5 +57,5 @@ jobs:
             ✅ **CORRECT!** The secret phrase was: **${{ env.CIPHER_SOLUTION_CLEAN }}**
             
             The GitHub README has been updated to feature you as the winner!
-          # Ensure you use 'closed' state here
-          issue-state: closed
+          # 💡 FIX: 'close-reason' is the correct parameter name for this action
+          close-reason: completed
