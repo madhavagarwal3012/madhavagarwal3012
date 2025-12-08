@@ -238,9 +238,9 @@ console.log(`Feel free to contribute`);
   <!--START_SECTION:waka-->
 **🐱 My GitHub Data** 
 
-> 📦 53.2 kB Used in GitHub's Storage 
+> 📦 55.2 kB Used in GitHub's Storage 
  > 
-> 🏆 1,247 Contributions in the Year 2025
+> 🏆 1,309 Contributions in the Year 2025
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -248,12 +248,48 @@ console.log(`Feel free to contribute`);
  > 
 > 🔑 3 Private Repositories 
  > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                397 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.63 % 
+🌆 Daytime                502 commits         ███░░░░░░░░░░░░░░░░░░░░░░   12.17 % 
+🌃 Evening                1480 commits        █████████░░░░░░░░░░░░░░░░   35.89 % 
+🌙 Night                  1745 commits        ███████████░░░░░░░░░░░░░░   42.31 % 
+```
+📅 **I'm Most Productive on Sunday** 
+
+```text
+Monday                   574 commits         ███░░░░░░░░░░░░░░░░░░░░░░   13.92 % 
+Tuesday                  671 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.27 % 
+Wednesday                356 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   08.63 % 
+Thursday                 422 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.23 % 
+Friday                   697 commits         ████░░░░░░░░░░░░░░░░░░░░░   16.90 % 
+Saturday                 628 commits         ████░░░░░░░░░░░░░░░░░░░░░   15.23 % 
+Sunday                   776 commits         █████░░░░░░░░░░░░░░░░░░░░   18.82 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Kolkata
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+```
+
 **Timeline**
 
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 24/10/2025 18:48:56 UTC
+ Last Updated on 08/12/2025 13:01:35 UTC
 <!--END_SECTION:waka-->
 </div>
 
