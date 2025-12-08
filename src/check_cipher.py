@@ -109,7 +109,9 @@ def main():
         print(f"✅ SUCCESS! Correct answer submitted by {issue_creator}!")
         update_readme(winner=issue_creator)
     else:
-        print(f"❌ FAILURE. Incorrect guess: {guess_clean}. No changes to README.")
+        print(f"❌ FAILURE. Incorrect guess: {guess_clean}. No changes to README. Exiting with error code 1.")
+        # 💡 NEW: Exit with a non-zero code to fail the job
+        exit(1)
         
 if __name__ == "__main__":
     main()
