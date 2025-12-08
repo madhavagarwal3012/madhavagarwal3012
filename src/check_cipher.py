@@ -1,5 +1,6 @@
 import os
 import pathlib
+import re
 
 # --- Configuration (SECURELY READ FROM ENVIRONMENT) ---
 CORRECT_ANSWER = os.environ.get("CIPHER_SOLUTION", "") 
