@@ -321,7 +321,7 @@ No Activity Tracked This Week
 
 <div>
   <img align="left" width="70%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/refs/heads/main/Github%20Graph%20Wavy%20Art.svg" alt="GitHub Graph Wavy Art"/>
-  <img align="right" width="29%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/html-css-js.gif" alt="HTML CSS JS GIF"/>
+  <img align="right" width="25%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/html-css-js.gif" alt="HTML CSS JS GIF"/>
   <img align="right" width="29%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/typing.gif" alt="Typing Person GIF"/>
 </div>
 <div style="clear: both; text-align: center; padding-top: 20px;">
