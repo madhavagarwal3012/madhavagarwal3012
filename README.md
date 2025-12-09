@@ -207,6 +207,7 @@ console.log(`Feel free to contribute`);
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/output/github-contribution-grid-snake.svg" />
   <img alt="breakout game graph" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/breakout.svg"/>
   <img alt="contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=madhavagarwal3012&bg_color=f6f8fa&color=24292e&line=40c463&point=30a14e&area=true&area_color=9be9a8&hide_border=true&hide_title=true" />
+  <img alt="contributions-banner" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/contributions.webp"/>
   <img alt="GitHub Metrics" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/github-metrics.svg" width="100%">
 </div>
 
@@ -424,3 +425,4 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=wave&height=300&color=gradient&section=footer"/>
 <img width=100% src="https://github.com/madhavagarwal3012/madhavagarwal3012/blob/main/techy.PNG" alt = "Techy Image"/>
+<img width=100% src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/coding-life.gif" alt="Coding Life Image"/>
