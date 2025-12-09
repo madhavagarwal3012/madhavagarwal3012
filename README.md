@@ -325,8 +325,11 @@ No Activity Tracked This Week
   <img align="right" width="29%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/typing.gif" alt="Typing Person GIF"/>
 </div>
 <div style="clear: both; text-align: center; padding-top: 20px;">
-  <img width="29%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/code-the-cool-stuff.gif" alt="Code the Cool Stuff GIF"/>
+  <img width="25%" src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/code-the-cool-stuff.gif" alt="Code the Cool Stuff GIF"/>
 </div>
+
+--- 
+
 <img src="https://raw.githubusercontent.com/BrunnerLivio/brunnerlivio/master/images/marquee.svg" width=100% />
 Counting of visitors to this page started on <strong>August 28, 2025</strong>
 
