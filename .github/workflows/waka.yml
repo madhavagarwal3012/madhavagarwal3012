@@ -5,6 +5,10 @@ on:
     # Runs daily at 12:00 AM IST (6:30 PM UTC the previous day)
     - cron: '30 18 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
+  
 jobs:
   update-readme:
     name: Update Readme with Metrics
