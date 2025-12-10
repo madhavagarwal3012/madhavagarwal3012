@@ -1,7 +1,7 @@
 name: Metrics
 on:
   schedule:
-    - cron: "0 * * * *"  # Update every hour
+    - cron: "0 */8 * * *" # Update every 8 hours
   workflow_dispatch:
 
 jobs:
