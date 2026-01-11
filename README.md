@@ -25,7 +25,7 @@
 
 <h2 align="center">🎓 I have finished my class 12th from GD Goenka Public School in 2023, where I spent my entire school life. I have always been an avid and curious learner, participating in various academic and co-curricular activities. I have earned certificates of excellence in Java from Coding Ninja, and certificates of completion in Python and SQL from SoloLearn. I have also aced the LinkedIn skill assessment test in Python. I’m proud of my achievements and thankful for the support of my teachers, mentors, and friends. 🙌</h2>
 
-<h2 align="center">👩‍💻 I’m currently pursuing my undergrad degree from the prestigious Jaypee Institute of Information Technology (JIIT, Noida). Taking my web development skills to the next level and exploring new technologies. Excited to apply my expertise and creativity in building amazing and user-friendly web apps. 💯</h2>
+<h2 align="center">👩‍💻 I’m currently pursuing my Bachelors in Computer Applications from the prestigious Jaypee Institute of Information Technology (JIIT, Noida). Taking my web development skills to the next level and exploring new technologies. Excited to apply my expertise and creativity in building amazing and user-friendly web apps. 💯</h2>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=madhavagarwal3012" alt="madhavagarwal3012" /></a> </p>
 <p align="left"> <a href="https://twitter.com/madhvagrwal3012" target="blank"><img src="https://img.shields.io/twitter/follow/madhvagrwal3012?logo=twitter&style=for-the-badge" alt="madhvagrwal3012" /></a> </p>
