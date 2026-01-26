@@ -449,7 +449,7 @@ _If for some reason the buttons are not clickable, try reloading the page. Somet
 [Take me to the bottom](#bottom)
 
 ---
-## 🎮 Start Game! Your move ✖️, ... \n
+## 🎮 Start Game! Your move ✖️
 <a name="root"></a><br/><br/><br/>
 ### [⬜](#1) [⬜](#2) [⬜](#3)
 ### [⬜](#4) [⬜](#5) [⬜](#6)
