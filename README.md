@@ -388,7 +388,7 @@ Before making your move, here's a quick refresher on how each piece can move and
 
 Having fun? Ask a friend to do the next move!
 
-#### How it works
+#### How it works ?
 
 When you click on a link and submit a new issue with the desired move, a GitHub action is triggered, which in turn runs a small python script that performs the specified movement, updates this README file and commits the changes.
 
