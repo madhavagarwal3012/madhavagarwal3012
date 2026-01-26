@@ -9,16 +9,20 @@ def main():
         return
 
     with open(README_PATH, 'r', encoding='utf-8') as f:
-        content = f.read()
+        full_content = f.read()
 
-    # Find the table rows specifically
-    # This regex looks for 3 columns of data
-    pattern = r'\| (.*?) \| (.*?) \| (.*?) \|'
-    matches = re.findall(pattern, content)
+    # 1. Extract ONLY the Tic Tac Toe section
+    section_match = re.search(r'(.*?)', full_content, re.DOTALL)
+    if not section_match:
+        return
     
-    # We expect 4 matches: 1 header, 1 alignment row, and 3 board rows
-    # We take the last 3 matches as the board
-    board_rows = matches[-3:]
+    game_section = section_match.group(1)
+
+    # 2. Parse the board from that section
+    pattern = r'\| (.*?) \| (.*?) \| (.*?) \|'
+    matches = re.findall(pattern, game_section)
+    board_rows = matches[1:] # Skip the alignment row
+    
     flat_board = []
     for row in board_rows:
         for cell in row:
@@ -26,6 +30,7 @@ def main():
             elif "⭕" in cell: flat_board.append("O")
             else: flat_board.append(" ")
 
+    # 3. Handle Logic
     if "reset" in ISSUE_TITLE:
         flat_board = [" "] * 9
     else:
@@ -33,30 +38,27 @@ def main():
             move_idx = int(ISSUE_TITLE.split('|')[1]) - 1
             if 0 <= move_idx <= 8 and flat_board[move_idx] == " ":
                 flat_board[move_idx] = "X"
-                # Bot move (O)
                 for i in range(9):
                     if flat_board[i] == " ":
                         flat_board[i] = "O"
                         break
-        except:
-            return
+        except: return
 
+    # 4. Rebuild the Table
     def get_cell(i):
         if flat_board[i] == "X": return "❌"
         if flat_board[i] == "O": return "⭕"
-        # Using a fixed width non-breaking space for the empty cell
-        return f"[‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C{i+1})"
+        return f"[ {i+1} ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C{i+1})"
 
     new_table = (
+        f"\n| :---: | :---: | :---: |\n"
         f"| {get_cell(0)} | {get_cell(1)} | {get_cell(2)} |\n"
         f"| {get_cell(3)} | {get_cell(4)} | {get_cell(5)} |\n"
-        f"| {get_cell(6)} | {get_cell(7)} | {get_cell(8)} |"
+        f"| {get_cell(6)} | {get_cell(7)} | {get_cell(8)} |\n"
     )
 
-    # Replace the table in the original content
-    table_pattern = r'\| :---: \| :---: \| :---: \|\n(?:\|.*\|\n?){3}'
-    new_header_and_table = f"| :---: | :---: | :---: |\n{new_table}"
-    updated_content = re.sub(table_pattern, new_header_and_table, content)
+    # 5. Put it back only in its own section
+    updated_content = full_content.replace(game_section, new_table)
 
     with open(README_PATH, 'w', encoding='utf-8') as f:
         f.write(updated_content)
