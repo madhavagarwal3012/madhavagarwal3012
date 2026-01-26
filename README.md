@@ -415,25 +415,6 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 <!-- END TOP MOVES -->
 </details>
 
----
-
-## 🎵 Spotify Vibes 🎧
-<div align="center">
-  <!-- Now Playing Widget -->
-  <h3>Currently Spinning 💿</h3>
-  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&redirect=true" target="_blank">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&bar_color_cover=true" alt="Spotify Current Song Playing Card"/>
-  </a>
-  
-  <!-- Recently Played Widget -->
-  <h3>Recently Played 🎼</h3>
-  <img src="https://spotify-recently-played-readme.vercel.app/api?user=31q27rypvnbypdgwqqzr3unsvyrq&count=10&unique=true">
-</div>
-
-<img width=100% src="https://capsule-render.vercel.app/api?type=wave&height=300&color=gradient&section=footer"/>
-<img width=100% src="https://github.com/madhavagarwal3012/madhavagarwal3012/blob/main/techy.PNG" alt = "Techy Image"/>
-<img width=100% src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/coding-life.gif" alt="Coding Life Image"/>
-
 --- 
 
 ## Tic Tac Toe Game ✖️⭕
@@ -8265,3 +8246,22 @@ _If for some reason the buttons are not clickable, try reloading the page. Somet
 ---
 <a name="bottom"></a>
 [Take me to the top](#top)
+
+---
+
+## 🎵 Spotify Vibes 🎧
+<div align="center">
+  <!-- Now Playing Widget -->
+  <h3>Currently Spinning 💿</h3>
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&redirect=true" target="_blank">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31q27rypvnbypdgwqqzr3unsvyrq&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true&bar_color_cover=true" alt="Spotify Current Song Playing Card"/>
+  </a>
+  
+  <!-- Recently Played Widget -->
+  <h3>Recently Played 🎼</h3>
+  <img src="https://spotify-recently-played-readme.vercel.app/api?user=31q27rypvnbypdgwqqzr3unsvyrq&count=10&unique=true">
+</div>
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=wave&height=300&color=gradient&section=footer"/>
+<img width=100% src="https://github.com/madhavagarwal3012/madhavagarwal3012/blob/main/techy.PNG" alt = "Techy Image"/>
+<img width=100% src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/coding-life.gif" alt="Coding Life Image"/>
