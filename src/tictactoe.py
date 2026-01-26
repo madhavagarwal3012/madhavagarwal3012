@@ -11,12 +11,14 @@ def main():
     with open(README_PATH, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Regex to find the 3x3 grid rows
+    # Find the table rows specifically
+    # This regex looks for 3 columns of data
     pattern = r'\| (.*?) \| (.*?) \| (.*?) \|'
     matches = re.findall(pattern, content)
     
-    # Selecting the game board rows (ignoring header and separator)
-    board_rows = matches[2:5] 
+    # We expect 4 matches: 1 header, 1 alignment row, and 3 board rows
+    # We take the last 3 matches as the board
+    board_rows = matches[-3:]
     flat_board = []
     for row in board_rows:
         for cell in row:
@@ -31,18 +33,19 @@ def main():
             move_idx = int(ISSUE_TITLE.split('|')[1]) - 1
             if 0 <= move_idx <= 8 and flat_board[move_idx] == " ":
                 flat_board[move_idx] = "X"
-                # Simple Bot: Moves to the first available spot
+                # Bot move (O)
                 for i in range(9):
                     if flat_board[i] == " ":
                         flat_board[i] = "O"
                         break
-        except Exception:
+        except:
             return
 
     def get_cell(i):
         if flat_board[i] == "X": return "❌"
         if flat_board[i] == "O": return "⭕"
-        return f"[ ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C{i+1})"
+        # Using a fixed width non-breaking space for the empty cell
+        return f"[‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C{i+1})"
 
     new_table = (
         f"| {get_cell(0)} | {get_cell(1)} | {get_cell(2)} |\n"
@@ -50,10 +53,10 @@ def main():
         f"| {get_cell(6)} | {get_cell(7)} | {get_cell(8)} |"
     )
 
-    table_regex = r'\| :---: \| :---: \| :---: \|\n(?:\|.*\|\n?){3}'
+    # Replace the table in the original content
+    table_pattern = r'\| :---: \| :---: \| :---: \|\n(?:\|.*\|\n?){3}'
     new_header_and_table = f"| :---: | :---: | :---: |\n{new_table}"
-    
-    updated_content = re.sub(table_regex, new_header_and_table, content)
+    updated_content = re.sub(table_pattern, new_header_and_table, content)
 
     with open(README_PATH, 'w', encoding='utf-8') as f:
         f.write(updated_content)
