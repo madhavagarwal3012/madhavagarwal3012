@@ -417,17 +417,6 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 ---
 
-## 🕹️ Tic Tac Toe (Community Edition)
-Click a square to play! I'm playing as **⭕**.
-
-| :---: | :---: | :---: |
-| [ 1 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C1) | [ 2 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C2) | [ 3 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C3) |
-| [ 4 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C4) | [ 5 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C5) | [ 6 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C6) |
-| [ 7 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C7) | [ 8 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C8) | [ 9 ](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C9) |
-[Reset Game](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7Creset)
-
----
-
 ## 🎵 Spotify Vibes 🎧
 <div align="center">
   <!-- Now Playing Widget -->
