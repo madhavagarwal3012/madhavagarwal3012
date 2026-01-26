@@ -417,7 +417,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 --- 
 
-## Tic Tac Toe Game ✖️⭕
+## ⭕✖️ Tic Tac Toe Game ✖️⭕
 <a name="top"></a>
 I challenge you to a game of Tic-Tac-Toe. 
 Give this page a few seconds to load all the emojis and then click the topmost box to start playing.
