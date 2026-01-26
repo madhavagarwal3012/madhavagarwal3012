@@ -421,11 +421,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 Click a square to play! I'm playing as **⭕**.
 
 | :---: | :---: | :---: |
-| [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C1) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C2) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C3) |
-| [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C4) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C5) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C6) |
-| [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C7) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C8) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C9) |
-
-[Reset Game](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7Creset)
+| [探索](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C1) | [探索](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C2) | [探索](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C3) |
 
 ---
 
