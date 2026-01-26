@@ -1,33 +1,42 @@
 name: Tic Tac Toe
+
 on:
   issues:
     types: [opened]
 
 jobs:
-  play:
-    if: startsWith(github.event.issue.title, 'ttb|')
-    runs-on: ubuntu-latest
+  move:
     permissions:
-      contents: write
       issues: write
+      contents: write
+    runs-on: ubuntu-latest
+    # Only run if the issue title starts with 'ttb|'
+    if: startsWith(github.event.issue.title, 'ttb|')
+
     steps:
       - uses: actions/checkout@v3
-      - setup-python: 
+
+      - name: Setting up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-      - name: Run Logic
-        run: python src/tictactoe.py
+          python-version: "3.10"
+          architecture: "x64"
+
+      - name: Play Tic Tac Toe
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
-      - name: Commit
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # If you have no dependencies, you can skip pip install
+          python src/tictactoe.py
+
+      - name: Commit and push changes
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Move played via issue" || exit 0
+          git add .
+          git commit -m "${ISSUE_TITLE} by ${ISSUE_AUTHOR}"
           git push
-      - name: Close Issue
-        run: gh issue close ${{ github.event.issue.number }} --comment "Move recorded!"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
