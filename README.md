@@ -347,10 +347,9 @@ Before making your move, here's a quick refresher on how each piece can move and
 
 | Piece | Image | Movement | Capturing | Key Rule |
 | :---: | :---: | :---: | :---: | :---: |
-| ⭕ | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C2) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C3) |
+| ⭕ | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C2) | ❌ |
 | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C4) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C5) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C6) |
-| [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C7) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C8) | ❌ || **Pawn** | <img src="img/pieces/pawn.PNG" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
-
+| [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C7) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C8) | [‎ ‎ ‎](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=ttb%7C9) |
 **It's your turn to play! Move a <!-- BEGIN TURN -->black<!-- END TURN --> piece.**
 
 <!-- BEGIN CHESS BOARD -->
