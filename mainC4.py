@@ -117,7 +117,9 @@ def main(issue, issue_author, repo_owner):
     current_turn = Conn.whosturn()[0]
     t_name = "Red" if current_turn == 1 else "Blue"
     t_color = "red" if current_turn == 1 else "blue"
-    turn_badge = f"![](https://img.shields.io/badge/Current%20Turn-{t_name}-{t_color}?style=for-the-badge)"
+
+    t_emoji = "🔴" if t_color == "red" else "🔵"
+    turn_badge = f"## {t_emoji} {t_name} Heart's Turn"
 
     data_map = {
         '{board_placeholder}': markdown.board_to_markdown(Conn),
