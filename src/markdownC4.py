@@ -11,10 +11,22 @@ def create_link(text, link):
 
 
 def create_issue_link(source):
-    base_url = settings['issues']['link'].format(repo=os.environ["GITHUB_REPOSITORY"], params="")
-    # Build params separately to handle the source injection safely
-    params = urlencode(settings['issues']['move']).replace("{source}", str(source))
-    return f" [{source}]({base_url.split('?')[0]}?{params}) |"
+    """Creates a link that opens a new issue with the move command"""
+    repo = os.environ.get("GITHUB_REPOSITORY", "madhavagarwal3012/madhavagarwal3012")
+    base_url = f"https://github.com/{repo}/issues/new"
+    
+    # 1. Get the raw title and body from your settings file
+    raw_title = settings['issues']['move']['title']
+    raw_body = settings['issues']['move']['body']
+    
+    # 2. MANUALLY replace {source} with the actual move number (e.g., 1, 2, 3)
+    clean_title = raw_title.replace("{source}", str(source))
+    clean_body = raw_body.replace("{source}", str(source))
+    
+    # 3. Encode them for the URL
+    params = urlencode({'title': clean_title, 'body': clean_body})
+    
+    return f" [{source}]({base_url}?{params}) |"
     
 def generate_top_moves():
     try:
