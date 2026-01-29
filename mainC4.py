@@ -118,8 +118,7 @@ def main(issue, issue_author, repo_owner):
     t_name = "Red" if current_turn == 1 else "Blue"
     t_color = "red" if current_turn == 1 else "blue"
 
-    t_emoji = "🔴" if t_color == "red" else "🔵"
-    turn_badge = f"## {t_emoji} {t_name} Heart's Turn"
+    turn_badge = f"![Turn](https://img.shields.io/badge/Current%20Heart's%20Color-{t_name}-{t_color}?style=for-the-badge)"
 
     data_map = {
         '{board_placeholder}': markdown.board_to_markdown(Conn),
@@ -132,7 +131,7 @@ def main(issue, issue_author, repo_owner):
     # Replace sections with placeholders
     readme = replace_text_between(readme, settings['markers']['board'], '{board_placeholder}')
     readme = replace_text_between(readme, settings['markers']['moves'], '{moves_placeholder}')
-    readme = replace_text_between(readme, settings['markers']['turn'], '{turn_placeholder}')
+    readme = replace_text_between(readme, settings['markers']['turn'], f"\n{turn_badge}\n")
     readme = replace_text_between(readme, settings['markers']['last_moves'], '{last_moves_placeholder}')
     readme = replace_text_between(readme, settings['markers']['top_moves'], '{top_moves_placeholder}')
 
