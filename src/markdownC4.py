@@ -104,7 +104,11 @@ def board_to_markdown(board):
             markdown += create_issue_link(i)
         else:
             markdown += f" {i} (Full) |"
-    markdown += " |\n"
+    markdown += " |\n\n"
+
+    current_turn = board.whosturn()[0]
+    t_name = "Red" if current_turn == 1 else "Blue"
+    markdown += f"## 🚩 Current Heart Color: {t_name}\n"
 
     return markdown
 
