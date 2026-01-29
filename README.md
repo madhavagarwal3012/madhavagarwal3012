@@ -418,7 +418,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 ## ❤️ Connect4 Game: Hearts Edition 💙
 > This is an open tournament where ANYONE can play! The rules are simple, but the strategy is deep.
 
-| Piece Type | Movement & Placement | Winning Pattern |
+| Heart | Movement & Placement | Winning Pattern |
 | :---: | :--- | :--- |
 | <img src="img/hearts/red.png" width="50px"><br>**Red Team** | **Gravity Rule:** Click a column number (1-7). Your heart drops to the lowest empty spot. | **Connect Four:** Align 4 hearts in a row—Horizontal, Vertical, or Diagonal. |
 | <img src="img/hearts/blue.png" width="50px"><br>**Blue Team** | **Turn-Based:** You must wait for the opponent to move. Check the "Current Status" badge! | **Win Patterns:**<br>↔️ `❤️ ❤️ ❤️ ❤️`<br>↕️ `Vertical Stack`<br>↗️ `Diagonal Line` |
