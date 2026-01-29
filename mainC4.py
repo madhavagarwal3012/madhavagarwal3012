@@ -109,37 +109,34 @@ def main(issue, issue_author, repo_owner):
         issue.edit(state='closed', labels=['Invalid'])
         return False, 'ERROR: Unknown action'
 
+    # --- README UPDATE LOGIC ---
     with open('README.md', 'r') as file:
         readme = file.read()
 
-    # Logic to determine turn text with emojis
+    # Dynamic Turn Badge Logic
     current_turn = Conn.whosturn()[0]
-    # Set the color name and the hex code for the badge
-    turn_name = "Red" if current_turn == 1 else "Blue"
-    badge_color = "red" if current_turn == 1 else "blue"
-    
-    # Create the full badge markdown string
-    turn_badge = f"![](https://img.shields.io/badge/Current%20Turn-{turn_name}-{badge_color}?style=for-the-badge)"
-    
-    # Define Data Map for replacement
+    t_name = "Red" if current_turn == 1 else "Blue"
+    t_color = "red" if current_turn == 1 else "blue"
+    turn_badge = f"![](https://img.shields.io/badge/Current%20Turn-{t_name}-{t_color}?style=for-the-badge)"
+
     data_map = {
-        '{chess_board}': markdown.board_to_markdown(Conn),
-        '{moves_list}': markdown.generate_moves_list(Conn),
-        '{turn}': turn_badge,
-        '{last_moves}': markdown.generate_last_moves(),
-        '{top_moves}': markdown.generate_top_moves()
+        '{board_placeholder}': markdown.board_to_markdown(Conn),
+        '{moves_placeholder}': markdown.generate_moves_list(Conn),
+        '{turn_placeholder}': turn_badge,
+        '{last_moves_placeholder}': markdown.generate_last_moves(),
+        '{top_moves_placeholder}': markdown.generate_top_moves()
     }
 
-    # Replace markers with placeholders, then inject actual data
-    for key in ['board', 'moves', 'turn', 'last_moves', 'top_moves']:
-        readme = replace_text_between(readme, settings['markers'][key], f"{{{key}_placeholder}}")
-    
-    # Safe replacement without .format()
-    readme = readme.replace('{board_placeholder}', data_map['{chess_board}'])
-    readme = readme.replace('{moves_placeholder}', data_map['{moves_list}'])
-    readme = readme.replace('{turn_placeholder}', data_map['{turn}'])
-    readme = readme.replace('{last_moves_placeholder}', data_map['{last_moves}'])
-    readme = readme.replace('{top_moves_placeholder}', data_map['{top_moves}'])
+    # Replace sections with placeholders
+    readme = replace_text_between(readme, settings['markers']['board'], '{board_placeholder}')
+    readme = replace_text_between(readme, settings['markers']['moves'], '{moves_placeholder}')
+    readme = replace_text_between(readme, settings['markers']['turn'], '{turn_placeholder}')
+    readme = replace_text_between(readme, settings['markers']['last_moves'], '{last_moves_placeholder}')
+    readme = replace_text_between(readme, settings['markers']['top_moves'], '{top_moves_placeholder}')
+
+    # Final safe injection
+    for placeholder, value in data_map.items():
+        readme = readme.replace(placeholder, str(value))
 
     with open('README.md', 'w') as file:
         file.write(readme)
