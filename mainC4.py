@@ -152,8 +152,8 @@ if __name__ == '__main__':
         if not ret: sys.exit(reason)
     except Exception:
         traceback.print_exc()
-        with open('data/settingsC4.yml', 'r') as f: settings = yaml.safe_load(f)
-        wf = "./.github/workflows/Connect4.yml"
-        if os.path.exists(wf): os.rename(wf, wf + ".bak")
+        with open('data/settingsC4.yml', 'r') as f: 
+            settings = yaml.safe_load(f)
+        # Simply log the error and comment on the issue without touching the workflow file
         issue.create_comment(settings['comments']['big_error'].format(author=issue_author, repo_owner=repo_owner))
         issue.edit(labels=['bug'])
