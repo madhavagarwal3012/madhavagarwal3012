@@ -417,6 +417,34 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 --- 
 
+### 🔵 Connect4 Game 🔴
+This is an open connect4 tournament where ANYONE can play. That's the fun part.  
+
+<!-- BEGIN CONNECT4 BOARD -->
+<!-- END CONNECT4 BOARD -->
+
+**It's your turn to move! Choose one from the following table**
+<!-- BEGIN MOVES LIST -->
+<!-- END MOVES LIST -->
+
+#### How it works ?
+
+When you click on a link and submit a new issue with the desired move, a GitHub action is triggered, which in turn runs a small python script that performs the specified movement, updates this README file and commits the changes.
+
+<details>
+  <summary>Last 5 moves in this game</summary>
+<!-- BEGIN LAST MOVES -->
+<!-- END LAST MOVES -->
+</details>
+
+<details>
+  <summary>Top 10 most moves across all games</summary>
+<!-- BEGIN TOP MOVES -->
+<!-- END TOP MOVES -->
+</details>
+
+---
+
 ## ⭕✖️ Tic Tac Toe Game ✖️⭕
 <a name="top"></a>
 I challenge you to a game of Tic-Tac-Toe. 
