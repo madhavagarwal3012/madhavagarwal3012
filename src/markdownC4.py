@@ -79,13 +79,10 @@ def get_image_link(piece):
     return imgs.get(piece, 'img/blank.png')
 
 def board_to_markdown(board):
-    current_turn = board.whosturn()[0]
-    turn_name = "Red" if current_turn == 1 else "Blue"
     grid = board.grid
     markdown = ""
 
     # Header showing column numbers
-    markdown += f"#### 🚩 Current Heart Color: {turn_name1}\n\n"
     markdown += "|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
 
