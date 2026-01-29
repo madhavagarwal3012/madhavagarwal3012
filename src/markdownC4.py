@@ -63,7 +63,7 @@ def board_to_list(board):
 
 def get_image_link(piece):
     # Standard: 0=Blank, 1=Red, 2=Blue
-    imgs = {0: 'img/blank.png', 1: 'img/circles/red.png', 2: 'img/circles/blue.png'}
+    imgs = {0: 'img/blankC4.png', 1: 'img/circles/red.png', 2: 'img/circles/blue.png'}
     return imgs.get(piece, 'img/blank.png')
 
 def board_to_markdown(board):
