@@ -112,11 +112,19 @@ def main(issue, issue_author, repo_owner):
     with open('README.md', 'r') as file:
         readme = file.read()
 
+    # Logic to determine turn text with emojis
+    current_turn = Conn.whosturn()[0]
+    turn_text = "🔴 Red" if current_turn == 1 else "🔵 Blue"
+    if current_turn == 2: # In your engine, turn 2 is often the second player
+         turn_text = "🔵 Blue"
+    else:
+         turn_text = "🔴 Red"
+
     # Define Data Map for replacement
     data_map = {
         '{chess_board}': markdown.board_to_markdown(Conn),
         '{moves_list}': markdown.generate_moves_list(Conn),
-        '{turn}': ('red' if Conn.whosturn()[0] == RED else 'blue'),
+        '{turn}': turn_text,
         '{last_moves}': markdown.generate_last_moves(),
         '{top_moves}': markdown.generate_top_moves()
     }
