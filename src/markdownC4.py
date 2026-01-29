@@ -107,8 +107,9 @@ def board_to_markdown(board):
     markdown += " |\n\n"
 
     current_turn = board.whosturn()[0]
+    t_color = "🔴" if current_turn == 1 else "🔵"
     t_name = "Red" if current_turn == 1 else "Blue"
-    markdown += f"## 🚩 Current Heart Color: {t_name}\n"
+    markdown += f"#### 🚩 Current Heart's Color: {t_name}{t_color}\n"
 
     return markdown
 
