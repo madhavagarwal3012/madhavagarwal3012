@@ -53,17 +53,17 @@ markers:
     begin: "<!-- BEGIN CONNECT4 BOARD -->\n"
     end: "<!-- END CONNECT4 BOARD -->\n"
   last_moves:
-    begin: "<!-- BEGIN LAST MOVES -->\n"
-    end: "<!-- END LAST MOVES -->\n"
+    begin: "<!-- BEGIN LAST MOVES C4 -->\n"
+    end: "<!-- END LAST MOVES C4 -->\n"
   moves:
-    begin: "<!-- BEGIN MOVES LIST -->\n"
-    end: "<!-- END MOVES LIST -->\n"
+    begin: "<!-- BEGIN MOVES LIST C4 -->\n"
+    end: "<!-- END MOVES LIST C4 -->\n"
   top_moves:
-    begin: "<!-- BEGIN TOP MOVES -->\n"
-    end: "<!-- END TOP MOVES -->\n"
+    begin: "<!-- BEGIN TOP MOVES C4 -->\n"
+    end: "<!-- END TOP MOVES C4 -->\n"
   turn:
-    begin: "<!-- BEGIN TURN -->"
-    end: "<!-- END TURN -->"
+    begin: "<!-- BEGIN TURN C4 -->"
+    end: "<!-- END TURN C4 -->"
 
 misc:
   # Maximum number of last moves displayed
