@@ -9,7 +9,7 @@ from datetime import datetime
 from connect4 import connect4
 import yaml
 from github import Github
-import src.markdown as markdown
+import src.markdownC4 as markdown
 
 RED = 1
 BLUE = 2
