@@ -114,17 +114,18 @@ def main(issue, issue_author, repo_owner):
 
     # Logic to determine turn text with emojis
     current_turn = Conn.whosturn()[0]
-    turn_text = "🔴 Red" if current_turn == 1 else "🔵 Blue"
-    if current_turn == 2: # In your engine, turn 2 is often the second player
-         turn_text = "🔵 Blue"
-    else:
-         turn_text = "🔴 Red"
-
+    # Set the color name and the hex code for the badge
+    turn_name = "Red" if current_turn == 1 else "Blue"
+    badge_color = "red" if current_turn == 1 else "blue"
+    
+    # Create the full badge markdown string
+    turn_badge = f"![](https://img.shields.io/badge/Current%20Turn-{turn_name}-{badge_color}?style=for-the-badge)"
+    
     # Define Data Map for replacement
     data_map = {
         '{chess_board}': markdown.board_to_markdown(Conn),
         '{moves_list}': markdown.generate_moves_list(Conn),
-        '{turn}': turn_text,
+        '{turn}': turn_badge,
         '{last_moves}': markdown.generate_last_moves(),
         '{top_moves}': markdown.generate_top_moves()
     }
