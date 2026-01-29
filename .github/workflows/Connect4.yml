@@ -1,0 +1,48 @@
+name: Connect4
+
+on:
+  issues:
+    types: [opened]
+
+# Add explicit permissions to allow the bot to comment and push code
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  move:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.issue.title, 'Connect4:')
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # Updated to v4
+
+      - name: Setting up Python
+        uses: actions/setup-python@v5 # Updated to v5
+        with:
+          python-version: "3.10" # Modern Python
+          architecture: "x64"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Play connect4
+        env:
+          # Pass secrets directly here instead of echoing them into $GITHUB_ENV
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPOSITORY_OWNER: ${{ github.repository_owner }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python main.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          # Check if there are changes to avoid error on empty commits
+          git diff-index --quiet HEAD || git commit -m "${{ github.event.issue.title }} by ${{ github.event.issue.user.login }}"
+          git push
