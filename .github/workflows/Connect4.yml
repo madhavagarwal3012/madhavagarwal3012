@@ -36,7 +36,7 @@ jobs:
           REPOSITORY_OWNER: ${{ github.repository_owner }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
-          python main.py
+          python mainC4.py
 
       - name: Commit and push changes
         run: |
