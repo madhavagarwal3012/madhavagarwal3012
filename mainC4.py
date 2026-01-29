@@ -49,7 +49,8 @@ def parse_issue(title):
     if title.lower() == 'connect4: start new game':
         return Action.NEW_GAME, None
     if 'connect4: put' in title.lower():
-        match_obj = re.match(r'Connect4: Put ([1-7])', title, re.I) # 1-7 is standard
+        # This regex looks for 'Connect4: Put' followed by a number 1-7
+        match_obj = re.match(r'Connect4: Put ([1-7])', title, re.I)
         if match_obj:
             return Action.MOVE, int(match_obj.group(1))
     return Action.UNKNOWN, title
