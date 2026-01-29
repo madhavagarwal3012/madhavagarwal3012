@@ -1,86 +1,51 @@
-from collections import defaultdict
-from urllib.parse import urlencode
 import os
-import re
-import ast
-
 import yaml
+import ast
+from urllib.parse import urlencode
 
-with open('data/settingsC4.yaml', 'r') as settings_file:
-    settings = yaml.load(settings_file, Loader=yaml.FullLoader)
-
+with open('data/settingsC4.yml', 'r') as f:
+    settings = yaml.safe_load(f)
 
 def create_link(text, link):
-    return " [" + str(text) + "](" + link + ") |"
+    return f" [{text}]({link}) |"
 
 
 def create_issue_link(source):
-    issue_link = settings['issues']['link'].format(
-        repo=os.environ["GITHUB_REPOSITORY"],
-        params=urlencode(settings['issues']['move'], safe="{}"))
-
+    base_url = settings['issues']['link'].format(repo=os.environ["GITHUB_REPOSITORY"], params="")
+    # Build params separately to handle the source injection safely
+    params = urlencode(settings['issues']['move']).replace("{source}", str(source))
+    return f" [{source}]({base_url.split('?')[0]}?{params}) |"
     
-    return create_link(source, issue_link.format(source=source))
-    
-
-
 def generate_top_moves():
-    with open("data/top_movesC4.txt", 'r') as file:
-        contents = file.read()
-        dictionary = ast.literal_eval(contents)
-
-    markdown = "\n"
-    markdown += "| Total moves |  User  |\n"
-    markdown += "| :---------: | :----- |\n"
-
-    counter = 0
-    for key,val in sorted(dictionary.items(), key=lambda x: x[1], reverse=True):
-        if counter >= settings['misc']['max_top_moves']:
-            break
-
-        counter += 1
-        markdown += "| " + str(val) + " | " + create_link(key, "https://github.com/" + key[1:]) + " |\n"
-
-    return markdown + "\n"
+    try:
+        with open("data/top_movesC4.txt", 'r') as f:
+            dictionary = ast.literal_eval(f.read())
+    except: dictionary = {}
+    
+    md = "\n| Total moves | User |\n| :---: | :--- |\n"
+    for user, val in sorted(dictionary.items(), key=lambda x: x[1], reverse=True)[:settings['misc']['max_top_moves']]:
+        md += f"| {val} | {create_link(user, 'https://github.com/' + user[1:])} \n"
+    return md
 
 
 def generate_last_moves():
-    markdown = "\n"
-    markdown += "| Move | Author |\n"
-    markdown += "| :--: | :----- |\n"
-
-    counter = 0
-
-    with open("data/last_movesC4.txt", 'r') as file:
-        for line in file.readlines():
-            parts = line.rstrip().split(':')
-
-            if not ":" in line:
-                continue
-
-            if counter >= settings['misc']['max_last_moves']:
-                break
-
-            counter += 1
-
-            markdown += "| `" + parts[0] + "` | " + create_link(parts[1], "https://github.com/" + parts[1].lstrip()[1:]) + " |\n"
-
-    return markdown + "\n"
+    md = "\n| Move | Author |\n| :---: | :--- |\n"
+    try:
+        with open("data/last_movesC4.txt", 'r') as f:
+            lines = f.readlines()[:settings['misc']['max_last_moves']]
+        for line in lines:
+            if ":" in line:
+                move, user = line.strip().split(":", 1)
+                md += f"| `{move}` | {create_link(user.strip(), 'https://github.com/' + user.strip()[1:])} \n"
+    except: pass
+    return md
 
 
 def generate_moves_list(board):
-    # return ''
-    # Create dictionary and fill it
-    # Write everything in Markdown format
-    markdown = ""
-    issue_link = settings['issues']['link'].format(
-        repo=os.environ["GITHUB_REPOSITORY"],
-        params=urlencode(settings['issues']['new_game']))
-
-    if board.is_game_over():
-        return "**GAME IS OVER!** " + create_link("Click here", issue_link) + " to start a new game :D\n"
-    else:
-        return ''
+    if board.has_space_left() and not os.path.exists("games/currentC4.p"):
+        url = settings['issues']['link'].format(repo=os.environ["GITHUB_REPOSITORY"], params=urlencode(settings['issues']['new_game']))
+        return f"**GAME OVER!** [Click here to start new game]({url})\n"
+    return ""
 
 
 def board_to_list(board):
@@ -97,36 +62,37 @@ def board_to_list(board):
 
 
 def get_image_link(piece):
-    switcher = ['img/blank.png', 'img/circles/red.png','img/circles/blue.png']
-
-    return switcher[piece]
-
+    # Standard: 0=Blank, 1=Red, 2=Blue
+    imgs = {0: 'img/blank.png', 1: 'img/circles/red.png', 2: 'img/circles/blue.png'}
+    return imgs.get(piece, 'img/blank.png')
 
 def board_to_markdown(board):
     grid = board.grid
     markdown = ""
 
-    # Write header in Markdown format
+    # Header showing column numbers
     markdown += "|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
 
-    # Write board
-    for row in reversed(grid):
-        markdown += "|---|"
+    # Write board - DO NOT use reversed() if row 0 is the top
+    for row in grid:
+        markdown += "|   |" # Changed from |---| for cleaner look
         for elem in row:
+            # You can use images OR emojis. Emojis are more reliable:
+            # switcher = ["⚪", "🔴", "🔵"]
+            # markdown += f" {switcher[elem]} | "
             markdown += "<img src=\"{}\" width=50px> | ".format(get_image_link(elem))
+        markdown += "   |\n"
 
-        markdown += "|---|\n"
-
-    # Write footer in Markdown format
+    # Footer with Move Buttons
     moves = board.valid_moves()
-    markdown += "|   |"
-    for i in range(7):
-        if (i+1) in moves:
-            markdown += create_issue_link(i+1)
+    markdown += "| **MOVE** |" # Added label for clarity
+    for i in range(1, 8): # 1 through 7
+        if i in moves:
+            markdown += create_issue_link(i)
         else:
-            markdown += f" {i+1} |"
-    markdown += "   |\n"
+            markdown += f" {i} (Full) |"
+    markdown += " |\n"
 
     return markdown
 
