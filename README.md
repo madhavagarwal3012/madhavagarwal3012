@@ -354,8 +354,6 @@ Before making your move, here's a quick refresher on how each piece can move and
 | **Knight (Horse)** | <img src="img/pieces/knight.PNG" width="40px"> | Moves in an **"L" shape** (two squares in one cardinal direction and then one square perpendicular). | Captures only on the square it lands on. | **The only piece that can jump** over other pieces. |
 | **Pawn** | <img src="img/pieces/pawn.PNG" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
 
-**It's your turn to play! Move a <!-- BEGIN TURN -->![](https://img.shields.io/badge/Current%20Turn-Red-red?style=for-the-badge)<!-- END TURN --> piece.**
-
 <!-- BEGIN CHESS BOARD -->
 |   | H | G | F | E | D | C | B | A |   |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -418,7 +416,7 @@ This is an open connect4 tournament where ANYONE can play. That's the fun part.
 | **MOVE** | [1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+1&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [2](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+2&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [3](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [6](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [7](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | |
 <!-- END CONNECT4 BOARD -->
 
-#### 🚩 Current Heart Color: {turn}```
+#### 🚩 Current Heart Color: {turn}
 **It's your turn to move! Choose one from the following table**
 <!-- BEGIN MOVES LIST -->
 
