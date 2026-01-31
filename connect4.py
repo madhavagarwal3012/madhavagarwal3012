@@ -40,11 +40,21 @@ class connect4:
             pickle.dump(data, f)
 
     def wongame(self):
-        filename = "games/" + datetime.now().strftime("%m_%d_%Y-%H_%M_%S") + ".p"
-        with open(filename, "wb") as f:
-            pickle.dump({'grid': self.grid, 'plays': self.whosTurn, 
-                        'player': self.player, 'rounds': self.rounds}, f)
-        os.remove("games/currentC4.p")
+        # Instead of a timestamped filename, use a fixed name for the history
+        history_file = "games/last_gameC4.p"
+        
+        # Save the final state to the history file
+        with open(history_file, "wb") as f:
+            pickle.dump({
+                'grid': self.grid, 
+                'plays': self.whosTurn, 
+                'player': self.player, 
+                'rounds': self.rounds
+            }, f)
+            
+        # Delete the active game file
+        if os.path.exists("games/currentC4.p"):
+            os.remove("games/currentC4.p")
     
 
     def create_newgame(self):
@@ -150,3 +160,4 @@ if __name__ == '__main__':
     Conn.grid[4][2] = 1
 
     Conn.grid[5][3] = 1
+
