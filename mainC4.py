@@ -80,6 +80,14 @@ def main(issue, issue_author, repo_owner):
 
         Valid_Moves = Conn.valid_moves()
         move = action[1]
+
+        # Check if player is moving twice in a row
+        if last_player == issue_author and 'Start game' not in last_move:
+            issue.create_comment(settings['comments']['consecutive_moves'].format(author=issue_author))
+            issue.edit(state='closed', labels=['Invalid'])
+            return False, 'ERROR: Two moves in a row!'
+            
+        # Check if move is valid    
         if move not in Valid_Moves:
             issue.create_comment(settings['comments']['invalid_move'].format(author=issue_author, move=move))
             issue.edit(state='closed', labels=['Invalid'])
