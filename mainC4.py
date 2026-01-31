@@ -97,25 +97,30 @@ def main(issue, issue_author, repo_owner):
             issue.edit(state='closed', labels=['Invalid'])
             return False, f'ERROR: Move "{move}" is invalid!'
 
-        plays, valid_moves, finished = Conn.move(move, issue_author)
-        # Check turn after move to label next player
-        plays_now = Conn.whosturn()[0]
-        issue_labels = ['Red Heart'] if plays_now == 2 else ['Blue Heart']
-        issue.edit(labels=issue_labels)
+        plays, _, finished = Conn.move(move, issue_author)
 
         if finished == 1:
-            won = 'Red Heart won' if plays_now == 2 else 'Blue Heart won'
-            issue.create_comment(settings['comments']['game_over'].format(outcome=won, num_moves=Conn.rounds, num_players=len(Conn.player), players=Conn.player))
-            issue.edit(state='closed', labels=['Winner'])
-
+            winner_team = "Red Heart" if plays == 1 else "Blue Heart"
+            issue.create_comment(settings['comments']['game_over'].format(
+                outcome=winner_team + " won", 
+                num_moves=Conn.rounds, 
+                num_players=len(Conn.player), 
+                players=Conn.player
+            ))
+            issue.edit(state='closed', labels=['Winner', winner_team])
         elif finished == 2:
-            issue.create_comment(settings['comments']['game_over'].format(num_moves=Conn.rounds, num_players=len(Conn.player), players=Conn.player))
-            
-            # Same here: Single edit call for the draw
-            issue.edit(state='closed', labels=['Draw', 'Blue Heart', 'Red Heart'])
+            issue.create_comment(settings['comments']['game_over'].format(
+                outcome="Draw", 
+                num_moves=Conn.rounds, 
+                num_players=len(Conn.player), 
+                players=Conn.player
+            ))
+            issue.edit(state='closed', labels=['Draw', 'Red Heart', 'Blue Heart'])
         else:
+            # Normal move: plays is the NEXT player
+            next_label = "Red Heart" if plays == 1 else "Blue Heart"
             issue.create_comment(settings['comments']['successful_move'].format(author=issue_author, move=move))
-            issue.edit(state='closed', labels=issue_labels)
+            issue.edit(labels=[next_label])
 
         update_last_moves(f"{move}: {issue_author}")
         update_top_moves(issue_author)
