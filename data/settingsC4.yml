@@ -64,6 +64,9 @@ markers:
   turn:
     begin: "<!-- BEGIN TURN C4 -->"
     end: "<!-- END TURN C4 -->"
+  win_stats:
+    begin: "<!-- BEGIN WIN STATS TABLE C4 -->"
+    end: "<!-- END WIN STATS TABLE C4 -->"
 
 misc:
   # Maximum number of last moves displayed
