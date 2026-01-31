@@ -125,7 +125,7 @@ def main(issue, issue_author, repo_owner):
             
             # 1. Post comment using the color that was JUST placed
             issue.create_comment(f"Successfully placed a **{last_player_color}**! It is now {next_player_color}'s turn.")
-            issue.edit(labels=[last_player_color])
+            issue.edit(state='closed', labels=[last_player_color])
 
         update_last_moves(f"{move}: {issue_author}")
         update_top_moves(issue_author)
