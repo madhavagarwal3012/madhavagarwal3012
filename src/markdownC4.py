@@ -114,7 +114,7 @@ def board_to_markdown(board):
     # This creates a professional colored button instead of plain text
     badge_url = f"https://img.shields.io/badge/{t_name}-{t_color}?style=flat-square"
     
-    markdown += f"#### 🚩 Current Heart's Color: ![{t_name}]({badge_url}) {t_emoji}\n"
+    markdown += f"### 🚩 Current Heart's Color: ![{t_name}]({badge_url}) {t_emoji}\n"
 
     return markdown
 
