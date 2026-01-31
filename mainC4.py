@@ -183,4 +183,4 @@ if __name__ == '__main__':
             settings = yaml.safe_load(f)
         # Simply log the error and comment on the issue without touching the workflow file
         issue.create_comment(settings['comments']['big_error'].format(author=issue_author, repo_owner=repo_owner))
-        issue.edit(state='closed', labels=['bug'])
+        issue.edit(state='closed', labels=['Invalid'])
