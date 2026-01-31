@@ -482,6 +482,10 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 <!-- END TOP MOVES C4 -->
 </details>
 
+### 🏆 WIN STATS TABLE (❤️ || 💙)
+<!-- BEGIN WIN STATS TABLE C4 -->
+<!-- END WIN STATS TABLE C4 -->
+
 ---
 
 ## ⭕✖️ Tic Tac Toe Game ✖️⭕
