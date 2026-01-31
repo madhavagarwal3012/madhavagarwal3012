@@ -55,25 +55,6 @@ def parse_issue(title):
             return Action.MOVE, int(match_obj.group(1))
     return Action.UNKNOWN, title
     
-def setup_labels(repo):
-    # Define your game's theme colors
-    game_labels = {
-        "Red Heart": "ff0000", # Bright Red
-        "Blue Heart": "5fafff",  # Bright Blue
-        "Invalid": "e99695", # Muted Red/Pink
-        "Bug": "d73a4a"    # GitHub Default Bug Red
-    }
-
-    for name, color in game_labels.items():
-        try:
-            # Check if label exists
-            label = repo.get_label(name)
-            label.edit(name=name, color=color) # Update color if it changed
-        except:
-            # Create it if it doesn't exist
-            repo.create_label(name=name, color=color)
-
-
 def main(issue, issue_author, repo_owner):
     action = parse_issue(issue.title)
     Conn = connect4()
@@ -120,7 +101,7 @@ def main(issue, issue_author, repo_owner):
         # Check turn after move to label next player
         plays_now = Conn.whosturn()[0]
         issue_labels = ['Red Heart'] if plays_now == 2 else ['Blue Heart']
-        issue.edit(labels=[issue_labels])
+        issue.edit(labels=issue_labels)
 
         if finished == 1:
             won = 'Red Heart won' if plays_now == 2 else 'Blue Heart won'
