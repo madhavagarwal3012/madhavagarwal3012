@@ -441,10 +441,10 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
-|   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/blue.png" width=50px> |    |
+|   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/blue.png" width=50px> |    |
 | **MOVE** | [1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+1&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [2](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+2&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [3](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [6](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [7](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Put+7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | |
 
-### 🚩 Current Heart's Color: <img src='https://img.shields.io/badge/Red-red?style=for-the-badge' height='35' valign='middle'> <img src='https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/img/hearts/red.png' height='35' valign='middle'>
+### 🚩 Current Heart's Color: <img src='https://img.shields.io/badge/Blue-blue?style=for-the-badge' height='35' valign='middle'> <img src='https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/img/hearts/blue.png' height='35' valign='middle'>
 <!-- END CONNECT4 BOARD -->
 
 ---
@@ -463,6 +463,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Move | Author |
 | :---: | :--- |
+| `6` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 | `7` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 | `Start game` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 <!-- END LAST MOVES C4 -->
@@ -474,7 +475,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Total moves | User |
 | :---: | :--- |
-| 8 |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
+| 9 |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 <!-- END TOP MOVES C4 -->
 </details>
 
