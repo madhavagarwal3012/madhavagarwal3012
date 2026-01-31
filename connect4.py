@@ -98,11 +98,11 @@ class connect4:
         return self.whosTurn, self.valid_moves()
 
     def move(self, x, curr_player):
-        x -= 1  # Convert 1-7 input to 0-6 index
+        x -= 1  
         if x < 0 or x >= len(self.grid[0]):
             return self.whosTurn, self.valid_moves(), 4
 
-        # FIX: Gravity Logic. We check from the bottom row (5) up to the top (0)
+        # Gravity Logic
         row_placed = -1
         for r in range(len(self.grid) - 1, -1, -1):
             if self.grid[r][x] == 0:
@@ -110,24 +110,25 @@ class connect4:
                 row_placed = r
                 break
         
-        if row_placed == -1:  # Column was full
+        if row_placed == -1:
             return self.whosTurn, self.valid_moves(), 4
 
-        # Update player list and turn
         if curr_player not in self.player:
             self.player.append(curr_player)
         
         self.rounds += 1
         
-        # Check win/draw conditions
+        # 1. Check Win
         if self.iswonornot():
             self.wongame()
-            return self.whosTurn, self.valid_moves(), 1
+            return self.whosTurn, self.valid_moves(), 1 # Returns current player as winner
+            
+        # 2. Check Draw
         elif not self.has_space_left():
             self.wongame()
             return self.whosTurn, self.valid_moves(), 2
         
-        # Switch turn: 1 -> 2, 2 -> 1
+        # 3. Switch Turn (Only if game continues)
         self.whosTurn = (self.whosTurn % 2) + 1
         self.save_currentgame()
         return self.whosTurn, self.valid_moves(), 0
@@ -147,4 +148,5 @@ if __name__ == '__main__':
     Conn.grid[2][0] = 1
     Conn.grid[3][1] = 1
     Conn.grid[4][2] = 1
+
     Conn.grid[5][3] = 1
