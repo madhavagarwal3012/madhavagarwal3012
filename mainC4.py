@@ -34,6 +34,18 @@ def update_last_moves(line):
         last_moves.seek(0, 0)
         last_moves.write(line.rstrip('\r\n') + '\n' + content)
 
+def update_win_stats(winner_color):
+    stats_path = 'data/win_statsC4.txt'
+    if not os.path.exists(stats_path):
+        with open(stats_path, 'w') as f: f.write("{'Red Heart': 0, 'Blue Heart': 0}")
+    
+    with open(stats_path, 'r') as file:
+        stats = ast.literal_eval(file.read())
+    
+    stats[winner_color] = stats.get(winner_color, 0) + 1
+    
+    with open(stats_path, 'w') as file:
+        file.write(str(stats))
 
 def replace_text_between(original_text, marker, replacement_text):
     delimiter_a = marker['begin']
@@ -101,6 +113,7 @@ def main(issue, issue_author, repo_owner):
 
         if finished == 1:
             winner_team = "Red Heart" if plays == 1 else "Blue Heart"
+            update_win_stats(winner_team)
             issue.create_comment(settings['comments']['game_over'].format(
                 outcome=winner_team + " won", 
                 num_moves=Conn.rounds, 
@@ -160,6 +173,18 @@ def main(issue, issue_author, repo_owner):
     readme = replace_text_between(readme, settings['markers']['turn'], f"\n{turn_badge}\n")
     readme = replace_text_between(readme, settings['markers']['last_moves'], '{last_moves_placeholder}')
     readme = replace_text_between(readme, settings['markers']['top_moves'], '{top_moves_placeholder}')
+
+    # --- Generate Win Streak Table ---
+    with open('data/win_statsC4.txt', 'r') as f:
+        stats = ast.literal_eval(f.read())
+        
+    streak_table = (
+        "| Team | Total Wins | Status |\n"
+        "| :---: | :---: | :---: |\n"
+        f"| 🔴 Red Team | **{stats['Red Heart']}** | {'🔥 Winning' if stats['Red Heart'] > stats['Blue Heart'] else 'Standard'} |\n"
+        f"| 🔵 Blue Team | **{stats['Blue Heart']}** | {'🔥 Winning' if stats['Blue Heart'] > stats['Red Heart'] else 'Standard'} |"
+    )
+    readme = replace_text_between(readme, settings['markers']['win_stats'], f"\n{streak_table}\n")
 
     # Final safe injection
     for placeholder, value in data_map.items():
