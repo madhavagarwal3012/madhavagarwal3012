@@ -78,6 +78,11 @@ def main(issue, issue_author, repo_owner):
         if not os.path.exists('games/currentC4.p'):
             return False, 'ERROR: No game in progress'
 
+        with open('data/last_movesC4.txt') as moves:
+            line = moves.readline()
+            last_player = line.split(':')[1].strip()
+            last_move   = line.split(':')[0].strip()
+
         Valid_Moves = Conn.valid_moves()
         move = action[1]
 
@@ -165,4 +170,5 @@ if __name__ == '__main__':
             settings = yaml.safe_load(f)
         # Simply log the error and comment on the issue without touching the workflow file
         issue.create_comment(settings['comments']['big_error'].format(author=issue_author, repo_owner=repo_owner))
-        issue.edit(labels=['bug'])
+        issue.edit(state='closed', labels=['bug'])
+        return False, 'ERROR: Resumbit the issue'
