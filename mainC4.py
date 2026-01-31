@@ -117,10 +117,15 @@ def main(issue, issue_author, repo_owner):
             ))
             issue.edit(state='closed', labels=['Draw', 'Red Heart', 'Blue Heart'])
         else:
-            # Normal move: plays is the NEXT player
-            next_label = "Red Heart" if plays == 1 else "Blue Heart"
-            issue.create_comment(settings['comments']['successful_move'].format(author=issue_author, move=move))
-            issue.edit(labels=[next_label])
+            # plays is the NEXT player (e.g., if Blue just moved, plays is 1/Red)
+            next_player_color = "Red Heart" if plays == 1 else "Blue Heart"
+            
+            # The player who JUST moved is the opposite of plays
+            last_player_color = "Blue Heart" if plays == 1 else "Red Heart"
+            
+            # 1. Post comment using the color that was JUST placed
+            issue.create_comment(f"Successfully placed a **{last_player_color} Heart**! It is now {next_player_color}'s turn.")
+            issue.edit(labels=[last_player_color])
 
         update_last_moves(f"{move}: {issue_author}")
         update_top_moves(issue_author)
