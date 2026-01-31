@@ -101,10 +101,10 @@ def main(issue, issue_author, repo_owner):
         plays, valid_moves, finished = Conn.move(move, issue_author)
         # Check turn after move to label next player
         plays_now = Conn.whosturn()[0]
-        issue_labels = ['Red'] if plays_now == 2 else ['Blue']
+        issue_labels = ['Red Heart'] if plays_now == 2 else ['Blue Heart']
 
         if finished == 1:
-            won = 'Red won' if plays_now == 2 else 'Blue won'
+            won = 'Red Heart won' if plays_now == 2 else 'Blue Heart won'
             issue.create_comment(settings['comments']['game_over'].format(outcome=won, num_moves=Conn.rounds, num_players=len(Conn.player), players=Conn.player))
             issue.edit(state='closed', labels=issue_labels)
         elif finished == 2:
