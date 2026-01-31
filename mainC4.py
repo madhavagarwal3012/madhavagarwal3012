@@ -68,7 +68,7 @@ def main(issue, issue_author, repo_owner):
             issue.edit(state='closed')
             return False, 'ERROR: Only owner can reset active game'
         issue.create_comment(settings['comments']['successful_new_game'].format(author=issue_author))
-        issue.edit(state='closed')
+        issue.edit(state='closed', labels=['New Game'])
         with open('data/last_movesC4.txt', 'w') as last_moves:
             last_moves.write('Start game: ' + issue_author)
         Conn.create_newgame()
