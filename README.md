@@ -437,7 +437,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 |   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
-|   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
+|   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/red.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/blue.png" width=50px> |    |
@@ -451,6 +451,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 **It's your turn to move!**
 <!-- BEGIN MOVES LIST C4 -->
+**GAME OVER!** [Click here to start new game](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Connect4%3A+start+new+game)
 <!-- END MOVES LIST C4 -->
 
 #### How it works ?
@@ -463,10 +464,10 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Move | Author |
 | :---: | :--- |
+| `4` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 | `2` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 | `2` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 | `1` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
-| `3` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 | `3` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 <!-- END LAST MOVES C4 -->
 </details>
@@ -477,7 +478,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Total moves | User |
 | :---: | :--- |
-| 26 |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
+| 27 |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 <!-- END TOP MOVES C4 -->
 </details>
 
