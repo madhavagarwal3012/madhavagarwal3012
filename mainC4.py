@@ -124,7 +124,7 @@ def main(issue, issue_author, repo_owner):
             last_player_color = "Blue Heart" if plays == 1 else "Red Heart"
             
             # 1. Post comment using the color that was JUST placed
-            issue.create_comment(f"Successfully placed a **{last_player_color} Heart**! It is now {next_player_color}'s turn.")
+            issue.create_comment(f"Successfully placed a **{last_player_color}**! It is now {next_player_color}'s turn.")
             issue.edit(labels=[last_player_color])
 
         update_last_moves(f"{move}: {issue_author}")
