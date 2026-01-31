@@ -106,7 +106,7 @@ def main(issue, issue_author, repo_owner):
         if finished == 1:
             won = 'Red Heart won' if plays_now == 2 else 'Blue Heart won'
             issue.create_comment(settings['comments']['game_over'].format(outcome=won, num_moves=Conn.rounds, num_players=len(Conn.player), players=Conn.player))
-            winner_team = "Red Heart" if play_now == 2 else "Blue Heart"
+            winner_team = "Red Heart" if plays_now == 2 else "Blue Heart"
             issue.set_labels(["Winner", winner_team])
             issue.edit(state='closed')
         elif finished == 2:
