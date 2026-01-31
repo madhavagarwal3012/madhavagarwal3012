@@ -106,13 +106,7 @@ def main(issue, issue_author, repo_owner):
         if finished == 1:
             won = 'Red Heart won' if plays_now == 2 else 'Blue Heart won'
             issue.create_comment(settings['comments']['game_over'].format(outcome=won, num_moves=Conn.rounds, num_players=len(Conn.player), players=Conn.player))
-            
-            # Logic: Determine the specific winner string
-            winner_team = "Red Heart" if plays_now == 2 else "Blue Heart"
-            
-            # Use .edit to set labels AND close state in one go. 
-            # This avoids the set_labels assertion error.
-            issue.edit(state='closed', labels=["Winner", winner_team])
+            issue.edit(state='closed', labels=['Winner', won])
 
         elif finished == 2:
             issue.create_comment(settings['comments']['game_over'].format(num_moves=Conn.rounds, num_players=len(Conn.player), players=Conn.player))
