@@ -112,7 +112,7 @@ def board_to_markdown(board):
     t_emoji = "❤️" if current_turn == 1 else "💙"
 
     # This creates a professional colored button instead of plain text
-    badge_url = f"https://img.shields.io/badge/{t_name}-{t_color}?style=flat-square"
+    badge_url = f"https://img.shields.io/badge/{t_name}-{t_color}?style=for-the-badge"
     
     markdown += f"### 🚩 Current Heart's Color: ![{t_name}]({badge_url}) {t_emoji}\n"
 
