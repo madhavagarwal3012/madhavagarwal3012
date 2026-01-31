@@ -40,7 +40,6 @@ class connect4:
             pickle.dump(data, f)
 
     def wongame(self):
-        # Instead of a timestamped filename, use a fixed name for the history
         history_file = "games/last_gameC4.p"
         
         # Save the final state to the history file
@@ -160,4 +159,5 @@ if __name__ == '__main__':
     Conn.grid[4][2] = 1
 
     Conn.grid[5][3] = 1
+
 
