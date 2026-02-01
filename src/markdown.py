@@ -107,9 +107,9 @@ def generate_status_badge(board):
     else:
         status, color = "Active", "green"
     
-    # Returns the Markdown image syntax
-    return f"![Status](https://img.shields.io/badge/Status-{status}-{color}?style=for-the-badge)"
-
+    badge_url = f"https://img.shields.io/badge/Status-{status}-{color}?style=for-the-badge"
+    return f"![Status]({badge_url})"
+    
 def generate_captured_table():
     white_lost, black_lost = [], []
     file_path = 'data/captured_data.txt'
@@ -232,6 +232,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
