@@ -58,31 +58,19 @@ def replace_text_between(original_text, marker, replacement_text):
     return leading_text + delimiter_a + replacement_text + delimiter_b + trailing_text
 
 def parse_issue(title):
-    """Parse issue title and return a tuple with (action, <move>)"""
     title_clean = title.lower().strip()
 
-    # 1. Check for New Game
-    if title_clean == 'chess: start new game':
-        return (Action.NEW_GAME, None)
-
-    # 2. Check for Moves (including Promotions)
     if 'chess: move' in title_clean:
-        # Our links format the title as: "Chess: Move A7 to A8 (Queen)"
-        # Or sometimes just: "Chess: Move e7e8q"
-        # We want to find the UCI string (4 or 5 chars)
-        
-        # Look for the pattern: 2 chars + 2 chars + optional 1 char
+        # This regex looks for moves like 'e7e8q' or 'a7a8n'
+        # It searches for 4 characters followed by an optional q, r, b, or n
         match = re.search(r'([a-h][1-8][a-h][1-8][qrbn]?)', title_clean)
-        
         if match:
             return (Action.MOVE, match.group(1))
             
-        # Fallback: Handle the "A7 to A8" format for manual moves
+        # Fallback for "A7 to A8" format
         match_obj = re.search(r'([a-h][1-8])\s*to\s*([a-h][1-8])', title_clean)
         if match_obj:
-            source = match_obj.group(1)
-            dest = match_obj.group(2)
-            return (Action.MOVE, (source + dest))
+            return (Action.MOVE, (match_obj.group(1) + match_obj.group(2)).lower())
 
     return (Action.UNKNOWN, None)
 
@@ -264,6 +252,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
