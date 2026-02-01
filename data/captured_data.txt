@@ -21,3 +21,4 @@ white,rook,f5e4
 black,pawn,f8g6
 white,rook,e2d1q
 white,knight,g7g6
+black,pawn,f6h5
