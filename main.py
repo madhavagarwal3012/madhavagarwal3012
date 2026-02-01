@@ -108,76 +108,59 @@ def main(issue, issue_author, repo_owner):
         if not os.path.exists('games/current.pgn'):
             return False, 'ERROR: There is no game in progress! Start a new game first'
 
-        # Load game from "games/current.pgn"
+        # Load game
         with open('games/current.pgn') as pgn_file:
             game = chess.pgn.read_game(pgn_file)
             gameboard = game.board()
 
-        with open('data/last_moves.txt') as moves:
-            line = moves.readline()
-            last_player = line.split(':')[1].strip()
-            last_move   = line.split(':')[0].strip()
-
+        # Replay the game to get current state
         for move in game.mainline_moves():
             gameboard.push(move)
 
-        if action[1][:2] == action[1][2:]:
-            issue.create_comment(settings['comments']['invalid_move'].format(author=issue_author, move=action[1]))
-            issue.edit(state='closed', labels=['Invalid'])
-            return False, 'ERROR: Move is invalid!'
+        # 1. Create the move object from the parsed UCI (e.g., 'e7e8q')
+        try:
+            move = chess.Move.from_uci(action[1])
+        except ValueError:
+            return False, 'ERROR: Invalid UCI format'
 
-        move = chess.Move.from_uci(action[1])
-
-        # Check if player is moving twice in a row
-        if last_player != repo_owner and last_player == issue_author and 'Start game' not in last_move:
-            issue.create_comment(settings['comments']['consecutive_moves'].format(author=issue_author))
-            issue.edit(state='closed', labels=['Invalid'])
-            return False, 'ERROR: Two moves in a row!'
-
-        # Check if move is valid
+        # 2. Validation Check
         if move not in gameboard.legal_moves:
             issue.create_comment(settings['comments']['invalid_move'].format(author=issue_author, move=action[1]))
             issue.edit(state='closed', labels=['Invalid'])
             return False, 'ERROR: Move is invalid!'
 
-        # NEW: Handle Promotion Success Message
+        # 3. Prevent Double Moves
+        with open('data/last_moves.txt') as moves:
+            line = moves.readline()
+            last_player = line.split(':')[1].strip()
+            last_move = line.split(':')[0].strip()
+
+        if last_player != repo_owner and last_player == issue_author and 'Start game' not in last_move:
+            issue.create_comment(settings['comments']['consecutive_moves'].format(author=issue_author))
+            issue.edit(state='closed', labels=['Invalid'])
+            return False, 'ERROR: Two moves in a row!'
+
+        # 4. Prepare the Success Message
         comment_msg = settings['comments']['successful_move'].format(author=issue_author, move=action[1])
-        if len(action[1]) == 5:
+        issue_labels = ['White' if gameboard.turn == chess.WHITE else 'Black']
+
+        # Handle Promotion specifics
+        if move.promotion:
             p_name = chess.piece_name(move.promotion).capitalize()
             comment_msg += f"\n\n🌟 **Pawn promoted to {p_name}!**"
-
-        # Check if board is valid
-        if not gameboard.is_valid():
-            issue.create_comment(settings['comments']['invalid_board'].format(author=issue_author))
-            issue.edit(state='closed', labels=['Invalid'])
-            return False, 'ERROR: Board is invalid!'
+            issue_labels.append('🌟 Promotion')
 
         if gameboard.is_capture(move):
-            captured_piece = gameboard.piece_at(move.to_square)
-            
-            # En Passant check: if move is a capture but landing square is empty
-            if captured_piece is None: 
-                captured_piece = chess.Piece(chess.PAWN, not gameboard.turn)
-            
-            p_color = "white" if captured_piece.color == chess.WHITE else "black"
-            p_name = chess.piece_name(captured_piece.piece_type)
+            issue_labels.append('⚔️ Capture!')
+            # ... (keep your existing captured_piece logic here) ...
 
-            # Record to your separate text file
-            with open('data/captured_data.txt', 'a') as f:
-                f.write(f"{p_color},{p_name},{action[1]}\n")
-
-        issue_labels = ['⚔️ Capture!'] if gameboard.is_capture(move) else []
-        issue_labels += ['White' if gameboard.turn == chess.WHITE else 'Black']
-        if len(action[1]) == 5:
-            issue_labels += ['🌟 Promotion']
-
+        # 5. EXECUTE & COMMENT (Single call)
         issue.create_comment(comment_msg)
         issue.edit(state='closed', labels=issue_labels)
 
         update_last_moves(action[1] + ': ' + issue_author)
         update_top_moves(issue_author)
 
-        # Perform move
         gameboard.push(move)
         game.end().add_main_variation(move, comment=issue_author)
         game.headers['Result'] = gameboard.result()
@@ -260,6 +243,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
