@@ -134,93 +134,97 @@ console.log(`Feel free to contribute`);
 ## 📂 My Repository Structure & Workflows 📂
 
 ```
-├── __pycache__/
-│   └── connect4.cpython-310.pyc
-├── .github/
-│   ├── workflows/
-│   │   ├── breakout.yaml
-│   │   ├── Chess.yml
-│   │   ├── Connect4.yml
-│   │   ├── main.yml
-│   │   ├── metrics.yml
-│   │   └── waka.yml
-│   └── FUNDING.yml
-├── assets/
-│   ├── bar_graph.png
-│   └── breakout.svg
-├── data/
-│   ├── last_moves.txt
-│   ├── last_movesC4.txt
-│   ├── settings.yaml
-│   ├── settingsC4.yml
-│   ├── top_moves.txt
-│   ├── top_movesC4.txt
-│   └── win_statsC4.txt
-├── games/
-│   ├── current.pgn
-│   └── currentC4.p
-├── img/
-│   ├── black/
-│   │   ├── bishop.svg
-│   │   ├── king.svg
-│   │   ├── knight.svg
-│   │   ├── pawn.svg
-│   │   ├── queen.svg
-│   │   └── rook.svg
-│   ├── circles/
-│   │   ├── blue.png
-│   │   └── red.png
-│   ├── hearts/
-│   │   ├── blue.png
-│   │   └── red.png
-│   ├── pieces/
-│   │   ├── bishop.PNG
-│   │   ├── king.PNG
-│   │   ├── knight.PNG
-│   │   ├── pawn.PNG
-│   │   ├── queen.PNG
-│   │   └── rook.PNG
-│   ├── white/
-│   │   ├── bishop.svg
-│   │   ├── king.svg
-│   │   ├── knight.svg
-│   │   ├── pawn.svg
-│   │   ├── queen.svg
-│   │   └── rook.svg
-│   ├── blank.png
-│   └── blankC4.png
-├── src/
-│   ├── __pycache__/
-│   │   ├── markdown.cpython-310.pyc
-│   │   ├── markdownC4.cpython-310.pyc
-│   │   ├── mockGithub.cpython-310.pyc
-│   │   └── selftest.cpython-310.pyc
-│   ├── markdown.py
-│   ├── markdownC4.py
-│   ├── mockGithub.py
-│   └── selftest.py
-├── Black Background.gif
-├── central text.svg
-├── code-the-cool-stuff.gif
-├── coding-life.gif
-├── connect4.py
-├── contribution name graph.svg
-├── contributions.webp
-├── Github Ascii Art Text.png
-├── Github Graph Wavy Art.svg
-├── github-metrics.svg
-├── header.png
-├── html-css-js.gif
-├── LICENSE.md
-├── main.py
-├── mainC4.py
-├── random dev quote.png
-├── README.md
-├── requirements.txt
-├── sponsor badge.jpg
-├── techy.PNG
-├── typing.gif
-└── White Background.gif
+```
+madhavagarwal3012/
+    ├── __pycache__/
+    │   ├── connect4.cpython-310.pyc
+    ├── .github/
+    │   ├── workflows/
+    │   │   ├── breakout.yaml
+    │   │   ├── Chess.yml
+    │   │   ├── Connect4.yml
+    │   │   ├── main.yml
+    │   │   ├── metrics.yml
+    │   │   ├── waka.yml
+    │   ├── FUNDING.yml
+    ├── assets/
+    │   ├── bar_graph.png
+    │   ├── breakout.svg
+    ├── data/
+    │   ├── captured_data.txt
+    │   ├── last_moves.txt
+    │   ├── last_movesC4.txt
+    │   ├── settings.yaml
+    │   ├── settingsC4.yml
+    │   ├── top_moves.txt
+    │   ├── top_movesC4.txt
+    │   ├── win_statsC4.txt
+    ├── games/
+    │   ├── current.pgn
+    │   ├── currentC4.p
+    ├── img/
+    │   ├── black/
+    │   │   ├── bishop.svg
+    │   │   ├── king.svg
+    │   │   ├── knight.svg
+    │   │   ├── pawn.svg
+    │   │   ├── queen.svg
+    │   │   ├── rook.svg
+    │   ├── circles/
+    │   │   ├── blue.png
+    │   │   ├── red.png
+    │   ├── hearts/
+    │   │   ├── blue.png
+    │   │   ├── red.png
+    │   ├── pieces/
+    │   │   ├── bishop.PNG
+    │   │   ├── king.PNG
+    │   │   ├── knight.PNG
+    │   │   ├── pawn.PNG
+    │   │   ├── queen.PNG
+    │   │   ├── rook.PNG
+    │   ├── white/
+    │   │   ├── bishop.svg
+    │   │   ├── king.svg
+    │   │   ├── knight.svg
+    │   │   ├── pawn.svg
+    │   │   ├── queen.svg
+    │   │   ├── rook.svg
+    │   ├── blank.png
+    │   ├── blankC4.png
+    ├── src/
+    │   ├── __pycache__/
+    │   │   ├── markdown.cpython-310.pyc
+    │   │   ├── markdownC4.cpython-310.pyc
+    │   │   ├── mockGithub.cpython-310.pyc
+    │   │   └── selftest.cpython-310.pyc
+    │   ├── markdown.py
+    │   ├── markdownC4.py
+    │   ├── mockGithub.py
+    │   └── selftest.py
+    ├── Black Background.gif
+    ├── central text.svg
+    ├── code-the-cool-stuff.gif
+    ├── coding-life.gif
+    ├── connect4.py
+    ├── contribution name graph.svg
+    ├── contributions.webp
+    ├── Github Ascii Art Text.png
+    ├── Github Graph Wavy Art.svg
+    ├── github-metrics.svg
+    ├── header.png
+    ├── html-css-js.gif
+    ├── LICENSE.md
+    ├── main.py
+    ├── mainC4.py
+    ├── random dev quote.png
+    ├── README.md
+    ├── requirements.txt
+    ├── sponsor badge.jpg
+    ├── techy.PNG
+    ├── typing.gif
+    └── White Background.gif
+```
 ```
 
 ---
