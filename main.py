@@ -221,8 +221,8 @@ def main(issue, issue_author, repo_owner):
         readme = replace_text_between(readme, settings['markers']['turn'], '{turn}')
         readme = replace_text_between(readme, settings['markers']['last_moves'], '{last_moves}')
         readme = replace_text_between(readme, settings['markers']['top_moves'], '{top_moves}')
-        readme = replace_text_between(readme, settings['markers']['status'], '{status_badge}')
-        readme = replace_text_between(readme, settings['markers']['status_top'], '{status_badge}')
+        readme = replace_text_between(readme, settings['markers']['status_top'], '{status_top}')
+        readme = replace_text_between(readme, settings['markers']['status_bottom'], '{status_bottom}')
         readme = replace_text_between(readme, settings['markers']['captured_table'], '{captured_table}')
 
     with open('README.md', 'w') as file:
@@ -254,6 +254,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
