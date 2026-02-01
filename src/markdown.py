@@ -73,7 +73,6 @@ def generate_moves_list(board):
     for move in board.legal_moves:
         source = chess.SQUARE_NAMES[move.from_square].upper()
         dest   = chess.SQUARE_NAMES[move.to_square].upper()
-
         moves_dict[source].add(dest)
 
     # Write everything in Markdown format
@@ -89,11 +88,22 @@ def generate_moves_list(board):
     if board.is_check():
         markdown += "**CHECK!** Choose your move wisely!\n"
 
-    markdown += "|  FROM  | TO (Just click a link!) |\n"
-    markdown += "| :----: | :---------------------- |\n"
+    markdown = "| Piece | From | To (Click to Move) |\n"
+    markdown += "| :---: | :---: | :--- |\n"
 
-    for source,dest in sorted(moves_dict.items()):
-        markdown += "| **" + source + "** | " + create_issue_link(source, dest) + " |\n"
+    for source, dest_list in sorted(moves_dict.items()):
+        square_index = chess.SQUARE_NAMES.index(source.lower())
+        piece = board.piece_at(square_index)
+        if piece:
+            color = "white" if piece.color == chess.WHITE else "black"
+            piece_name = chess.piece_name(piece.piece_type)
+            # Create the small icon
+            icon = f"<img src='img/{color}/{piece_name}.svg' width='24' valign='middle'>"
+            
+            # Format the destination links
+            links = create_issue_link(source, dest_list)
+            
+            markdown += f"| {icon} | **{source}** | {links} |\n"
 
     return markdown
 
@@ -234,6 +244,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
