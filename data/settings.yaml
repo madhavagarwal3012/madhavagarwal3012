@@ -60,6 +60,9 @@ markers:
   turn:
     begin: "<!-- BEGIN TURN -->"
     end: "<!-- END TURN -->"
+  status:
+    begin: "<!-- BEGIN STATUS -->"
+    end: "<!-- END STATUS -->"
   captured_table:
     begin: "<!-- BEGIN CAPTURE TABLE -->"
     end: "<!-- END CAPTURE TABLE -->"
@@ -70,3 +73,4 @@ misc:
   # Maximum number of top players displayed
 
   max_top_moves: 10
+
