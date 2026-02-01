@@ -1,7 +1,7 @@
 comments:
   # Message to be shown when two consecutive moves are played. {author} is the author of the issue
   consecutive_moves: "Sorry {author}, you can't move twice in a row! You can ask someone to play the next turn :D"
-  big_error: "Hi {repo_owner}, an error occurred! {author}, the workflow has been disabled to prevent a loop. Please check the Actions logs."
+  big_error: "Hi {repo_owner}, an error occurred! {author}, the workflow has been disabled to prevent a loop. Please check the Actions logs. And try to resubmit the issue after some time."
   
   # Message to be shown on game over. {outcome} is a message that specifies wether white wins, black wins or
   # both players draw, {num_moves} corresponds with the number of moves, {num_players} is the number of players
