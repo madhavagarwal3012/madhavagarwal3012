@@ -57,21 +57,36 @@ def replace_text_between(original_text, marker, replacement_text):
 
     return leading_text + delimiter_a + replacement_text + delimiter_b + trailing_text
 
-
 def parse_issue(title):
     """Parse issue title and return a tuple with (action, <move>)"""
-    if title.lower() == 'chess: start new game':
+    title_clean = title.lower().strip()
+
+    if title_clean == 'chess: start new game':
         return (Action.NEW_GAME, None)
 
-    if 'chess: move' in title.lower():
-        match_obj = re.match('Chess: Move ([A-H][1-8]) to ([A-H][1-8])', title, re.I)
-
-        source = match_obj.group(1)
-        dest   = match_obj.group(2)
-        return (Action.MOVE, (source + dest).lower())
+    if 'chess: move' in title_clean:
+        # This regex captures:
+        # 1. Source (A-H, 1-8)
+        # 2. Destination (A-H, 1-8)
+        # 3. Optional Promotion Piece inside parentheses or at the end
+        # Example: "Chess: Move A7 to A8 (Knight)" or "Chess: Move e7e8q"
+        
+        # Strategy: Extract the UCI string (e7e8q) which is the last word in our new links
+        parts = title_clean.split()
+        move_str = parts[-1].rstrip(')').lstrip('(') 
+        
+        # Validation: check if it's a valid coordinate pattern
+        if re.match(r'^[a-h][1-8][a-h][1-8][qrbn]?$', move_str):
+            return (Action.MOVE, move_str)
+            
+        # Fallback for old 4-character titles
+        match_obj = re.search(r'([a-h][1-8])\s*to\s*([a-h][1-8])', title_clean, re.I)
+        if match_obj:
+            source = match_obj.group(1)
+            dest = match_obj.group(2)
+            return (Action.MOVE, (source + dest).lower())
 
     return (Action.UNKNOWN, None)
-
 
 def main(issue, issue_author, repo_owner):
     if not os.path.exists("games"):
@@ -124,10 +139,6 @@ def main(issue, issue_author, repo_owner):
             issue.create_comment(settings['comments']['invalid_move'].format(author=issue_author, move=action[1]))
             issue.edit(state='closed', labels=['Invalid'])
             return False, 'ERROR: Move is invalid!'
-
-        # Try to move with promotion to queen
-        if chess.Move.from_uci(action[1] + 'q') in gameboard.legal_moves:
-            action = (action[0], action[1] + 'q')
 
         move = chess.Move.from_uci(action[1])
 
@@ -255,4 +266,5 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
