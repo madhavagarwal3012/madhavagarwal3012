@@ -97,6 +97,37 @@ def generate_moves_list(board):
 
     return markdown
 
+def generate_captured_table():
+    white_lost, black_lost = [], []
+    file_path = 'data/captured_data.txt'
+    
+    if not os.path.exists(file_path):
+        return "*No pieces captured yet.*"
+
+    with open(file_path, 'r') as f:
+        for line in f:
+            if not line.strip(): continue
+            color, piece, uci = line.strip().split(',')
+            # Formatting the SVG image and the move notation
+            entry = f"<img src='img/{color}/{piece}.svg' width='22'> `{uci}`"
+            
+            if color == "white":
+                white_lost.append(entry)
+            else:
+                black_lost.append(entry)
+
+    rows = max(len(white_lost), len(black_lost))
+    if rows == 0:
+        return "*No pieces captured yet.*"
+
+    table = "| ⚪ White Pieces Lost | ⚫ Black Pieces Lost |\n| :---: | :---: |\n"
+    for i in range(rows):
+        w = white_lost[i] if i < len(white_lost) else " "
+        b = black_lost[i] if i < len(black_lost) else " "
+        table += f"| {w} | {b} |\n"
+    
+    return table
+
 def board_to_markdown(board):
     board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
     markdown = ""
@@ -179,6 +210,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
