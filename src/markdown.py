@@ -97,6 +97,19 @@ def generate_moves_list(board):
 
     return markdown
 
+def generate_status_badge(board):
+    if board.is_checkmate():
+        status, color = "Checkmate", "red"
+    elif board.is_check():
+        status, color = "In_Check", "orange"
+    elif board.is_game_over():
+        status, color = "Game_Over", "lightgrey"
+    else:
+        status, color = "Active", "green"
+    
+    # Returns the Markdown image syntax
+    return f"![Status](https://img.shields.io/badge/Status-{status}-{color}?style=for-the-badge)"
+
 def generate_captured_table():
     white_lost, black_lost = [], []
     file_path = 'data/captured_data.txt'
@@ -219,6 +232,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
