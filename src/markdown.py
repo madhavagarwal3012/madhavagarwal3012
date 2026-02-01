@@ -91,7 +91,7 @@ def generate_promotion_table(board):
         # Link to trigger the move
         link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{move_uci.upper()[:2]}+to+{move_uci.upper()[2:4]}+({p_name.capitalize()})&body=move%20{move_uci}"
         
-        icon = f"<img src='img/{color_str}/{p_name}.svg' width='55' valign='middle'>"
+        icon = f"<img src='img/{color_str}/{p_name}.svg' width='40' valign='middle'>"
         markdown += f"| {icon} | **{p_name.capitalize()}** | [Promote to {p_name.capitalize()}]({link}) |\n"
     
     return markdown + "\n---\n"
@@ -275,5 +275,6 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
