@@ -91,9 +91,16 @@ def main(issue, issue_author, repo_owner):
 
         with open('data/last_movesC4.txt') as moves:
             line = moves.readline()
-            last_player = line.split(':')[1].strip()
-            last_move   = line.split(':')[0].strip()
-
+            
+            # Safety check: ensure the line actually has a colon
+            if ':' in line:
+                last_player = line.split(':')[1].strip()
+                last_move   = line.split(':')[0].strip()
+            else:
+                # Default values if the file is new or formatted differently
+                last_player = ""
+                last_move = "Start game"
+                
         Valid_Moves = Conn.valid_moves()
         move = action[1]
 
