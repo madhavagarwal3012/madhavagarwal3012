@@ -380,9 +380,8 @@ Before making your move, here's a quick refresher on how each piece can move and
 | **Pawn** | <img src="img/pieces/pawn.PNG" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
 
 ### 🕹️ Game Status
-<!-- BEGIN STATUS -->
-![Status](https://img.shields.io/badge/TURN-BLACK_TO_MOVE-green?style=for-the-badge)
-<!-- END STATUS -->
+<!-- BEGIN TOP STATUS -->
+<!-- END TOP STATUS -->
 
 <!-- BEGIN CHESS BOARD -->
 |   | H | G | F | E | D | C | B | A |   |
@@ -398,8 +397,8 @@ Before making your move, here's a quick refresher on how each piece can move and
 |   | <span style="color:#A78C6F; font-weight:bold;">H</span> | <span style="color:#A78C6F; font-weight:bold;">G</span> | <span style="color:#A78C6F; font-weight:bold;">F</span> | <span style="color:#A78C6F; font-weight:bold;">E</span> | <span style="color:#A78C6F; font-weight:bold;">D</span> | <span style="color:#A78C6F; font-weight:bold;">C</span> | <span style="color:#A78C6F; font-weight:bold;">B</span> | <span style="color:#A78C6F; font-weight:bold;">A</span> |   |
 <!-- END CHESS BOARD -->
 
-<!-- BEGIN STATUS -->
-<!-- END STATUS -->
+<!-- BEGIN BOTTOM STATUS -->
+<!-- END BOTTOM STATUS -->
 
 ---
 
