@@ -5,3 +5,4 @@ white,queen,e7f6
 white,pawn,e5d4
 black,bishop,f3g4
 white,pawn,e8e4
+white,knight,d5c4
