@@ -125,16 +125,16 @@ def generate_captured_table():
         return "*No pieces captured yet.*"
 
     # Start the table
-    table = "| ⚪ White Pieces Lost | ⚫ Black Pieces Lost |\n"
-    table += "| :---: | :---: |\n"
+    markdown += "| ⚪ White Pieces Lost | ⚫ Black Pieces Lost |\n"
+    markdown += "| :---: | :---: |\n"
     
     for i in range(rows):
         w = white_lost[i] if i < len(white_lost) else " "
         b = black_lost[i] if i < len(black_lost) else " "
         # Ensure there are only TWO columns (one | at start, middle, and end)
-        table += f"| {w} | {b} |\n"
+        markdown += f"| {w} | {b} |\n"
     
-    return table
+    return markdown
 
 def board_to_markdown(board):
     board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
@@ -218,6 +218,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
