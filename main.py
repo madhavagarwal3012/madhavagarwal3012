@@ -74,6 +74,8 @@ def parse_issue(title):
 
 
 def main(issue, issue_author, repo_owner):
+    if not os.path.exists("games"):
+        os.makedirs("games")
     action = parse_issue(issue.title)
     gameboard = chess.Board()
 
@@ -229,4 +231,5 @@ if __name__ == '__main__':
     ret, reason = main(issue, issue_author, repo_owner)
 
     if ret == False:
+
         sys.exit(reason)
