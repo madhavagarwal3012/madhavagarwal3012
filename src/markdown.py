@@ -99,15 +99,20 @@ def generate_moves_list(board):
             color_str = "white" if piece.color == chess.WHITE else "black"
             piece_type_name = chess.piece_name(piece.piece_type).capitalize()
             
-            # Using align="center" to keep the piece focused.
-            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='45' align='center' style='max-width:100%;'>"
+            # UI IMPROVEMENT: Use 'height' instead of 'width' for better responsiveness
+            # 32px is a 'Sweet Spot' for mobile and desktop visibility
+            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' height='32' valign='middle'>"
             
-            # Format the destination links with bold text for better visibility
-            # Replace 'your_issue_url' with your actual variable/logic
-            links = " , ".join([f"**[{d}](?body=move%20{source.lower()}{d.lower()})**" for d in sorted(dest_list)])
+            # Format the links to actually create an issue with the move command
+            formatted_links = []
+            for d in sorted(dest_list):
+                move_cmd = f"move {source.lower()}{d.lower()}"
+                link = f"{base_url}?title=Chess+Move:+{move_cmd}&body=Just+click+'Submit+new+issue'+to+confirm+your+move!"
+                formatted_links.append(f"[{d}]({link})")
             
-            # Create a row where the piece name and icon are prominent
-            markdown += f"| {icon} | **{piece_type_name}** | `{source}` | {links} |\n"
+            links_str = " , ".join(formatted_links)
+            
+            markdown += f"| {icon} | **{piece_type_name}** | `{source}` | {links_str} |\n"
 
     return markdown
 
@@ -248,6 +253,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
