@@ -140,6 +140,12 @@ def main(issue, issue_author, repo_owner):
             issue.edit(state='closed', labels=['Invalid'])
             return False, 'ERROR: Move is invalid!'
 
+        # NEW: Handle Promotion Success Message
+        comment_msg = settings['comments']['successful_move'].format(author=issue_author, move=action[1])
+        if len(action[1]) == 5:
+            p_name = chess.piece_name(move.promotion).capitalize()
+            comment_msg += f"\n\n🌟 **Pawn promoted to {p_name}!**"
+
         # Check if board is valid
         if not gameboard.is_valid():
             issue.create_comment(settings['comments']['invalid_board'].format(author=issue_author))
@@ -162,8 +168,10 @@ def main(issue, issue_author, repo_owner):
 
         issue_labels = ['⚔️ Capture!'] if gameboard.is_capture(move) else []
         issue_labels += ['White' if gameboard.turn == chess.WHITE else 'Black']
+        if len(action[1]) == 5:
+            issue_labels += ['🌟 Promotion']
 
-        issue.create_comment(settings['comments']['successful_move'].format(author=issue_author, move=action[1]))
+        issue.create_comment(comment_msg)
         issue.edit(state='closed', labels=issue_labels)
 
         update_last_moves(action[1] + ': ' + issue_author)
@@ -252,6 +260,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
