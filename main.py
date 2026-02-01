@@ -83,6 +83,8 @@ def main(issue, issue_author, repo_owner):
         settings = yaml.load(settings_file, Loader=yaml.FullLoader)
 
     if action[0] == Action.NEW_GAME:
+        with open('data/captured_data.txt', 'w') as f:
+            f.close()
         if os.path.exists('games/current.pgn') and issue_author != repo_owner:
             issue.create_comment(settings['comments']['invalid_new_game'].format(author=issue_author))
             issue.edit(state='closed')
@@ -146,6 +148,20 @@ def main(issue, issue_author, repo_owner):
             issue.create_comment(settings['comments']['invalid_board'].format(author=issue_author))
             issue.edit(state='closed', labels=['Invalid'])
             return False, 'ERROR: Board is invalid!'
+
+        if gameboard.is_capture(move):
+            captured_piece = gameboard.piece_at(move.to_square)
+            
+            # En Passant check: if move is a capture but landing square is empty
+            if captured_piece is None: 
+                captured_piece = chess.Piece(chess.PAWN, not gameboard.turn)
+            
+            p_color = "white" if captured_piece.color == chess.WHITE else "black"
+            p_name = chess.piece_name(captured_piece.piece_type)
+
+            # Record to your separate text file
+            with open('data/captured_data.txt', 'a') as f:
+                f.write(f"{p_color},{p_name},{action[1]}\n")
 
         issue_labels = ['⚔️ Capture!'] if gameboard.is_capture(move) else []
         issue_labels += ['White' if gameboard.turn == chess.WHITE else 'Black']
@@ -233,5 +249,6 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
