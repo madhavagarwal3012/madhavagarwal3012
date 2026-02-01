@@ -89,7 +89,7 @@ def main(issue, issue_author, repo_owner):
             return False, 'ERROR: A current game is in progress. Only the repo owner can start a new game'
 
         issue.create_comment(settings['comments']['successful_new_game'].format(author=issue_author))
-        issue.edit(state='closed')
+        issue.edit(state='closed', labels=['New Game'])
 
         with open('data/last_moves.txt', 'w') as last_moves:
             last_moves.write('Start game: ' + issue_author)
@@ -233,3 +233,4 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
