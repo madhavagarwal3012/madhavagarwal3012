@@ -489,6 +489,10 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 When you click on a link and submit a new issue with the desired move, a GitHub action is triggered, which in turn runs a small python script that performs the specified movement, updates this README file and commits the changes.
 
+### 💀 Captured Pieces Table 
+<!-- BEGIN CAPTURE TABLE -->
+<!-- END CAPTURE TABLE -->
+
 <details>
   <summary>Last 5 moves in this game</summary>
 <!-- BEGIN LAST MOVES C4 -->
