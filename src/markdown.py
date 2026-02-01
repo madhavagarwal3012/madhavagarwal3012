@@ -126,7 +126,7 @@ def generate_captured_table():
             display_name = piece.capitalize()
             
             # Format: Image + Name + Move
-            entry = f"<img src='img/{color}/{piece}.svg' width='22' vertical-align='middle'> {display_name} (`{uci}`)"
+            entry = f"&nbsp; <img src='img/{color}/{piece}.svg' width='22' valign='middle'> {piece.capitalize()} (`{uci}`) &nbsp;"
             
             if color == "white":
                 white_lost.append(entry)
@@ -232,6 +232,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
