@@ -2,3 +2,4 @@ black,knight,d1g4
 black,queen,h4d8
 white,bishop,e8d8
 white,queen,e7f6
+white,pawn,e5d4
