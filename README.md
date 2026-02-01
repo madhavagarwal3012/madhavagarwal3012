@@ -225,7 +225,6 @@ madhavagarwal3012/
     ├── typing.gif
     └── White Background.gif
 ```
-```
 
 ---
 
