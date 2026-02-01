@@ -60,9 +60,13 @@ markers:
   turn:
     begin: "<!-- BEGIN TURN -->"
     end: "<!-- END TURN -->"
+  captured_table:
+    begin: "<!-- BEGIN CAPTURE TABLE -->"
+    end: "<!-- END CAPTURE TABLE -->"
 
 misc:
   # Maximum number of last moves displayed
   max_last_moves: 5
   # Maximum number of top players displayed
+
   max_top_moves: 10
