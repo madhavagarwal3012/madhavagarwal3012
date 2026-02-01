@@ -11,3 +11,4 @@ black,bishop,c3b4
 white,pawn,a6b4
 white,pawn,b4a2
 black,pawn,d1d4
+white,pawn,g3b3
