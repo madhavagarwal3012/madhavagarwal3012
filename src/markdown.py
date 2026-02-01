@@ -67,34 +67,45 @@ def generate_last_moves():
     return markdown + "\n"
 
 def generate_promotion_table(board):
-    """Detects promotion moves and creates the choice gallery."""
-    promo_moves = [m for m in board.legal_moves if m.promotion]
-    if not promo_moves:
+    """Groups promotion moves by their starting square for better UI."""
+    from collections import defaultdict
+    
+    # Group moves: { 'A7': [move1, move2], 'B7': [move3, move4] }
+    promo_groups = defaultdict(list)
+    for m in board.legal_moves:
+        if m.promotion:
+            source_sq = chess.SQUARE_NAMES[m.from_square].upper()
+            promo_groups[source_sq].append(m)
+
+    if not promo_groups:
         return ""
 
     color_str = "white" if board.turn == chess.WHITE else "black"
     repo = os.environ.get('GITHUB_REPOSITORY', 'your-user/your-repo')
     
-    markdown = "### 🌟 PAWN PROMOTION AVAILABLE! 🌟\n"
-    markdown += "Your pawn reached the final rank! Choose its new form:\n\n"
-    markdown += "| Piece | Type | Action |\n"
-    markdown += "| :---: | :--- | :--- |\n"
-
-    for move in promo_moves:
-        p_type = move.promotion
-        p_name = chess.piece_name(p_type)
-        p_char = chess.piece_symbol(p_type) # 'q', 'r', 'b', 'n'
-        
-        # Build 5-char move string
-        move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
-        
-        # Link to trigger the move
-        link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{move_uci.upper()[:2]}+to+{move_uci.upper()[2:4]}+{move_uci.lower()}&body=Performing%20a%20special%20pawn%20promotion%20move!\nPlease%20do%20not%20change%20the%20title.%20Just%20click%20%22Submit%20new%20issue%20.%20You%20don't%20need%20to%20do%20anything%20else%20:D"
-        
-        icon = f"<img src='img/{color_str}/{p_name}.svg' width='40' valign='middle'>"
-        markdown += f"| {icon} | **{p_name.capitalize()}** | [Promote to {p_name.capitalize()}]({link}) |\n"
+    markdown = "### 🌟 PAWN PROMOTION AVAILABLE!\n"
     
-    return markdown + "\n---\n"
+    # Iterate through each pawn that can promote
+    for source, moves in promo_groups.items():
+        markdown += f"### ♟️ Promote Pawn at `{source}`\n"
+        markdown += "| Piece | Type | Action |\n"
+        markdown += "| :---: | :--- | :--- |\n"
+
+        for move in moves:
+            p_type = move.promotion
+            p_name = chess.piece_name(p_type)
+            p_char = chess.piece_symbol(p_type) 
+            move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
+            
+            # The URL title now clearly shows WHICH pawn is moving
+            link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{source}+to+{move_uci.upper()[2:4]}+{move_uci.lower()}&body=move%20{move_uci}"
+            
+            icon = f"<img src='img/{color_str}/{p_name}.svg' width='50' valign='middle'>"
+            markdown += f"| {icon} | **{p_name.capitalize()}** | [Promote {source} to {p_name.capitalize()}]({link}) |\n"
+        
+        markdown += "\n" # Space between different pawns
+    
+    return markdown + "---\n"
 
 def generate_moves_list(board):
     if board.is_game_over():
@@ -275,6 +286,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
