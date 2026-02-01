@@ -66,30 +66,65 @@ def generate_last_moves():
 
     return markdown + "\n"
 
+def generate_promotion_table(board):
+    """Detects promotion moves and creates the choice gallery."""
+    promo_moves = [m for m in board.legal_moves if m.promotion]
+    if not promo_moves:
+        return ""
+
+    color_str = "white" if board.turn == chess.WHITE else "black"
+    repo = os.environ.get('GITHUB_REPOSITORY', 'your-user/your-repo')
+    
+    markdown = "### 🌟 PAWN PROMOTION AVAILABLE! 🌟\n"
+    markdown += "Your pawn reached the final rank! Choose its new form:\n\n"
+    markdown += "| Piece | Type | Action |\n"
+    markdown += "| :---: | :--- | :--- |\n"
+
+    for move in promo_moves:
+        p_type = move.promotion
+        p_name = chess.piece_name(p_type)
+        p_char = chess.piece_symbol(p_type) # 'q', 'r', 'b', 'n'
+        
+        # Build 5-char move string
+        move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
+        
+        # Link to trigger the move
+        link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{move_uci.upper()[:2]}+to+{move_uci.upper()[2:4]}+({p_name.capitalize()})&body=move%20{move_uci}"
+        
+        icon = f"<img src='img/{color_str}/{p_name}.svg' width='55' valign='middle'>"
+        markdown += f"| {icon} | **{p_name.capitalize()}** | [Promote to {p_name.capitalize()}]({link}) |\n"
+    
+    return markdown + "\n---\n"
+
 def generate_moves_list(board):
-    # Create dictionary and fill it
-    moves_dict = defaultdict(set)
-
-    for move in board.legal_moves:
-        source = chess.SQUARE_NAMES[move.from_square].upper()
-        dest   = chess.SQUARE_NAMES[move.to_square].upper()
-        moves_dict[source].add(dest)
-
-    # Write everything in Markdown format
-    markdown = ""
-
     if board.is_game_over():
+        repo = os.environ.get("GITHUB_REPOSITORY", "username/repo")
         issue_link = settings['issues']['link'].format(
-            repo=os.environ["GITHUB_REPOSITORY"],
+            repo=repo,
             params=urlencode(settings['issues']['new_game']))
-
         return "**GAME IS OVER!** " + create_link("Click here", issue_link) + " to start a new game :D\n"
 
-    if board.is_check():
-        markdown += "**CHECK!** Choose your move wisely!\n"
+    # 1. Start with Promotion (if available)
+    markdown_output = generate_promotion_table(board)
+    
+    # 2. Add normal moves heading if promotion is an option
+    if markdown_output:
+        markdown_output += "### ♟️ Other Legal Moves\n"
 
-    markdown = "| Piece | Type | From | To (Click to Move) |\n"
-    markdown += "| :---: | :--- | :---: | :--- |\n"
+    # 3. Build the standard table
+    moves_dict = defaultdict(set)
+    for move in board.legal_moves:
+        # Don't show promotion variations in the standard list
+        if not move.promotion:
+            source = chess.SQUARE_NAMES[move.from_square].upper()
+            dest = chess.SQUARE_NAMES[move.to_square].upper()
+            moves_dict[source].add(dest)
+
+    if board.is_check() and not markdown_output:
+        markdown_output += "**CHECK!** Choose your move wisely!\n"
+
+    standard_table = "| Piece | Type | From | To (Click to Move) |\n"
+    standard_table += "| :---: | :--- | :---: | :--- |\n"
 
     for source, dest_list in sorted(moves_dict.items()):
         square_index = chess.SQUARE_NAMES.index(source.lower())
@@ -98,12 +133,10 @@ def generate_moves_list(board):
         if piece:
             color_str = "white" if piece.color == chess.WHITE else "black"
             piece_type_name = chess.piece_name(piece.piece_type).capitalize()
-            
             icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='40' valign='middle'>"
-            
-            markdown += f"| {icon} | **{piece_type_name}** | `{source}` | {create_issue_link(source, dest_list)} |\n"
+            standard_table += f"| {icon} | **{piece_type_name}** | `{source}` | {create_issue_link(source, dest_list)} |\n"
 
-    return markdown
+    return markdown_output + standard_table
 
 def generate_status_badge(board):
     current_player = "WHITE" if board.turn == chess.WHITE else "BLACK"
@@ -242,4 +275,5 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
