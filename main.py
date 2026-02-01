@@ -61,30 +61,28 @@ def parse_issue(title):
     """Parse issue title and return a tuple with (action, <move>)"""
     title_clean = title.lower().strip()
 
+    # 1. Check for New Game
     if title_clean == 'chess: start new game':
         return (Action.NEW_GAME, None)
 
+    # 2. Check for Moves (including Promotions)
     if 'chess: move' in title_clean:
-        # This regex captures:
-        # 1. Source (A-H, 1-8)
-        # 2. Destination (A-H, 1-8)
-        # 3. Optional Promotion Piece inside parentheses or at the end
-        # Example: "Chess: Move A7 to A8 (Knight)" or "Chess: Move e7e8q"
+        # Our links format the title as: "Chess: Move A7 to A8 (Queen)"
+        # Or sometimes just: "Chess: Move e7e8q"
+        # We want to find the UCI string (4 or 5 chars)
         
-        # Strategy: Extract the UCI string (e7e8q) which is the last word in our new links
-        parts = title_clean.split()
-        move_str = parts[-1].rstrip(')').lstrip('(') 
+        # Look for the pattern: 2 chars + 2 chars + optional 1 char
+        match = re.search(r'([a-h][1-8][a-h][1-8][qrbn]?)', title_clean)
         
-        # Validation: check if it's a valid coordinate pattern
-        if re.match(r'^[a-h][1-8][a-h][1-8][qrbn]?$', move_str):
-            return (Action.MOVE, move_str)
+        if match:
+            return (Action.MOVE, match.group(1))
             
-        # Fallback for old 4-character titles
-        match_obj = re.search(r'([a-h][1-8])\s*to\s*([a-h][1-8])', title_clean, re.I)
+        # Fallback: Handle the "A7 to A8" format for manual moves
+        match_obj = re.search(r'([a-h][1-8])\s*to\s*([a-h][1-8])', title_clean)
         if match_obj:
             source = match_obj.group(1)
             dest = match_obj.group(2)
-            return (Action.MOVE, (source + dest).lower())
+            return (Action.MOVE, (source + dest))
 
     return (Action.UNKNOWN, None)
 
@@ -266,5 +264,6 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
