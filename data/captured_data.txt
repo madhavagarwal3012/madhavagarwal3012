@@ -14,3 +14,4 @@ black,pawn,d1d4
 white,pawn,g3b3
 black,knight,b2a2
 black,pawn,d4c4
+black,rook,g2f3
