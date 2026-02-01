@@ -92,23 +92,21 @@ def generate_moves_list(board):
     markdown += "| :---: | :--- | :---: | :--- |\n"
 
     for source, dest_list in sorted(moves_dict.items()):
-        # 1. Identify the piece at the starting square
         square_index = chess.SQUARE_NAMES.index(source.lower())
         piece = board.piece_at(square_index)
         
         if piece:
             color_str = "white" if piece.color == chess.WHITE else "black"
-            # Get piece name (e.g., 'knight', 'bishop')
             piece_type_name = chess.piece_name(piece.piece_type).capitalize()
             
-            # 2. Format the Icon and Name
-            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='22' valign='middle'>"
+            # Using align="center" to keep the piece focused.
+            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='45' align='center' style='max-width:100%;'>"
             
-            # 3. Create formatted links for all possible destinations
-            # Assuming you have a 'create_link' helper; adjust to your function name
-            links = " , ".join([f"[{d}](your_issue_url_here?body=move%20{source.lower()}{d.lower()})" for d in sorted(dest_list)])
+            # Format the destination links with bold text for better visibility
+            # Replace 'your_issue_url' with your actual variable/logic
+            links = " , ".join([f"**[{d}](?body=move%20{source.lower()}{d.lower()})**" for d in sorted(dest_list)])
             
-            # 4. Add the row to the table
+            # Create a row where the piece name and icon are prominent
             markdown += f"| {icon} | **{piece_type_name}** | `{source}` | {links} |\n"
 
     return markdown
@@ -250,6 +248,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
