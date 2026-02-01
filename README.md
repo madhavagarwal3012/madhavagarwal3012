@@ -379,6 +379,8 @@ Before making your move, here's a quick refresher on how each piece can move and
 | **Knight (Horse)** | <img src="img/pieces/knight.PNG" width="40px"> | Moves in an **"L" shape** (two squares in one cardinal direction and then one square perpendicular). | Captures only on the square it lands on. | **The only piece that can jump** over other pieces. |
 | **Pawn** | <img src="img/pieces/pawn.PNG" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
 
+---
+
 ### 🕹️ Game Status
 <!-- BEGIN TOP STATUS -->
 ![Status](https://img.shields.io/badge/TURN-WHITE_TO_MOVE-green?style=for-the-badge)
