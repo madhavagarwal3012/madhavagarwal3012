@@ -108,8 +108,9 @@ def generate_status_badge(board):
     else:
         # Displays "WHITE_TO_MOVE" or "BLACK_TO_MOVE"
         status, color = f"{current_player}_TO_MOVE", "green"
-    
-    return f"![Status](https://img.shields.io/badge/TURN-{status}-{color}?style=for-the-badge)\n"
+
+    badge_url = f"https://img.shields.io/badge/TURN-{status}-{color}?style=for-the-badge"
+    return f"\n![Status]({badge_url})\n"
     
 def generate_captured_table():
     white_lost, black_lost = [], []
@@ -233,6 +234,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
