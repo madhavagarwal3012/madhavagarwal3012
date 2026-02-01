@@ -134,7 +134,6 @@ console.log(`Feel free to contribute`);
 ## 📂 My Repository Structure & Workflows 📂
 
 ```
-```
 madhavagarwal3012/
     ├── __pycache__/
     │   ├── connect4.cpython-310.pyc
