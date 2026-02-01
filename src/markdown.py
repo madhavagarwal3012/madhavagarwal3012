@@ -126,7 +126,7 @@ def generate_captured_table():
 
     # Start the table
     table = "| ⚪ White Pieces Lost | ⚫ Black Pieces Lost |\n"
-    table += "| :--- | :--- |\n"
+    table += "| :---: | :---: |\n"
     
     for i in range(rows):
         w = white_lost[i] if i < len(white_lost) else " "
@@ -218,6 +218,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
