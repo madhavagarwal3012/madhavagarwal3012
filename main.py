@@ -232,7 +232,8 @@ def main(issue, issue_author, repo_owner):
             turn=('white' if gameboard.turn == chess.WHITE else 'black'),
             last_moves=last_moves,
             top_moves=markdown.generate_top_moves(),
-            status_badge=markdown.generate_status_badge(gameboard),
+            status_top=markdown.generate_status_badge(gameboard),
+            status_bottom=markdown.generate_status_badge(gameboard),
             captured_table=markdown.generate_captured_table() 
         ))
 
@@ -254,11 +255,4 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
-
-
-
-
-
-
-
 
