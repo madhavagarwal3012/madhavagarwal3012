@@ -3,3 +3,4 @@ black,queen,h4d8
 white,bishop,e8d8
 white,queen,e7f6
 white,pawn,e5d4
+black,bishop,f3g4
