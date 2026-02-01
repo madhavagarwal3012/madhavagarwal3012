@@ -107,8 +107,7 @@ def generate_status_badge(board):
     else:
         status, color = "Active", "green"
     
-    badge_url = f"https://img.shields.io/badge/Status-{status}-{color}?style=for-the-badge"
-    return f"![Status]({badge_url})"
+    return f"\n![Status](https://img.shields.io/badge/Status-{status}-{color}?style=for-the-badge)\n"
     
 def generate_captured_table():
     white_lost, black_lost = [], []
