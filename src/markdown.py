@@ -123,8 +123,9 @@ def generate_captured_table():
     rows = max(len(white_lost), len(black_lost))
     if rows == 0:
         return "*No pieces captured yet.*"
-
+    
     # Start the table
+    markdown = "\n
     markdown += "| ⚪ White Pieces Lost | ⚫ Black Pieces Lost |\n"
     markdown += "| :---: | :---: |\n"
     
@@ -218,6 +219,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
