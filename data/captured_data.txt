@@ -18,3 +18,4 @@ black,rook,g2f3
 white,bishop,e1e2
 black,rook,g1e2
 white,rook,f5e4
+black,pawn,f8g6
