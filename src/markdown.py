@@ -98,20 +98,25 @@ def generate_moves_list(board):
     return markdown
 
 def generate_status_badge(board):
-    # Determine the color of the player currently in trouble
+    # Determine which king is in trouble
+    # In chess.py, 'board.turn' is the player whose move it is. 
+    # If they are in check, it's THEIR king.
     current_player = "WHITE" if board.turn == chess.WHITE else "BLACK"
     
     if board.is_checkmate():
         status, color = f"{current_player}_CHECKMATE", "red"
     elif board.is_check():
-        # This will now display "BLACK_CHECK" or "WHITE_CHECK"
         status, color = f"{current_player}_CHECK", "orange"
     elif board.is_game_over():
         status, color = "GAME_OVER", "lightgrey"
     else:
         status, color = "ACTIVE", "green"
     
-    return f"![Status](https://img.shields.io/badge/STATUS-{status}-{color}?style=for-the-badge)\n"
+    # IMPORTANT: Ensure no extra brackets or spaces at the start
+    badge_url = f"https://img.shields.io/badge/STATUS-{status}-{color}?style=for-the-badge"
+    
+    # Adding newlines \n ensures it sits on its own line for better Markdown parsing
+    return f"\n![Status]({badge_url})\n"
     
 def generate_captured_table():
     white_lost, black_lost = [], []
@@ -235,6 +240,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
