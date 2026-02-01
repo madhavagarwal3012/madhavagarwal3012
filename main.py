@@ -58,21 +58,35 @@ def replace_text_between(original_text, marker, replacement_text):
     return leading_text + delimiter_a + replacement_text + delimiter_b + trailing_text
 
 def parse_issue(title):
+    """Parse issue title and return a tuple with (action, <move>)"""
     title_clean = title.lower().strip()
 
-    if 'chess: move' in title_clean:
-        # This regex looks for moves like 'e7e8q' or 'a7a8n'
-        # It searches for 4 characters followed by an optional q, r, b, or n
-        match = re.search(r'([a-h][1-8][a-h][1-8][qrbn]?)', title_clean)
-        if match:
-            return (Action.MOVE, match.group(1))
-            
-        # Fallback for "A7 to A8" format
-        match_obj = re.search(r'([a-h][1-8])\s*to\s*([a-h][1-8])', title_clean)
-        if match_obj:
-            return (Action.MOVE, (match_obj.group(1) + match_obj.group(2)).lower())
+    if title_clean == 'chess: start new game':
+        return (Action.NEW_GAME, None)
 
-    return (Action.UNKNOWN, None)
+    if 'chess: move' in title_clean:
+        # This regex captures:
+        # 1. Source (A-H, 1-8)
+        # 2. Destination (A-H, 1-8)
+        # 3. Optional Promotion Piece inside parentheses or at the end
+        # Example: "Chess: Move A7 to A8 (Knight)" or "Chess: Move e7e8q"
+        
+        # Strategy: Extract the UCI string (e7e8q) which is the last word in our new links
+        parts = title_clean.split()
+        move_str = parts[-1].rstrip(')').lstrip('(') 
+        
+        # Validation: check if it's a valid coordinate pattern
+        if re.match(r'^[a-h][1-8][a-h][1-8][qrbn]?$', move_str):
+            return (Action.MOVE, move_str)
+            
+        # Fallback for old 4-character titles
+        match_obj = re.search(r'([a-h][1-8])\s*to\s*([a-h][1-8])', title_clean, re.I)
+        if match_obj:
+            source = match_obj.group(1)
+            dest = match_obj.group(2)
+            return (Action.MOVE, (source + dest).lower())
+
+    return (Action.UNKNOWN, None) 
 
 def main(issue, issue_author, repo_owner):
     if not os.path.exists("games"):
@@ -152,7 +166,17 @@ def main(issue, issue_author, repo_owner):
 
         if gameboard.is_capture(move):
             issue_labels.append('⚔️ Capture!')
-            # ... (keep your existing captured_piece logic here) ...
+            captured_piece = gameboard.piece_at(move.to_square)
+            # If En Passant or unusual capture
+            if captured_piece is None:
+                captured_piece = chess.Piece(chess.PAWN, not gameboard.turn)
+    
+            p_color = "white" if captured_piece.color == chess.WHITE else "black"
+            p_name = chess.piece_name(captured_piece.piece_type)
+        
+            with open('data/captured_data.txt', 'a') as f:
+                f.write(f"{p_color},{p_name},{action[1]}\n")
+            
 
         # 5. EXECUTE & COMMENT (Single call)
         issue.create_comment(comment_msg)
@@ -243,6 +267,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
