@@ -8,3 +8,4 @@ white,pawn,e8e4
 white,knight,d5c4
 white,pawn,e4g4
 black,bishop,c3b4
+white,pawn,a6b4
