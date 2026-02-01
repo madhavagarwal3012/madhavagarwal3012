@@ -224,14 +224,14 @@ def main(issue, issue_author, repo_owner):
         readme = replace_text_between(readme, settings['markers']['captured_table'], '{captured_table}')
 
     with open('README.md', 'w') as file:
-        # Write new board & list of movements
         file.write(readme.format(
             chess_board=markdown.board_to_markdown(gameboard),
             moves_list=markdown.generate_moves_list(gameboard),
             turn=('white' if gameboard.turn == chess.WHITE else 'black'),
             last_moves=last_moves,
-            top_moves=markdown.generate_top_moves()))
-            captured_table=markdown.generate_captured_table()
+            top_moves=markdown.generate_top_moves(),
+            captured_table=markdown.generate_captured_table() 
+        ))
 
     return True, ''
 
@@ -251,6 +251,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
