@@ -188,8 +188,8 @@ def main(issue, issue_author, repo_owner):
     streak_table = (
         "| Team | Total Wins | Status |\n"
         "| :---: | :---: | :---: |\n"
-        f"| ❤️ Red Heart Team ❤️ | **{stats['Red Heart']}** | {'🔥 Winning' if stats['Red Heart'] > stats['Blue Heart'] else 'Chasing'} |\n"
-        f"| 💙 Blue Heart Team 💙| **{stats['Blue Heart']}** | {'🔥 Winning' if stats['Blue Heart'] > stats['Red Heart'] else 'Chasing'} |"
+        f"| ❤️ Red Heart Team ❤️ | **{stats['Red Heart']}** | {'🔥 Winning' if stats['Red Heart'] > stats['Blue Heart'] else ' ⚔️ Chasing'} |\n"
+        f"| 💙 Blue Heart Team 💙| **{stats['Blue Heart']}** | {'🔥 Winning' if stats['Blue Heart'] > stats['Red Heart'] else ' ⚔️ Chasing'} |"
     )
     readme = replace_text_between(readme, settings['markers']['win_stats'], f"\n{streak_table}\n")
 
