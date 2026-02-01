@@ -99,7 +99,7 @@ def generate_moves_list(board):
             color_str = "white" if piece.color == chess.WHITE else "black"
             piece_type_name = chess.piece_name(piece.piece_type).capitalize()
             
-            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='30px' valign='middle'>"
+            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='40' height='40' valign='middle'>"
             
             markdown += f"| {icon} | **{piece_type_name}** | `{source}` | {create_issue_link(source, dest_list)} |\n"
 
@@ -136,7 +136,7 @@ def generate_captured_table():
             display_name = piece.capitalize()
             
             # Format: Image + Name + Move
-            entry = f"&nbsp; <img src='img/{color}/{piece}.svg' width='30px' valign='middle'> {piece.capitalize()} (`{uci}`) &nbsp;"
+            entry = f"&nbsp; <img src='img/{color}/{piece}.svg' width='30' height='30' valign='middle'> {piece.capitalize()} (`{uci}`) &nbsp;"
             
             if color == "white":
                 white_lost.append(entry)
@@ -242,5 +242,3 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
-
-
