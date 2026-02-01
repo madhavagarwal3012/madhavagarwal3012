@@ -1,2 +1,3 @@
 black,knight,d1g4
 black,queen,h4d8
+white,bishop,e8d8
