@@ -398,6 +398,9 @@ Before making your move, here's a quick refresher on how each piece can move and
 |   | <span style="color:#A78C6F; font-weight:bold;">H</span> | <span style="color:#A78C6F; font-weight:bold;">G</span> | <span style="color:#A78C6F; font-weight:bold;">F</span> | <span style="color:#A78C6F; font-weight:bold;">E</span> | <span style="color:#A78C6F; font-weight:bold;">D</span> | <span style="color:#A78C6F; font-weight:bold;">C</span> | <span style="color:#A78C6F; font-weight:bold;">B</span> | <span style="color:#A78C6F; font-weight:bold;">A</span> |   |
 <!-- END CHESS BOARD -->
 
+<!-- BEGIN STATUS -->
+<!-- END STATUS -->
+
 **It's your turn to move! Choose one from the following table**
 <!-- BEGIN MOVES LIST -->
 | Piece | Type | From | To (Click to Move) |
