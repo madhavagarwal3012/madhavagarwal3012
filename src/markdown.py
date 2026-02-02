@@ -309,8 +309,12 @@ def board_to_markdown(board, is_comment=False):
             full_cell_style = base_style + " display: block; height: 100%; margin: -8px -10px; padding: 8px 10px;"
             
             markdown += "<div style=\"{}\">".format(full_cell_style)
+            
+            img_width = "150px" if is_comment else "218px"
+            markdown += f"<div style=\"{full_cell_style}\"><img src=\"{images.get(elem, '???')}\" width=\"{img_width}\"></div> | "
+
             # NOTE: Use the correct width (218px) for your custom pieces
-            markdown += f"<div style=\"{full_cell_style}\"><img src=\"{images.get(elem, '???')}\" width=\"218px\"></div> | "
+            # markdown += f"<div style=\"{full_cell_style}\"><img src=\"{images.get(elem, '???')}\" width=\"218px\"></div> | "
 
         markdown += "<span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> |\n"
 
@@ -321,6 +325,7 @@ def board_to_markdown(board, is_comment=False):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
