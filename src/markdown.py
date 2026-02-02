@@ -194,6 +194,7 @@ def generate_status_badge(board):
 def generate_captured_table():
     white_lost, black_lost = [], []
     file_path = 'data/captured_data.txt'
+    repo = os.environ.get("GITHUB_REPOSITORY", "username/repo")
     
     if not os.path.exists(file_path) or os.stat(file_path).st_size == 0:
         return "\n #### No pieces captured yet. \n"
@@ -201,13 +202,15 @@ def generate_captured_table():
     with open(file_path, 'r') as f:
         for line in f:
             if not line.strip(): continue
-            color, piece, uci = line.strip().split(',')
+            color, piece, uci, issue_id = line.strip().split(',')
+            issue_url = f"https://github.com/{repo}/issues/{issue_id}"
+            move_link = f"[`{uci}`]({issue_url})"
             
             # Capitalize piece name (e.g., 'pawn' -> 'Pawn')
             display_name = piece.capitalize()
             
             # Format: Image + Name + Move
-            entry = f"&nbsp; <img src='img/{color}/{piece}.svg' width='30' valign='middle'> {piece.capitalize()} (`{uci}`) &nbsp;"
+            entry = f"&nbsp; <img src='img/{color}/{piece}.svg' width='30' valign='middle'> {piece.capitalize()} ({move_link}) &nbsp;"
             
             if color == "white":
                 white_lost.append(entry)
@@ -313,3 +316,4 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
