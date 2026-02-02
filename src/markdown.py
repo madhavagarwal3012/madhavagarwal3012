@@ -243,8 +243,8 @@ def board_to_markdown(board, is_comment=False):
     base_url = f"https://raw.githubusercontent.com/{repo}/master/" if is_comment else ""
 
     # --- ADDED: Define your custom colors here ---
-    LIGHT_SQUARE_COLOR = "#EDEAD8"  # Light: (Very Light Cream)
-    DARK_SQUARE_COLOR = "#A78C6F"   # Dark: (Faded Sepia Brown)
+    # LIGHT_SQUARE_COLOR = "#EDEAD8"  # Light: (Very Light Cream)
+    # DARK_SQUARE_COLOR = "#A78C6F"   # Dark: (Faded Sepia Brown)
     # ---------------------------------------------
 
     # All image paths now prepend the base_url
@@ -325,6 +325,7 @@ def board_to_markdown(board, is_comment=False):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
