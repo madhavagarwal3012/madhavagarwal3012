@@ -19,7 +19,7 @@ def create_issue_link(source, dest_list):
         repo=os.environ["GITHUB_REPOSITORY"],
         params=urlencode(settings['issues']['move'], safe="{}"))
 
-    ret = [create_link(dest, issue_link.format(source=source, dest=dest)) for dest in sorted(dest_list)]
+    ret = [create_link(dest, issue_link.format(source=source, dest=dest)) for dest in dest_list]
     return ", ".join(ret)
 
 def generate_top_moves():
@@ -122,6 +122,9 @@ def generate_moves_list(board):
     if markdown_output:
         markdown_output += "### ♟️ Other Legal Moves\n"
 
+    # Determine if we need to reverse the list (True for Black, False for White)
+    is_black_turn = (board.turn == chess.BLACK)
+
     # 3. Build the standard table
     moves_dict = defaultdict(set)
     for move in board.legal_moves:
@@ -130,6 +133,9 @@ def generate_moves_list(board):
             source = chess.SQUARE_NAMES[move.from_square].upper()
             dest = chess.SQUARE_NAMES[move.to_square].upper()
             moves_dict[source].add(dest)
+            
+    # Sort starting squares: A->H for White, H->A for Black
+    sorted_sources = sorted(moves_dict.keys(), reverse=is_black_turn)
 
     if board.is_check() and not markdown_output:
         markdown_output += "**CHECK!** Choose your move wisely!\n"
@@ -286,6 +292,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
