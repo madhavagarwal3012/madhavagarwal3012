@@ -3,3 +3,4 @@ black,pawn,e5d6
 white,pawn,c7d6
 black,knight,b5d7
 white,bishop,e8d7
+black,pawn,d1d5
