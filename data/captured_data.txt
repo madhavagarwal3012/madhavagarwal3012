@@ -8,3 +8,4 @@ white,queen,a5d5,412
 black,queen,e4d5,413
 white,pawn,d6h2,417
 white,knight,f7e6,421
+black,pawn,d5e6,422
