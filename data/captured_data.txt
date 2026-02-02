@@ -6,3 +6,4 @@ white,bishop,e8d7,401
 black,pawn,d1d5,411
 white,queen,a5d5,412
 black,queen,e4d5,413
+white,pawn,d6h2,417
