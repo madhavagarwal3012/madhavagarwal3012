@@ -115,46 +115,66 @@ def generate_moves_list(board):
             params=urlencode(settings['issues']['new_game']))
         return "**GAME IS OVER!** " + create_link("Click here", issue_link) + " to start a new game :D\n"
 
-    # 1. Start with Promotion (if available)
     markdown_output = generate_promotion_table(board)
-    
-    # 2. Add normal moves heading if promotion is an option
     if markdown_output:
         markdown_output += "### ♟️ Other Legal Moves\n"
 
-    # Determine if we need to reverse the list (True for Black, False for White)
     is_black_turn = (board.turn == chess.BLACK)
 
-    # 3. Build the standard table
-    moves_dict = defaultdict(set)
-    for move in board.legal_moves:
-        # Don't show promotion variations in the standard list
-        if not move.promotion:
-            source = chess.SQUARE_NAMES[move.from_square].upper()
-            dest = chess.SQUARE_NAMES[move.to_square].upper()
-            moves_dict[source].add(dest)
+    # 1. Map piece types to sort weights (Pawn -> King)
+    piece_weights = {
+        chess.PAWN: 1,
+        chess.KNIGHT: 2,
+        chess.BISHOP: 3,
+        chess.ROOK: 4,
+        chess.QUEEN: 5,
+        chess.KING: 6
+    }
+
+    # 2. Collect moves and their piece data
+    # Structure: (weight, source_name) -> set(destinations)
+    moves_data = []
+    
+    # We use a set of sources to avoid duplicate rows for the same piece
+    sources = {move.from_square for move in board.legal_moves if not move.promotion}
+    
+    for sq in sources:
+        piece = board.piece_at(sq)
+        if piece:
+            weight = piece_weights.get(piece.piece_type, 7)
+            source_name = chess.SQUARE_NAMES[sq].upper()
             
-    # Sort starting squares: A->H for White, H->A for Black
-    sorted_sources = sorted(moves_dict.keys(), reverse=is_black_turn)
+            # Get all legal destinations for THIS specific square
+            dests = [chess.SQUARE_NAMES[m.to_square].upper() for m in board.legal_moves 
+                     if m.from_square == sq and not m.promotion]
+            
+            moves_data.append({
+                'weight': weight,
+                'source': source_name,
+                'piece': piece,
+                'dests': sorted(dests, reverse=is_black_turn)
+            })
+
+    # 3. Sort logic: First by Piece Weight, then by Source Square
+    # This keeps all Pawns together, then Knights, etc.
+    moves_data.sort(key=lambda x: (x['weight'], sorted(x['source'], reverse=is_black_turn)))
 
     if board.is_check() and not markdown_output:
         markdown_output += "**CHECK!** Choose your move wisely!\n"
 
-    standard_table = "| Piece | Type | From | To (Click to Move) |\n"
-    standard_table += "| :---: | :--- | :---: | :--- |\n"
+    table = "| Piece | Type | From | To (Click to Move) |\n"
+    table += "| :---: | :--- | :---: | :--- |\n"
 
-    for source, dest_list in sorted(moves_dict.items()):
-        dest_list = sorted(list(moves_dict[source]), reverse=is_black_turn)
-        square_index = chess.SQUARE_NAMES.index(source.lower())
-        piece = board.piece_at(square_index)
+    for entry in moves_data:
+        p = entry['piece']
+        color_str = "white" if p.color == chess.WHITE else "black"
+        p_type_name = chess.piece_name(p.piece_type).capitalize()
+        icon = f"<img src='img/{color_str}/{p_type_name.lower()}.svg' width='40' valign='middle'>"
         
-        if piece:
-            color_str = "white" if piece.color == chess.WHITE else "black"
-            piece_type_name = chess.piece_name(piece.piece_type).capitalize()
-            icon = f"<img src='img/{color_str}/{piece_type_name.lower()}.svg' width='40' valign='middle'>"
-            standard_table += f"| {icon} | **{piece_type_name}** | `{source}` | {create_issue_link(source, dest_list)} |\n"
+        links = create_issue_link(entry['source'], entry['dests'])
+        table += f"| {icon} | **{p_type_name}** | `{entry['source']}` | {links} |\n"
 
-    return markdown_output + standard_table
+    return markdown_output + table
 
 def generate_status_badge(board):
     current_player = "WHITE" if board.turn == chess.WHITE else "BLACK"
@@ -293,19 +313,3 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
