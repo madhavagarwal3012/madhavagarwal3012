@@ -43,3 +43,22 @@ jobs:
           git add .
           git commit -m "${ISSUE_TITLE} by ${ISSUE_AUTHOR}"
           git push
+          
+      - name: Close Issue on Failure
+        if: failure() || cancelled()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed',
+              labels: ['System Error 🛠️']
+            })
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '❌ The workflow was cancelled or encountered a system error. Please try again or contact the owner.'
+            })
