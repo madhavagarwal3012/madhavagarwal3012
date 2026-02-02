@@ -180,6 +180,7 @@ def main(issue, issue_author, repo_owner):
             with open('data/captured_data.txt', 'a') as f:
                 f.write(f"{p_color},{p_name},{action[1]},{issue_id}\n")
 
+        comment_msg += "--- \n\n" 
         comment_msg += "### Board state before this move:\n"
         comment_msg += board_snapshot
 
@@ -272,6 +273,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
