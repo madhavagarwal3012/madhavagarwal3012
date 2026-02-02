@@ -1,2 +1,3 @@
 black,pawn,d4e5
 black,pawn,e5d6
+white,pawn,c7d6
