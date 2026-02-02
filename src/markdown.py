@@ -238,27 +238,32 @@ def board_to_markdown(board):
     board_list = [[item for item in line.split(' ')] for line in str(board).split('\n')]
     markdown = ""
 
+    # If is_comment is True, we use the full raw URL so GitHub Issues can see the images.
+    repo = os.environ.get("GITHUB_REPOSITORY", "username/repo")
+    base_url = f"https://raw.githubusercontent.com/{repo}/master/" if is_comment else ""
+
     # --- ADDED: Define your custom colors here ---
     LIGHT_SQUARE_COLOR = "#EDEAD8"  # Light: (Very Light Cream)
     DARK_SQUARE_COLOR = "#A78C6F"   # Dark: (Faded Sepia Brown)
     # ---------------------------------------------
 
+    # All image paths now prepend the base_url
     images = {
-        "r": "img/black/rook.svg",
-        "n": "img/black/knight.svg",
-        "b": "img/black/bishop.svg",
-        "k": "img/black/king.svg",
-        "q": "img/black/queen.svg",
-        "p": "img/black/pawn.svg",
-
-        "R": "img/white/rook.svg",
-        "N": "img/white/knight.svg",
-        "B": "img/white/bishop.svg",
-        "K": "img/white/king.svg",
-        "Q": "img/white/queen.svg",
-        "P": "img/white/pawn.svg",
-
-        ".": "img/blank.png"
+        "r": f"{base_url}img/black/rook.svg",
+        "n": f"{base_url}img/black/knight.svg",
+        "b": f"{base_url}img/black/bishop.svg",
+        "k": f"{base_url}img/black/king.svg",
+        "q": f"{base_url}img/black/queen.svg",
+        "p": f"{base_url}img/black/pawn.svg",
+        
+        "R": f"{base_url}img/white/rook.svg",
+        "N": f"{base_url}img/white/knight.svg",
+        "B": f"{base_url}img/white/bishop.svg",
+        "K": f"{base_url}img/white/king.svg",
+        "Q": f"{base_url}img/white/queen.svg",
+        "P": f"{base_url}img/white/pawn.svg",
+        
+        ".": f"{base_url}img/blank.png"
     }
     # ---------------------------------
 
@@ -305,7 +310,7 @@ def board_to_markdown(board):
             
             markdown += "<div style=\"{}\">".format(full_cell_style)
             # NOTE: Use the correct width (218px) for your custom pieces
-            markdown += "<img src=\"{}\" width=218px></div> | ".format(images.get(elem, "???"))
+            markdown += f"<img src=\"{images.get(elem, '???')}\" width={img_width}></div> |
 
         markdown += "<span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> |\n"
 
@@ -316,4 +321,5 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
