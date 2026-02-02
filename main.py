@@ -127,27 +127,11 @@ def main(issue, issue_author, repo_owner):
             game = chess.pgn.read_game(pgn_file)
             gameboard = game.board()
 
-        # 1. Capture the board BEFORE pushing the new move
-        # Passing is_comment=True triggers the absolute URLs
-        board_snapshot = board_to_markdown(gameboard, is_comment=True)
-    
-        # 2. Process the move (Pushing to gameboard)
-        # gameboard.push(move) ...
-    
-        # 3. Create the final comment
-        issue_author = issue.user.login
-        move_text = action[1]
-        
-        comment_body = f"Done! @{issue_author} played move `{move_text}`. 🎯\n\n"
-        comment_body += "### Board state before this move:\n"
-        comment_body += board_snapshot
-        
-        # 4. Post to GitHub
-        issue.create_comment(comment_body)
-
         # Replay the game to get current state
         for move in game.mainline_moves():
             gameboard.push(move)
+
+        board_snapshot = board_to_markdown(gameboard, is_comment=True)
 
         # 1. Create the move object from the parsed UCI (e.g., 'e7e8q')
         try:
@@ -195,7 +179,9 @@ def main(issue, issue_author, repo_owner):
             issue_id = issue.number
             with open('data/captured_data.txt', 'a') as f:
                 f.write(f"{p_color},{p_name},{action[1]},{issue_id}\n")
-            
+
+        comment_msg += "### Board state before this move:\n"
+        comment_msg += board_snapshot
 
         # 5. EXECUTE & COMMENT (Single call)
         issue.create_comment(comment_msg)
@@ -286,6 +272,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
