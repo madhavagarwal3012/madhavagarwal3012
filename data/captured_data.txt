@@ -1,8 +1,8 @@
-black,pawn,d4e5
-black,pawn,e5d6
-white,pawn,c7d6
-black,knight,b5d7
-white,bishop,e8d7
-black,pawn,d1d5
-white,queen,a5d5
-black,queen,e4d5
+black,pawn,d4e5,392
+black,pawn,e5d6,394
+white,pawn,c7d6,395
+black,knight,b5d7,400
+white,bishop,e8d7,401
+black,pawn,d1d5,411
+white,queen,a5d5,412
+black,queen,e4d5,413
