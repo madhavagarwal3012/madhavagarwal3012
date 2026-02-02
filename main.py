@@ -131,7 +131,7 @@ def main(issue, issue_author, repo_owner):
         for move in game.mainline_moves():
             gameboard.push(move)
 
-        board_snapshot = board_to_markdown(gameboard, is_comment=True)
+        board_snapshot = markdown.board_to_markdown(gameboard, is_comment=True)
 
         # 1. Create the move object from the parsed UCI (e.g., 'e7e8q')
         try:
@@ -272,6 +272,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
