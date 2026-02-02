@@ -169,7 +169,7 @@ def generate_captured_table():
     file_path = 'data/captured_data.txt'
     
     if not os.path.exists(file_path) or os.stat(file_path).st_size == 0:
-        return "#### No pieces captured yet. \n"
+        return "\n #### No pieces captured yet. \n"
 
     with open(file_path, 'r') as f:
         for line in f:
@@ -286,6 +286,7 @@ def board_to_markdown(board):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
