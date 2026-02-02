@@ -173,9 +173,10 @@ def main(issue, issue_author, repo_owner):
     
             p_color = "white" if captured_piece.color == chess.WHITE else "black"
             p_name = chess.piece_name(captured_piece.piece_type)
-        
+
+            issue_id = issue.number
             with open('data/captured_data.txt', 'a') as f:
-                f.write(f"{p_color},{p_name},{action[1]}\n")
+                f.write(f"{p_color},{p_name},{action[1]},{issue_id}\n")
             
 
         # 5. EXECUTE & COMMENT (Single call)
@@ -267,6 +268,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
