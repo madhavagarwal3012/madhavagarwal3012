@@ -385,39 +385,35 @@ Before making your move, here's a quick refresher on how each piece can move and
 
 ### 🕹️ Game Status
 <!-- BEGIN TOP STATUS -->
-![Status](https://img.shields.io/badge/TURN-WHITE_TO_MOVE-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/TURN-BLACK_IN_CHECK-orange?style=for-the-badge)
 <!-- END TOP STATUS -->
 
 <!-- BEGIN CHESS BOARD -->
-|   | A | B | C | D | E | F | G | H |   |
+|   | H | G | F | E | D | C | B | A |   |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **8** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | | **8** | 
-| **7** | <img src="img/blank.png" width="218px"> | <img src="img/black/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | | **7** | 
-| **6** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/rook.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/king.svg" width="218px"> | <img src="img/blank.png" width="218px"> | | **6** | 
-| **5** | <img src="img/black/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/king.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/pawn.svg" width="218px"> | | **5** | 
-| **4** | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | | **4** | 
-| **3** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | | **3** | 
-| **2** | <img src="img/blank.png" width="218px"> | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | | **2** | 
 | **1** | <img src="img/blank.png" width="218px"> | <img src="img/white/rook.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/rook.svg" width="218px"> | <img src="img/blank.png" width="218px"> | | **1** | 
-| | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | |
+| **2** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | | **2** | 
+| **3** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | | **3** | 
+| **4** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/pawn.svg" width="218px"> | | **4** | 
+| **5** | <img src="img/white/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/white/king.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/pawn.svg" width="218px"> | | **5** | 
+| **6** | <img src="img/blank.png" width="218px"> | <img src="img/black/king.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/rook.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | | **6** | 
+| **7** | <img src="img/blank.png" width="218px"> | <img src="img/black/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/black/pawn.svg" width="218px"> | <img src="img/blank.png" width="218px"> | | **7** | 
+| **8** | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | <img src="img/blank.png" width="218px"> | | **8** | 
+| | **H** | **G** | **F** | **E** | **D** | **C** | **B** | **A** | |
 <!-- END CHESS BOARD -->
 
 <!-- BEGIN BOTTOM STATUS -->
-![Status](https://img.shields.io/badge/TURN-WHITE_TO_MOVE-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/TURN-BLACK_IN_CHECK-orange?style=for-the-badge)
 <!-- END BOTTOM STATUS -->
 
 ---
 
 **It's your turn to move! Choose one from the following table**
 <!-- BEGIN MOVES LIST -->
+**CHECK!** Choose your move wisely!
 | Piece | Type | From | To (Click to Move) |
 | :---: | :--- | :---: | :--- |
-| <img src='img/white/pawn.svg' width='40' valign='middle'> | **Pawn** | `B2` | [B3](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B2+to+B3), [B4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B2+to+B4) |
-| <img src='img/white/pawn.svg' width='40' valign='middle'> | **Pawn** | `C3` | [C4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+C3+to+C4) |
-| <img src='img/white/pawn.svg' width='40' valign='middle'> | **Pawn** | `G4` | [G5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G4+to+G5), [H5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G4+to+H5) |
-| <img src='img/white/rook.svg' width='40' valign='middle'> | **Rook** | `B1` | [A1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B1+to+A1), [C1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B1+to+C1), [D1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B1+to+D1), [E1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B1+to+E1), [F1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+B1+to+F1) |
-| <img src='img/white/rook.svg' width='40' valign='middle'> | **Rook** | `G1` | [C1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+C1), [D1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+D1), [E1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+E1), [F1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+F1), [G2](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+G2), [G3](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+G3), [H1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G1+to+H1) |
-| <img src='img/white/king.svg' width='40' valign='middle'> | **King** | `E5` | [D4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+E5+to+D4), [D5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+E5+to+D5), [E4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+E5+to+E4), [F4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+E5+to+F4) |
+| <img src='img/black/king.svg' width='40' valign='middle'> | **King** | `G6` | [H7](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G6+to+H7), [H6](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G6+to+H6), [H5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G6+to+H5), [F7](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD&title=Chess%3A+Move+G6+to+F7) |
 <!-- END MOVES LIST -->
 
 Having fun? Ask a friend to do the next move!
@@ -442,6 +438,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 | &nbsp; <img src='img/white/bishop.svg' width='30' valign='middle'> Bishop ([`d8d6`](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/469)) &nbsp; | &nbsp; <img src='img/black/rook.svg' width='30' valign='middle'> Rook ([`f4d6`](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/464)) &nbsp; |
 | &nbsp; <img src='img/white/knight.svg' width='30' valign='middle'> Knight ([`f5b1`](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/471)) &nbsp; | &nbsp; <img src='img/black/knight.svg' width='30' valign='middle'> Knight ([`f3g4`](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/470)) &nbsp; |
 |   | &nbsp; <img src='img/black/bishop.svg' width='30' valign='middle'> Bishop ([`a1b1`](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/472)) &nbsp; |
+|   | &nbsp; <img src='img/black/pawn.svg' width='30' valign='middle'> Pawn ([`g4h5`](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/476)) &nbsp; |
 <!-- END CAPTURE TABLE -->
 
 <details>
@@ -450,11 +447,11 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Move | Author |
 | :--: | :----- |
+| `G4` to `H5` | [ @madhavagarwal3012](https://github.com/madhavagarwal3012) |
 | `F6` to `C6` | [ @madhavagarwal3012](https://github.com/madhavagarwal3012) |
 | `F4` to `E5` | [ @madhavagarwal3012](https://github.com/madhavagarwal3012) |
 | `D6` to `F6` | [ @madhavagarwal3012](https://github.com/madhavagarwal3012) |
 | `A1` to `B1` | [ @madhavagarwal3012](https://github.com/madhavagarwal3012) |
-| `F5` to `B1` | [ @madhavagarwal3012](https://github.com/madhavagarwal3012) |
 
 <!-- END LAST MOVES -->
 </details>
@@ -465,7 +462,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Total moves |  User  |
 | :---------: | :----- |
-| 198 | [@madhavagarwal3012](https://github.com/madhavagarwal3012) |
+| 199 | [@madhavagarwal3012](https://github.com/madhavagarwal3012) |
 
 <!-- END TOP MOVES -->
 </details>

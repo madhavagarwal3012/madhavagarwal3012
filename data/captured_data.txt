@@ -17,3 +17,4 @@ white,bishop,d8d6,469
 black,knight,f3g4,470
 white,knight,f5b1,471
 black,bishop,a1b1,472
+black,pawn,g4h5,476
