@@ -285,7 +285,9 @@ def board_to_markdown(board, is_comment=False):
     # Write board
     for rank_index, row in zip(rank_indexes, rows):
         # NOTE: Using inline style for coordinates to match the color aesthetic
-        markdown += "| <span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> | "
+        # markdown += "| <span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> | "
+
+        markdown += f"| **{9 - row}** | "
         
         columns = board_list[rank_index]
         file_indexes = range(0, 8)
@@ -296,19 +298,19 @@ def board_to_markdown(board, is_comment=False):
 
         for file_index, elem in zip(file_indexes, columns):
             # Calculate the chess square index (0 to 63)
-            square = file_index + (rank_index * 8)
+            # square = file_index + (rank_index * 8)
             
-            # 🎯 FIX 1: Robust Color Check (Based on Square Index Parity)
+            # Robust Color Check (Based on Square Index Parity)
             # This correctly determines the square's intrinsic color regardless of its content.
-            is_dark = (square % 2) != (rank_index % 2)
-            bg_color = DARK_SQUARE_COLOR if is_dark else LIGHT_SQUARE_COLOR
+            # is_dark = (square % 2) != (rank_index % 2)
+            # bg_color = DARK_SQUARE_COLOR if is_dark else LIGHT_SQUARE_COLOR
             
-            # FIX 2: GitHub Styling Hack (Force DIV to cover the whole cell)
+            # GitHub Styling Hack (Force DIV to cover the whole cell)
             # This ensures the background color is not overridden by the cell's default white.
-            base_style = "background-color:{};".format(bg_color)
-            full_cell_style = base_style + " display: block; height: 100%; margin: -8px -10px; padding: 8px 10px;"
+            # base_style = "background-color:{};".format(bg_color)
+            # full_cell_style = base_style + " display: block; height: 100%; margin: -8px -10px; padding: 8px 10px;"
             
-            markdown += "<div style=\"{}\">".format(full_cell_style)
+            # markdown += "<div style=\"{}\">".format(full_cell_style)
             
             img_width = "150px" if is_comment else "218px"
             markdown += f"<div style=\"{full_cell_style}\"><img src=\"{images.get(elem, '???')}\" width=\"{img_width}\"></div> | "
@@ -316,7 +318,8 @@ def board_to_markdown(board, is_comment=False):
             # NOTE: Use the correct width (218px) for your custom pieces
             # markdown += f"<div style=\"{full_cell_style}\"><img src=\"{images.get(elem, '???')}\" width=\"218px\"></div> | "
 
-        markdown += "<span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> |\n"
+        # markdown += "<span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> |\n"
+        markdown += f"| **{9 - row}** | "
 
     # Write footer in Markdown format
     if board.turn == chess.BLACK:
@@ -325,6 +328,7 @@ def board_to_markdown(board, is_comment=False):
         markdown += "|   | <span style=\"color:#A78C6F; font-weight:bold;\">A</span> | <span style=\"color:#A78C6F; font-weight:bold;\">B</span> | <span style=\"color:#A78C6F; font-weight:bold;\">C</span> | <span style=\"color:#A78C6F; font-weight:bold;\">D</span> | <span style=\"color:#A78C6F; font-weight:bold;\">E</span> | <span style=\"color:#A78C6F; font-weight:bold;\">F</span> | <span style=\"color:#A78C6F; font-weight:bold;\">G</span> | <span style=\"color:#A78C6F; font-weight:bold;\">H</span> |   |\n"
 
     return markdown
+
 
 
 
