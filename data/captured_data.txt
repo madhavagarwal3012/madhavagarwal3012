@@ -11,3 +11,4 @@ white,knight,f7e6,421
 black,pawn,d5e6,422
 white,pawn,d7e6,423
 black,bishop,g5f4,450
+white,pawn,f5g6,457
