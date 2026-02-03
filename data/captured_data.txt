@@ -13,3 +13,4 @@ white,pawn,d7e6,423
 black,bishop,g5f4,450
 white,pawn,f5g6,457
 black,rook,f4d6,464
+white,bishop,d8d6,469
