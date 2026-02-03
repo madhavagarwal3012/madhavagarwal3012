@@ -321,7 +321,7 @@ def board_to_markdown(board, is_comment=False):
             # markdown += f"<div style=\"{full_cell_style}\"><img src=\"{images.get(elem, '???')}\" width=\"218px\"></div> | "
 
         # markdown += "<span style=\"color:#A78C6F; font-weight:bold;\">" + str(9 - row) + "</span> |\n"
-        markdown += f"| **{9 - row}** | "
+        markdown += f"| **{9 - row}** | \n"
 
     # Write footer in Markdown format
     # if board.turn == chess.BLACK:
@@ -336,6 +336,7 @@ def board_to_markdown(board, is_comment=False):
         markdown += "| | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | |\n"
         
     return markdown
+
 
 
 
