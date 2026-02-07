@@ -128,7 +128,7 @@ def board_to_markdown(board, is_comment=False):
     else:
         markdown += "\n|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |"
                 
-    markdown += " |\n\n
+    markdown += " |\n\n"
     
     markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
     return markdown
