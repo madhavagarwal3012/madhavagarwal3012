@@ -82,6 +82,8 @@ def board_to_markdown(board):
     grid = board.grid
     markdown = ""
 
+    markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
+
     # Header showing column numbers
     markdown += "|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |\n"
     markdown += "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n"
