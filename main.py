@@ -231,8 +231,14 @@ def main(issue, issue_author, repo_owner):
             pattern = re.compile('.*: (@[a-z\\d](?:[a-z\\d]|-(?=[a-z\\d])){0,38})', flags=re.I)
             player_list = { re.match(pattern, line).group(1) for line in lines }
 
+        draw_label = '👑 Draw!'
+        if gameboard.is_stalemate():
+            draw_label = '👑 Draw! (Stalemate)'
+        elif gameboard.is_insufficient_material():
+            draw_label = '👑 Draw! (Insufficient Material)'
+
         if gameboard.result() == '1/2-1/2':
-            issue.add_to_labels('👑 Draw! (Stalemate)')
+            issue.add_to_labels(draw_label)
         else:
             issue.add_to_labels('👑 Winner!')
 
@@ -286,6 +292,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
