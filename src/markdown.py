@@ -182,8 +182,17 @@ def generate_status_badge(board):
     
     if board.is_checkmate():
         status, color = f"{current_player}_CHECKMATE", "red"
+        
+    elif board.is_stalemate():
+        status, color = "DRAW_STALEMATE", "lightgrey"
+    elif board.is_insufficient_material():
+        status, color = "DRAW_INSUFFICIENT_MATERIAL", "lightgrey"
+    elif board.is_fivefold_repetition() or board.can_claim_threefold_repetition():
+        status, color = "DRAW_REPETITION", "lightgrey"
+
     elif board.is_check():
         status, color = f"{current_player}_IN_CHECK", "orange"
+        
     else:
         # Displays "WHITE_TO_MOVE" or "BLACK_TO_MOVE"
         status, color = f"{current_player}_TO_MOVE", "green"
@@ -336,6 +345,7 @@ def board_to_markdown(board, is_comment=False):
         markdown += "| | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | |\n"
         
     return markdown
+
 
 
 
