@@ -8,7 +8,7 @@ from enum import Enum
 from datetime import datetime
 from connect4 import connect4
 import yaml
-from github import Github
+from github import Github, Auth
 import src.markdownC4 as markdown
 
 RED = 1
@@ -209,7 +209,11 @@ def main(issue, issue_author, repo_owner):
     return True, ''
 
 if __name__ == '__main__':
-    repo = Github(os.environ['GITHUB_TOKEN']).get_repo(os.environ['GITHUB_REPOSITORY'])
+    # Create an authentication object
+    auth = Auth.Token(os.environ['GITHUB_TOKEN'])
+    # Use the auth object to initialize Github
+    repo = Github(auth=auth).get_repo(os.environ['GITHUB_REPOSITORY'])
+    
     issue = repo.get_issue(number=int(os.environ['ISSUE_NUMBER']))
     issue_author = '@' + issue.user.login
     repo_owner = '@' + os.environ['REPOSITORY_OWNER']
