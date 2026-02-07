@@ -121,6 +121,8 @@ def main(issue, issue_author, repo_owner):
     elif action[0] == Action.MOVE:
         try:
             if not os.path.exists('games/current.pgn'):
+                issue.create_comment("🏁 **The game is already over!** Check the README to start a new match.")
+                issue.edit(state='closed', labels=['Invalid'])
                 return False, 'ERROR: There is no game in progress! Start a new game first'
     
             # Load game
@@ -292,6 +294,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
