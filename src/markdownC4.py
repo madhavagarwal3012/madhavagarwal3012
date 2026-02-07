@@ -107,7 +107,7 @@ def board_to_markdown(board, is_comment=False):
             markdown += "<img src=\"{}\" width=50px> | ".format(get_image_link(elem, is_comment))
         markdown += "   |\n"
 
-    if is_comment == False:
+    if not is_comment:
         # Footer with Move Buttons
         moves = board.valid_moves()
         markdown += "| **MOVE** |" # Added label for clarity
