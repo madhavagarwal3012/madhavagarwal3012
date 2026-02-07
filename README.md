@@ -8392,3 +8392,24 @@ _If for some reason the buttons are not clickable, try reloading the page. Somet
 <img width=100% src="https://github.com/madhavagarwal3012/madhavagarwal3012/blob/main/techy.PNG" alt = "Techy Image"/>
 <img width=100% src="https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/coding-life.gif" alt="Coding Life Image"/>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
