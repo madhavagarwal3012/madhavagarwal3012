@@ -278,8 +278,13 @@ def main(issue, issue_author, repo_owner):
 
     return True, ''
 
+    # Read the content first
+    with open('README.md', 'r') as file:
+        content = file.read()
+    
+    # Strip whitespace from the end and write it back
     with open('README.md', 'w') as file:
-        file.write(final_output.rstrip())
+        file.write(content.rstrip())
 
 if __name__ == '__main__':
     if len(sys.argv) >= 2 and sys.argv[1] == '--self-test':
@@ -300,4 +305,5 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
