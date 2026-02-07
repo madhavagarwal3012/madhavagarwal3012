@@ -117,7 +117,7 @@ def main(issue, issue_author, repo_owner):
             return False, f'ERROR: Move "{move}" is invalid!'
 
         plays, _, finished = Conn.move(move, issue_author)
-        board_snapshot = markdown.board_to_markdown(gameboard, is_comment=True)
+        board_snapshot = markdown.board_to_markdown(Conn, is_comment=True)
 
         if finished == 1:
             winner_team = "Red Heart" if plays == 1 else "Blue Heart"
