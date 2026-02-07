@@ -56,7 +56,7 @@ def generate_last_moves():
 def generate_moves_list(board):
     if board.has_space_left() and not os.path.exists("games/currentC4.p"):
         url = settings['issues']['link'].format(repo=os.environ["GITHUB_REPOSITORY"], params=urlencode(settings['issues']['new_game']))
-        return f"**GAME OVER!** [Click here to start new game]({url})\n"
+        return f"**GAME IS OVER!** [Click here]({url}) to start a new game :D\n"
     return ""
 
 
