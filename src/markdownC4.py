@@ -100,7 +100,8 @@ def board_to_markdown(board, is_comment=False):
     badge_url = f"https://img.shields.io/badge/{t_name}-{t_color}?style=for-the-badge"
     heart_img = f"https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/img/hearts/{t_color}.png"
 
-    markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
+    if not is_comment:
+        markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
 
     # Header showing column numbers
     markdown += "|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |\n"
@@ -126,11 +127,12 @@ def board_to_markdown(board, is_comment=False):
             else:
                 markdown += f" {i} (Full) |"
     else:
-        markdown += "\n|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |"
+        markdown += "|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |"
                 
     markdown += " |\n\n"
-    
-    markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
+
+    if not is_comment:
+        markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
     return markdown
 
 if __name__ == '__main__':
