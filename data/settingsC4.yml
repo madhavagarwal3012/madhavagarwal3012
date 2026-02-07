@@ -67,6 +67,12 @@ markers:
   win_stats:
     begin: "<!-- BEGIN WIN STATS TABLE C4 -->"
     end: "<!-- END WIN STATS TABLE C4 -->"
+  status_top:
+    begin: "<!-- BEGIN TOP STATUS C4 -->"
+    end: "<!-- END TOP STATUS C4 -->"
+  status_bottom:
+    begin: "<!-- BEGIN BOTTOM STATUS C4 -->"
+    end: "<!-- END BOTTOM STATUS C4 -->"
 
 misc:
   # Maximum number of last moves displayed
