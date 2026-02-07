@@ -117,17 +117,24 @@ def main(issue, issue_author, repo_owner):
             return False, f'ERROR: Move "{move}" is invalid!'
 
         plays, _, finished = Conn.move(move, issue_author)
+        board_snapshot = markdown.board_to_markdown(gameboard, is_comment=True)
 
         if finished == 1:
             winner_team = "Red Heart" if plays == 1 else "Blue Heart"
             update_win_stats(winner_team)
-            issue.create_comment(settings['comments']['game_over'].format(
+            comment_msg = settings['comments']['game_over'].format(
                 outcome=winner_team + " won", 
                 num_moves=Conn.rounds, 
                 num_players=len(Conn.player), 
                 players=Conn.player
-            ))
+            )
+            comment_msg += "--- \n\n" 
+            comment_msg += "### Board State (Winning Pattern) :\n"
+            comment_msg += board_snapshot
+
+            issue.create_comment(comment_msg)
             issue.edit(state='closed', labels=['Winner', winner_team])
+            
         elif finished == 2:
             issue.create_comment(settings['comments']['game_over'].format(
                 outcome="Draw", 
