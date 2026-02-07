@@ -91,6 +91,10 @@ def board_to_markdown(board, is_comment=False):
     grid = board.grid
     markdown = ""
 
+    # This creates a professional colored button instead of plain text
+    badge_url = f"https://img.shields.io/badge/{t_name}-{t_color}?style=for-the-badge"
+    heart_img = f"https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/img/hearts/{t_color}.png"
+
     markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
 
     # Header showing column numbers
@@ -125,10 +129,6 @@ def board_to_markdown(board, is_comment=False):
     t_name = "Red" if current_turn == 1 else "Blue"
     t_color = "red" if current_turn == 1 else "blue"
     t_emoji = "❤️" if current_turn == 1 else "💙"
-
-    # This creates a professional colored button instead of plain text
-    badge_url = f"https://img.shields.io/badge/{t_name}-{t_color}?style=for-the-badge"
-    heart_img = f"https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/img/hearts/{t_color}.png"
     
     markdown += f"### 🚩 Current Heart's Color: <img src='{badge_url}' height='35' valign='middle'> <img src='{heart_img}' height='35' valign='middle'>\n"
     return markdown
