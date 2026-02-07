@@ -278,6 +278,9 @@ def main(issue, issue_author, repo_owner):
 
     return True, ''
 
+    with open('README.md', 'w') as file:
+        file.write(final_output.rstrip())
+
 if __name__ == '__main__':
     if len(sys.argv) >= 2 and sys.argv[1] == '--self-test':
         selftest.run(main)
@@ -297,3 +300,4 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
