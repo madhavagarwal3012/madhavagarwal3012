@@ -73,12 +73,21 @@ def board_to_list(board):
     return board_list
 
 
-def get_image_link(piece):
+def get_image_link(piece, is_comment=False):
+    # Absolute URL logic for Issue comments
+    repo = os.environ.get("GITHUB_REPOSITORY", "madhavagarwal3012/madhavagarwal3012")
+    # Using 'main' as your branch name based on your code
+    base_url = f"https://raw.githubusercontent.com/{repo}/main/" if is_comment else ""
+    
     # Standard: 0=Blank, 1=Red, 2=Blue
-    imgs = {0: 'img/blankC4.png', 1: 'img/hearts/red.png', 2: 'img/hearts/blue.png'}
-    return imgs.get(piece, 'img/blank.png')
+    imgs = {
+        0: f'{base_url}img/blankC4.png', 
+        1: f'{base_url}img/hearts/red.png', 
+        2: f'{base_url}img/hearts/blue.png'
+    }
+    return imgs.get(piece, f'{base_url}img/blankC4.png')
 
-def board_to_markdown(board):
+def board_to_markdown(board, is_comment=False):
     grid = board.grid
     markdown = ""
 
@@ -95,7 +104,7 @@ def board_to_markdown(board):
             # You can use images OR emojis. Emojis are more reliable:
             # switcher = ["⚪", "🔴", "🔵"]
             # markdown += f" {switcher[elem]} | "
-            markdown += "<img src=\"{}\" width=50px> | ".format(get_image_link(elem))
+            markdown += "<img src=\"{}\" width=50px> | ".format(get_image_link(elem, is_comment))
         markdown += "   |\n"
 
     # Footer with Move Buttons
