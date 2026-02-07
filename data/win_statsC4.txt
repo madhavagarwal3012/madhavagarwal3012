@@ -1,1 +1,1 @@
-{'Red Heart': 1, 'Blue Heart': 0}
+{'Red Heart': 0, 'Blue Heart': 0}
