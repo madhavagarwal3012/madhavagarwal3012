@@ -116,6 +116,8 @@ def board_to_markdown(board, is_comment=False):
                 markdown += create_issue_link(i)
             else:
                 markdown += f" {i} (Full) |"
+    else:
+        markdown += "\n|   | 1 | 2 | 3 | 4 | 5 | 6 | 7 |   |"
                 
     markdown += " |\n\n"
 
