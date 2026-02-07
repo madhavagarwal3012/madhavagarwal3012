@@ -43,7 +43,7 @@ issues:
   link: "https://github.com/{repo}/issues/new?{params}"
   move:
     body: "Please do not change the title. Just click \"Submit new issue\". You don't need to do anything else :D"
-    title: "Connect4: Place Heart In {source}"
+    title: "Connect4: Place Heart At {source}"
   new_game:
     body: "Please do not change the title. Just click \"Submit new issue\". You don't need to do anything else :D"
     title: "Connect4: start new game"
