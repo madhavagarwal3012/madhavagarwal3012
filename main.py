@@ -232,7 +232,7 @@ def main(issue, issue_author, repo_owner):
             player_list = { re.match(pattern, line).group(1) for line in lines }
 
         if gameboard.result() == '1/2-1/2':
-            issue.add_to_labels('👑 Draw!')
+            issue.add_to_labels('👑 Draw! (Stalemate)')
         else:
             issue.add_to_labels('👑 Winner!')
 
@@ -286,6 +286,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
