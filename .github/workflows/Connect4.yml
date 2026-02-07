@@ -26,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install PyGithub pyyaml
 
       - name: Play connect4
         env:
