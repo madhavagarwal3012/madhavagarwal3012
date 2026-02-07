@@ -187,16 +187,15 @@ def main(issue, issue_author, repo_owner):
     
             # 5. EXECUTE & COMMENT (Single call)
             issue.create_comment(comment_msg)
+            update_last_moves(action[1] + ': ' + issue_author)
+            update_top_moves(issue_author)
+    
+            gameboard.push(move)
             if gameboard.is_checkmate():
                 issue_labels.append('🏆 Checkmate!')
             elif gameboard.is_check():
                 issue_labels.append('❗ Check')
             issue.edit(state='closed', labels=issue_labels)
-    
-            update_last_moves(action[1] + ': ' + issue_author)
-            update_top_moves(issue_author)
-    
-            gameboard.push(move)
 
             game.end().add_main_variation(move, comment=issue_author)
             game.headers['Result'] = gameboard.result()
@@ -287,6 +286,7 @@ if __name__ == '__main__':
     if ret == False:
 
         sys.exit(reason)
+
 
 
 
