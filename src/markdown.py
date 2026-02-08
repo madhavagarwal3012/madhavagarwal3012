@@ -261,7 +261,7 @@ def board_to_markdown(board, is_comment=False):
         "r": f"{base_url}img/black/rook.svg",
         "n": f"{base_url}img/black/knight.svg",
         "b": f"{base_url}img/black/bishop.svg",
-        "k": f"{base_url}img/black/king.svg",
+        "k": f"{base_url}king.png",
         "q": f"{base_url}img/black/queen.svg",
         "p": f"{base_url}img/black/pawn.svg",
         
@@ -345,6 +345,7 @@ def board_to_markdown(board, is_comment=False):
         markdown += "| | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | |\n"
         
     return markdown
+
 
 
 
