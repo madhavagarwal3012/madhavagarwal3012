@@ -100,7 +100,7 @@ def generate_promotion_table(board):
             body_text = "Performing%20a%20special%20pawn%20promotion%20move!%0A%0APlease%20do%20not%20change%20the%20title.%20Just%20click%20'Submit%20new%20issue'.%20You%20don't%20need%20to%20do%20anything%20else%20:D"
             link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{move_uci.upper()[:2]}+to+{move_uci.upper()[2:4]}+{move_uci.lower()}&body={body_text}"
             
-            icon = f"<img src='img/{color_str}/{p_name}.svg' width='40' valign='middle'>"
+            icon = f"<img src='img/{color_str}/{p_name}.png' width='40' valign='middle'>"
             markdown += f"| {icon} | **{p_name.capitalize()}** | [Promote {source} to {p_name.capitalize()}]({link}) |\n"
         
         markdown += "\n" # Space between different pawns
@@ -169,7 +169,7 @@ def generate_moves_list(board):
         p = entry['piece']
         color_str = "white" if p.color == chess.WHITE else "black"
         p_type_name = chess.piece_name(p.piece_type).capitalize()
-        icon = f"<img src='img/{color_str}/{p_type_name.lower()}.svg' width='40' valign='middle'>"
+        icon = f"<img src='img/{color_str}/{p_type_name.lower()}.png' width='40' valign='middle'>"
         
         links = create_issue_link(entry['source'], entry['dests'])
         table += f"| {icon} | **{p_type_name}** | `{entry['source']}` | {links} |\n"
@@ -219,7 +219,7 @@ def generate_captured_table():
             display_name = piece.capitalize()
             
             # Format: Image + Name + Move
-            entry = f"&nbsp; <img src='img/{color}/{piece}.svg' width='30' valign='middle'> {piece.capitalize()} ({move_link}) &nbsp;"
+            entry = f"&nbsp; <img src='img/{color}/{piece}.png' width='40' valign='middle'> {piece.capitalize()} ({move_link}) &nbsp;"
             
             if color == "white":
                 white_lost.append(entry)
@@ -345,3 +345,4 @@ def board_to_markdown(board, is_comment=False):
         markdown += "| | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | |\n"
         
     return markdown
+
