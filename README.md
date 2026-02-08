@@ -176,12 +176,12 @@ madhavagarwal3012/
     │   │   ├── blue.png
     │   │   ├── red.png
     │   ├── pieces/
-    │   │   ├── bishop.PNG
-    │   │   ├── king.PNG
-    │   │   ├── knight.PNG
-    │   │   ├── pawn.PNG
-    │   │   ├── queen.PNG
-    │   │   ├── rook.PNG
+    │   │   ├── bishop.png
+    │   │   ├── king.png
+    │   │   ├── knight.png
+    │   │   ├── pawn.png
+    │   │   ├── queen.png
+    │   │   ├── rook.png
     │   ├── white/
     │   │   ├── bishop.svg
     │   │   ├── king.svg
@@ -374,12 +374,12 @@ Before making your move, here's a quick refresher on how each piece can move and
 
 | Piece | Image | Movement | Capturing | Key Rule |
 | :---: | :---: | :---: | :---: | :---: |
-| **King** | <img src="img/pieces/king.PNG" width="40px"> | Moves **one square** in any direction (horizontal, vertical, or diagonal). | Captures like it moves (1 square in any direction). | **Must never** move into a square where it can be captured (check). |
-| **Queen** | <img src="img/pieces/queen.PNG" width="40px"> | Moves any number of squares **horizontally, vertically, or diagonally**. | Captures on any square along its line of movement. | The most powerful piece on the board. |
-| **Rook (Elephant)** | <img src="img/pieces/rook.PNG" width="40px"> | Moves any number of squares **horizontally** (across files) or **vertically** (up/down ranks). | Captures on any square along its straight line of movement. | Cannot jump over other pieces. |
-| **Bishop** | <img src="img/pieces/bishop.PNG" width="40px"> | Moves any number of squares **diagonally**. | Captures on any square along its diagonal line of movement. | Stays on its original color square for the entire game. |
-| **Knight (Horse)** | <img src="img/pieces/knight.PNG" width="40px"> | Moves in an **"L" shape** (two squares in one cardinal direction and then one square perpendicular). | Captures only on the square it lands on. | **The only piece that can jump** over other pieces. |
-| **Pawn** | <img src="img/pieces/pawn.PNG" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
+| **King** | <img src="img/pieces/king.png" width="40px"> | Moves **one square** in any direction (horizontal, vertical, or diagonal). | Captures like it moves (1 square in any direction). | **Must never** move into a square where it can be captured (check). |
+| **Queen** | <img src="img/pieces/queen.png" width="40px"> | Moves any number of squares **horizontally, vertically, or diagonally**. | Captures on any square along its line of movement. | The most powerful piece on the board. |
+| **Rook (Elephant)** | <img src="img/pieces/rook.png" width="40px"> | Moves any number of squares **horizontally** (across files) or **vertically** (up/down ranks). | Captures on any square along its straight line of movement. | Cannot jump over other pieces. |
+| **Bishop** | <img src="img/pieces/bishop.png" width="40px"> | Moves any number of squares **diagonally**. | Captures on any square along its diagonal line of movement. | Stays on its original color square for the entire game. |
+| **Knight (Horse)** | <img src="img/pieces/knight.png" width="40px"> | Moves in an **"L" shape** (two squares in one cardinal direction and then one square perpendicular). | Captures only on the square it lands on. | **The only piece that can jump** over other pieces. |
+| **Pawn** | <img src="img/pieces/pawn.png" width="40px"> | Moves **forward one square** (two squares on its first move only). | Captures **diagonally** one square forward. | If it reaches the opposite side of the board, it must **Promote** (usually to a Queen). |
 
 ---
 
