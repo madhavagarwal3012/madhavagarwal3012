@@ -258,19 +258,19 @@ def board_to_markdown(board, is_comment=False):
 
     # All image paths now prepend the base_url
     images = {
-        "r": f"{base_url}img/black/rook.svg",
-        "n": f"{base_url}img/black/knight.svg",
-        "b": f"{base_url}img/black/bishop.svg",
-        "k": f"{base_url}king.png",
-        "q": f"{base_url}img/black/queen.svg",
-        "p": f"{base_url}img/black/pawn.svg",
+        "r": f"{base_url}img/black/rook.png",
+        "n": f"{base_url}img/black/knight.png",
+        "b": f"{base_url}img/black/bishop.png",
+        "k": f"{base_url}img/black/king.png",
+        "q": f"{base_url}img/black/queen.png",
+        "p": f"{base_url}img/black/pawn.png",
         
-        "R": f"{base_url}img/white/rook.svg",
-        "N": f"{base_url}img/white/knight.svg",
-        "B": f"{base_url}img/white/bishop.svg",
-        "K": f"{base_url}img/white/king.svg",
-        "Q": f"{base_url}img/white/queen.svg",
-        "P": f"{base_url}img/white/pawn.svg",
+        "R": f"{base_url}img/white/rook.png",
+        "N": f"{base_url}img/white/knight.png",
+        "B": f"{base_url}img/white/bishop.png",
+        "K": f"{base_url}img/white/king.png",
+        "Q": f"{base_url}img/white/queen.png",
+        "P": f"{base_url}img/white/pawn.png",
         
         ".": f"{base_url}img/blank.png"
     }
@@ -345,17 +345,3 @@ def board_to_markdown(board, is_comment=False):
         markdown += "| | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | |\n"
         
     return markdown
-
-
-
-
-
-
-
-
-
-
-
-
-
-
