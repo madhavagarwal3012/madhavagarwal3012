@@ -142,7 +142,7 @@ def main(issue, issue_author, repo_owner):
             # 1. Create the move object from the parsed UCI (e.g., 'e7e8q')
             try:
                 move = chess.Move.from_uci(action[1])
-                piece = gameboard.piece_at(move_obj.from_square)
+                piece = gameboard.piece_at(move.from_square)
                 p_type = chess.piece_name(piece.piece_type).lower() if piece else "pawn"
                 p_color = "white" if gameboard.turn == chess.WHITE else "black"
             except ValueError:
