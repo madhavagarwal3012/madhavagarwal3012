@@ -38,31 +38,47 @@ def generate_top_moves():
 
 def generate_last_moves():
     markdown = "\n"
-    markdown += "| Move | Author |\n"
-    markdown += "| :--: | :----- |\n"
+    markdown += "| Move | Piece | Author | Log |\n"
+    markdown += "| :--: | :---: | :----- | :--: |\n"
 
     counter = 0
+    repo = os.environ.get("GITHUB_REPOSITORY", "username/repo")
+    file_path = "data/last_moves.txt"
 
-    with open("data/last_moves.txt", 'r') as file:
+    if not os.path.exists(file_path):
+        return "\n| No moves yet | - | - | - |\n"
+
+    with open(file_path, 'r') as file:
         for line in file.readlines():
             parts = line.rstrip().split(':')
 
-            if not ":" in line:
+            # We now expect 5 parts (UCI, Author, ID, Color, Name)
+            if len(parts) < 5:
                 continue
 
             if counter >= settings['misc']['max_last_moves']:
                 break
 
             counter += 1
+            
+            move_uci = parts[0].strip()
+            author_raw = parts[1].strip()
+            issue_id = parts[2].strip()
+            p_color = parts[3].strip()    # e.g., "white"
+            p_name = parts[4].strip()     # e.g., "knight"
+            
+            # Construct the correct image path based on the saved color
+            icon = f"<img src='img/{p_color}/{p_name}.png' width='40' valign='middle'>" 
+            
+            author_link = create_link(author_raw, "https://github.com/" + author_raw.lstrip()[1:])
+            log_link = f"[# {issue_id}](https://github.com/{repo}/issues/{issue_id})"
 
-            match_obj = re.search('([A-H][1-8])([A-H][1-8])', line, re.I)
-            if match_obj is not None:
-                source = match_obj.group(1).upper()
-                dest   = match_obj.group(2).upper()
+            # Format coordinates (e.g., E2 to E4)
+            source = move_uci[:2].upper()
+            dest = move_uci[2:4].upper()
+            display_move = f"`{source}` to `{dest}`"
 
-                markdown += "| `" + source + "` to `" + dest + "` | " + create_link(parts[1], "https://github.com/" + parts[1].lstrip()[1:]) + " |\n"
-            else:
-                markdown += "| `" + parts[0] + "` | " + create_link(parts[1], "https://github.com/" + parts[1].lstrip()[1:]) + " |\n"
+            markdown += f"| {display_move} | {icon} | {author_link} | {log_link} |\n"
 
     return markdown + "\n"
 
