@@ -1,2 +1,3 @@
 black,knight,d1g4,566
 white,knight,d8g5,572
+black,pawn,d4c5,579
