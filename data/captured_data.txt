@@ -6,3 +6,4 @@ black,bishop,f4c7,585
 black,pawn,c7b7,587
 black,bishop,c7c6,591
 black,knight,c6a6,593
+white,bishop,e2d3,596
