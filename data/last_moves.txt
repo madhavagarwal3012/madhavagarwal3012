@@ -1,3 +1,4 @@
+c7b7: @madhavagarwal3012: 587: white: queen
 c8d7: @madhavagarwal3012: 586: black: bishop
 f4c7: @madhavagarwal3012: 585: white: queen
 b6c7: @madhavagarwal3012: 584: black: bishop
