@@ -1,3 +1,4 @@
+e7d7: @madhavagarwal3012: 602: black: king
 d2g5: @madhavagarwal3012: 601: white: bishop
 e6e5: @madhavagarwal3012: 600: black: pawn
 e3e4: @madhavagarwal3012: 599: white: pawn
