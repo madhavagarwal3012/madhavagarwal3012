@@ -120,7 +120,7 @@ def main(issue, issue_author, repo_owner):
 
     elif action[0] == Action.MOVE:
         piece = ""
-        p_type = ""
+        p_name = ""
         p_color = ""
         try:
             if not os.path.exists('games/current.pgn'):
@@ -143,7 +143,7 @@ def main(issue, issue_author, repo_owner):
             try:
                 move = chess.Move.from_uci(action[1])
                 piece = gameboard.piece_at(move.from_square)
-                p_type = chess.piece_name(piece.piece_type).lower() if piece else "pawn"
+                p_name = chess.piece_name(piece.piece_type) if piece else "pawn"
                 p_color = "white" if gameboard.turn == chess.WHITE else "black"
             except ValueError:
                 return False, 'ERROR: Invalid UCI format'
