@@ -4,3 +4,4 @@ black,pawn,d4c5,579
 white,pawn,f8c5,580
 black,bishop,f4c7,585
 black,pawn,c7b7,587
+black,bishop,c7c6,591
