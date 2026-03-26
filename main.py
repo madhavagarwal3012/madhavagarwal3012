@@ -119,6 +119,9 @@ def main(issue, issue_author, repo_owner):
         game.headers['Round'] = '1'
 
     elif action[0] == Action.MOVE:
+        piece = ""
+        p_type = ""
+        p_color = ""
         try:
             if not os.path.exists('games/current.pgn'):
                 issue.create_comment("🏁 **The game is already over!** Check the README to start a new match.")
@@ -139,6 +142,9 @@ def main(issue, issue_author, repo_owner):
             # 1. Create the move object from the parsed UCI (e.g., 'e7e8q')
             try:
                 move = chess.Move.from_uci(action[1])
+                piece = gameboard.piece_at(move_obj.from_square)
+                p_type = chess.piece_name(piece.piece_type).lower() if piece else "pawn"
+                p_color = "white" if gameboard.turn == chess.WHITE else "black"
             except ValueError:
                 return False, 'ERROR: Invalid UCI format'
     
@@ -165,8 +171,8 @@ def main(issue, issue_author, repo_owner):
     
             # Handle Promotion specifics
             if move.promotion:
-                p_name = chess.piece_name(move.promotion).capitalize()
-                comment_msg += f"\n\n🌟 **Pawn promoted to {p_name}!**"
+                pp_name = chess.piece_name(move.promotion).capitalize()
+                comment_msg += f"\n\n🌟 **Pawn promoted to {pp_name}!**"
                 issue_labels.append('🌟 Promotion')
     
             if gameboard.is_capture(move):
@@ -176,12 +182,12 @@ def main(issue, issue_author, repo_owner):
                 if captured_piece is None:
                     captured_piece = chess.Piece(chess.PAWN, not gameboard.turn)
         
-                p_color = "white" if captured_piece.color == chess.WHITE else "black"
-                p_name = chess.piece_name(captured_piece.piece_type)
+                cp_color = "white" if captured_piece.color == chess.WHITE else "black"
+                cp_name = chess.piece_name(captured_piece.piece_type)
     
                 issue_id = issue.number
                 with open('data/captured_data.txt', 'a') as f:
-                    f.write(f"{p_color},{p_name},{action[1]},{issue_id}\n")
+                    f.write(f"{cp_color},{cp_name},{action[1]},{issue_id}\n")
     
             comment_msg += "--- \n\n" 
             comment_msg += "### Board state before this move:\n"
@@ -189,7 +195,7 @@ def main(issue, issue_author, repo_owner):
     
             # 5. EXECUTE & COMMENT (Single call)
             issue.create_comment(comment_msg)
-            update_last_moves(f"{action[1]}: {issue_author}: {issue.number}")
+            update_last_moves(f"{action[1]}: {issue_author}: {issue.number}: {p_color}: {p_name}")
             update_top_moves(issue_author)
     
             gameboard.push(move)
