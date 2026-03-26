@@ -189,7 +189,7 @@ def main(issue, issue_author, repo_owner):
     
             # 5. EXECUTE & COMMENT (Single call)
             issue.create_comment(comment_msg)
-            update_last_moves(action[1] + ': ' + issue_author)
+            update_last_moves(f"{action[1]}: {issue_author}: {issue.number}")
             update_top_moves(issue_author)
     
             gameboard.push(move)
