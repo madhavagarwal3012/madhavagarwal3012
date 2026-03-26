@@ -1,3 +1,4 @@
+g4e2: @madhavagarwal3012: 594: black: queen
 c6a6: @madhavagarwal3012: 593: white: queen
 e8e7: @madhavagarwal3012: 592: black: king
 c7c6: @madhavagarwal3012: 591: white: queen
