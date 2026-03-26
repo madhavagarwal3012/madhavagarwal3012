@@ -1,3 +1,4 @@
+a2a4: @madhavagarwal3012: 583: white: pawn
 c5b6: @madhavagarwal3012: 582: black: bishop
 b2b4: @madhavagarwal3012: 581: white: pawn
 f8c5: @madhavagarwal3012: 580: black: bishop
