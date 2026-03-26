@@ -1,22 +1,22 @@
-e1g1: @madhavagarwal3012: 573: King
-d8g5: @madhavagarwal3012: 572: Queen
-h5f3: @madhavagarwal3012: 570: Queen
-g7g6: @madhavagarwal3012: 569: Pawn
-g4h5: @madhavagarwal3012: 568: Queen
-f7f5: @madhavagarwal3012: 567: Pawn
-d1g4: @madhavagarwal3012: 566: Queen
-f6g4: @madhavagarwal3012: 565: Knight
-h3g5: @madhavagarwal3012: 563: Knight
-g8f6: @madhavagarwal3012: 562: Knight
-g1h3: @madhavagarwal3012: 561: Knight
-d7e8: @madhavagarwal3012: 560: King
-b5d3: @madhavagarwal3012: 559: Bishop
-c7c6: @madhavagarwal3012: 558: Pawn
-f1b5: @madhavagarwal3012: 557: Bishop
-e7e6: @madhavagarwal3012: 556: Pawn
-e2e3: @madhavagarwal3012: 555: Pawn
-e8d7: @madhavagarwal3012: 554: King
-c2c3: @madhavagarwal3012: 553: Pawn
-d7d5: @madhavagarwal3012: 552: Pawn
-d2d4: @madhavagarwal3012: 551: Pawn
+e1g1: @madhavagarwal3012: 573: white: King
+d8g5: @madhavagarwal3012: 572: black: Queen
+h5f3: @madhavagarwal3012: 570: white: Queen
+g7g6: @madhavagarwal3012: 569: black: Pawn
+g4h5: @madhavagarwal3012: 568: white: Queen
+f7f5: @madhavagarwal3012: 567: black: Pawn
+d1g4: @madhavagarwal3012: 566: white: Queen
+f6g4: @madhavagarwal3012: 565: black: Knight
+h3g5: @madhavagarwal3012: 563: white: Knight
+g8f6: @madhavagarwal3012: 562: black: Knight
+g1h3: @madhavagarwal3012: 561: white: Knight
+d7e8: @madhavagarwal3012: 560: black: King
+b5d3: @madhavagarwal3012: 559: white: Bishop
+c7c6: @madhavagarwal3012: 558: black: Pawn
+f1b5: @madhavagarwal3012: 557: white: Bishop
+e7e6: @madhavagarwal3012: 556: black: Pawn
+e2e3: @madhavagarwal3012: 555: white: Pawn
+e8d7: @madhavagarwal3012: 554: black: King
+c2c3: @madhavagarwal3012: 553: white: Pawn
+d7d5: @madhavagarwal3012: 552: black: Pawn
+d2d4: @madhavagarwal3012: 551: white: Pawn
 Start game: @madhavagarwal3012
