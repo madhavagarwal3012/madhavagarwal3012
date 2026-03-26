@@ -1,3 +1,4 @@
+a8d8: @madhavagarwal3012: 598: black: rook
 a6d3: @madhavagarwal3012: 597: white: queen
 e2d3: @madhavagarwal3012: 596: black: queen
 c1d2: @madhavagarwal3012: 595: white: bishop
