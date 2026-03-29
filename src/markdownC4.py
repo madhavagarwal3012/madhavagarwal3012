@@ -39,18 +39,43 @@ def generate_top_moves():
         md += f"| {val} | {create_link(user, 'https://github.com/' + user[1:])} \n"
     return md
 
-
 def generate_last_moves():
-    md = "\n| Move | Author |\n| :---: | :--- |\n"
-    try:
-        with open("data/last_movesC4.txt", 'r') as f:
-            lines = f.readlines()[:settings['misc']['max_last_moves']]
-        for line in lines:
-            if ":" in line:
-                move, user = line.strip().split(":", 1)
-                md += f"| `{move}` | {create_link(user.strip(), 'https://github.com/' + user.strip()[1:])} \n"
-    except: pass
-    return md
+    md = "\n"
+    md += "| Column | Heart | Author | Log |\n"
+    md += "| :----: | :--: | :----- | :--: |\n"
+
+    counter = 0
+    repo = os.environ.get("GITHUB_REPOSITORY", "username/repo")
+    file_path = "data/last_movesC4.txt"
+
+    if not os.path.exists(file_path):
+        return "\n| No moves yet | - | - | - |\n"
+
+    with open(file_path, 'r') as file:
+        for line in file.readlines():
+            parts = line.rstrip().split(':')
+
+            # Expecting: column, author, issue_id, color
+            if len(parts) < 4:
+                continue
+
+            if counter >= 5: # Show last 5 moves
+                break
+
+            counter += 1
+            
+            column = parts[0].strip()
+            author_raw = parts[1].strip()
+            issue_id = parts[2].strip()
+            color = parts[3].strip()
+            
+            icon = f"<img src='img/hearts/{color}.png' width='40' valign='middle'>" 
+            author_link = f"[{author_raw}](https://github.com/{author_raw.lstrip()[1:]})"
+            log_link = f"[# {issue_id}](https://github.com/{repo}/issues/{issue_id})"
+
+            md += f"| Column `{column}` | {icon} | {author_link} | {log_link} |\n"
+
+    return md + "\n"
 
 
 def generate_moves_list(board):
