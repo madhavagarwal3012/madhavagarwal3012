@@ -119,6 +119,7 @@ def main(issue, issue_author, repo_owner):
         plays, _, finished = Conn.move(move, issue_author)
         board_snapshot = markdown.board_to_markdown(Conn, is_comment=True)
 
+        color = blue if plays == 1 else red
         if finished == 1:
             winner_team = "Red Heart" if plays == 1 else "Blue Heart"
             update_win_stats(winner_team)
@@ -154,7 +155,7 @@ def main(issue, issue_author, repo_owner):
             issue.create_comment(f"Successfully placed a **{last_player_color}**! It is now {next_player_color}'s turn.")
             issue.edit(state='closed', labels=[last_player_color])
 
-        update_last_moves(f"{move}: {issue_author}")
+        update_last_moves(f"{move}: {issue_author}: {issue.number}: {color}")
         update_top_moves(issue_author)
 
     elif action[0] == Action.UNKNOWN:
