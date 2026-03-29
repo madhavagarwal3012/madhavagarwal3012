@@ -119,7 +119,7 @@ def main(issue, issue_author, repo_owner):
         plays, _, finished = Conn.move(move, issue_author)
         board_snapshot = markdown.board_to_markdown(Conn, is_comment=True)
 
-        color = blue if plays == 1 else red
+        color = "blue" if plays == 1 else "red"
         if finished == 1:
             winner_team = "Red Heart" if plays == 1 else "Blue Heart"
             update_win_stats(winner_team)
