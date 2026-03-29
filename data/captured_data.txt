@@ -8,3 +8,4 @@ black,bishop,c7c6,591
 black,knight,c6a6,593
 white,bishop,e2d3,596
 black,queen,a6d3,597
+black,rook,g5d8,609

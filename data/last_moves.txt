@@ -1,3 +1,4 @@
+g5d8: @madhavagarwal3012: 609: white: bishop
 d7c8: @madhavagarwal3012: 608: black: king
 d3b5: @madhavagarwal3012: 603: white: queen
 e7d7: @madhavagarwal3012: 602: black: king
