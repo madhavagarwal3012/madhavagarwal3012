@@ -73,7 +73,7 @@ def generate_last_moves():
             author_link = f"[{author_raw}](https://github.com/{author_raw.lstrip()[1:]})"
             log_link = f"[# {issue_id}](https://github.com/{repo}/issues/{issue_id})"
 
-            md += f"| Column `{column}` | {icon} | {author_link} | {log_link} |\n"
+            md += f"|`{column}` | {icon} | {author_link} | {log_link} |\n"
 
     return md + "\n"
 
