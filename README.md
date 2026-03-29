@@ -491,8 +491,8 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
-|   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 |   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
+|   |<img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/blankC4.png" width=50px> | <img src="img/hearts/red.png" width=50px> | <img src="img/hearts/blue.png" width=50px> | <img src="img/blankC4.png" width=50px> |    |
 | **MOVE** | [1](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+1&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [2](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+2&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [3](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+3&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [4](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+4&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [5](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+5&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [6](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+6&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | [7](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/new?title=Connect4%3A+Place+Heart+At+7&body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.+You+don%27t+need+to+do+anything+else+%3AD) | |
 
 ### 🚩 Current Heart's Color: <img src='https://img.shields.io/badge/Red-red?style=for-the-badge' height='35' valign='middle'> <img src='https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/img/hearts/red.png' height='35' valign='middle'>
@@ -512,10 +512,11 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
   <summary>Last 5 moves in this game</summary>
 <!-- BEGIN LAST MOVES C4 -->
 
-| Move | Author |
-| :---: | :--- |
-| `6` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
-| `Start game` |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
+| Column | Heart | Author | Log |
+| :----: | :--: | :----- | :--: |
+| Column `6` | <img src='img/hearts/blue.png' width='40' valign='middle'> | [@madhavagarwal3012](https://github.com/madhavagarwal3012) | [# 605](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/605) |
+| Column `6` | <img src='img/hearts/blue.png' width='40' valign='middle'> | [@madhavagarwal3012](https://github.com/madhavagarwal3012) | [# 564](https://github.com/madhavagarwal3012/madhavagarwal3012/issues/564) |
+
 <!-- END LAST MOVES C4 -->
 </details>
 
@@ -525,7 +526,7 @@ When you click on a link and submit a new issue with the desired move, a GitHub 
 
 | Total moves | User |
 | :---: | :--- |
-| 15 |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
+| 16 |  [@madhavagarwal3012](https://github.com/madhavagarwal3012) | 
 <!-- END TOP MOVES C4 -->
 </details>
 
