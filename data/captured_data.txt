@@ -10,3 +10,4 @@ white,bishop,e2d3,596
 black,queen,a6d3,597
 black,rook,g5d8,609
 white,bishop,h8d8,610
+white,pawn,f5e4,614
