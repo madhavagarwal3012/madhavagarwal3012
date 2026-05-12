@@ -1,3 +1,4 @@
+b5a6: @madhavagarwal3012: 615: white: queen
 f5e4: @madhavagarwal3012: 614: black: pawn
 f1d1: @madhavagarwal3012: 611: white: rook
 h8d8: @madhavagarwal3012: 610: black: rook
