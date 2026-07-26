@@ -266,7 +266,7 @@ madhavagarwal3012/
   <!--START_SECTION:waka-->
 **🐱 My GitHub Data** 
 
-> 📦 67.4 kB Used in GitHub's Storage 
+> 📦 67.0 kB Used in GitHub's Storage 
  > 
 > 🏆 880 Contributions in the Year 2026
  > 
@@ -317,7 +317,7 @@ No Activity Tracked This Week
 ![Lines of Code chart](https://raw.githubusercontent.com/madhavagarwal3012/madhavagarwal3012/main/assets/bar_graph.png)
 
 
- Last Updated on 31/05/2026 11:43:40 UTC
+ Last Updated on 26/07/2026 21:02:20 UTC
 <!--END_SECTION:waka-->
 </div>
 
