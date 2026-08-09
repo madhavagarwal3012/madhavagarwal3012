@@ -18,3 +18,4 @@ black,rook,g1f1,627
 white,knight,e3d2,630
 white,pawn,d1d4,634
 white,pawn,d4b4,636
+white,pawn,d1a4,646
