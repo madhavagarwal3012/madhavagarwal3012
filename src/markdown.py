@@ -109,15 +109,25 @@ def generate_promotion_table(board):
 
         for move in moves:
             p_type = move.promotion
-            p_name = chess.piece_name(p_type)
+            p_name = chess.piece_name(p_type).capitalize()
             p_char = chess.piece_symbol(p_type) 
+            
+            # Destination square (e.g., "D1" or "C1")
+            dest_sq = chess.SQUARE_NAMES[move.to_square].upper()
+            
+            # Full UCI string (e.g., "d2d1q" or "d2c1q")
             move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
             
+            # Check if this promotion move is a capture
+            is_capture = board.is_capture(move)
+            action_verb = f"Capture {dest_sq}" if is_capture else f"Move to {dest_sq}"
+            action_label = f"{action_verb} & Promote to {p_name}"
+
             body_text = "Performing%20a%20special%20pawn%20promotion%20move!%0A%0APlease%20do%20not%20change%20the%20title.%20Just%20click%20'Submit%20new%20issue'.%20You%20don't%20need%20to%20do%20anything%20else%20:D"
-            link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{move_uci.upper()[:2]}+to+{move_uci.upper()[2:4]}+{move_uci.lower()}&body={body_text}"
+            link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{source}+to+{dest_sq}+{move_uci.lower()}&body={body_text}"
             
-            icon = f"<img src='img/{color_str}/{p_name}.png' width='40' valign='middle'>"
-            markdown += f"| {icon} | **{p_name.capitalize()}** | [Promote {source} to {p_name.capitalize()}]({link}) |\n"
+            icon = f"<img src='img/{color_str}/{p_name.lower()}.png' width='40' valign='middle'>"
+            markdown += f"| {icon} | **{p_name}** | [{action_label}]({link}) |\n"
         
         markdown += "\n" # Space between different pawns
     
