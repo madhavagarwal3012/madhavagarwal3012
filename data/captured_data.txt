@@ -23,3 +23,4 @@ black,rook,b1b4,647
 white,pawn,h3g2,664
 white,pawn,g4h3,671
 black,queen,f7e8q,680
+white,queen,a7a6,685
