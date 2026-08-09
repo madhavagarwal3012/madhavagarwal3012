@@ -1,3 +1,4 @@
+a3b1: @madhavagarwal3012: 623: white: knight
 c8c3: @madhavagarwal3012: 622: black: rook
 c3d4: @madhavagarwal3012: 621: white: pawn
 e5d4: @madhavagarwal3012: 620: black: pawn
