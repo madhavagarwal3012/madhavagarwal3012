@@ -83,54 +83,64 @@ def generate_last_moves():
     return markdown + "\n"
 
 def generate_promotion_table(board):
-    """Groups promotion moves by their starting square for better UI."""
+    """Generates a compact matrix table for pawn promotion options."""
     from collections import defaultdict
     
-    # Group moves: { 'A7': [move1, move2], 'B7': [move3, move4] }
-    promo_groups = defaultdict(list)
+    # 1. Group moves: { source_square: { dest_square: { piece_symbol: move } } }
+    # Example: { 'D2': { 'D1': {'q': move1, 'r': move2...}, 'C1': {'q': move5...} } }
+    promo_groups = defaultdict(lambda: defaultdict(dict))
+    
     for m in board.legal_moves:
         if m.promotion:
             source_sq = chess.SQUARE_NAMES[m.from_square].upper()
-            promo_groups[source_sq].append(m)
+            dest_sq = chess.SQUARE_NAMES[m.to_square].upper()
+            p_char = chess.piece_symbol(m.promotion).lower()
+            promo_groups[source_sq][dest_sq][p_char] = m
 
     if not promo_groups:
         return ""
 
     color_str = "white" if board.turn == chess.WHITE else "black"
     repo = os.environ.get('GITHUB_REPOSITORY', 'your-user/your-repo')
+    pieces_order = [('q', 'Queen'), ('r', 'Rook'), ('b', 'Bishop'), ('n', 'Knight')]
     
     markdown = "### 🌟 PAWN PROMOTION AVAILABLE!\n"
     
-    # Iterate through each pawn that can promote
-    for source, moves in promo_groups.items():
-        markdown += f"### ♟️ Promote Pawn at `{source}`\n"
-        markdown += "| Piece | Type | Action |\n"
-        markdown += "| :---: | :--- | :--- |\n"
+    body_text = "Performing%20a%20special%20pawn%20promotion%20move!%0A%0APlease%20do%20not%20change%20the%20title.%20Just%20click%20'Submit%20new%20issue'.%20You%20don't%20need%20to%20do%20anything%20else%20:D"
 
-        for move in moves:
-            p_type = move.promotion
-            p_name = chess.piece_name(p_type).capitalize()
-            p_char = chess.piece_symbol(p_type) 
-            
-            # Destination square (e.g., "D1" or "C1")
-            dest_sq = chess.SQUARE_NAMES[move.to_square].upper()
-            
-            # Full UCI string (e.g., "d2d1q" or "d2c1q")
-            move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
-            
-            # Check if this promotion move is a capture
-            is_capture = board.is_capture(move)
-            action_verb = f"Capture {dest_sq}" if is_capture else f"Move to {dest_sq}"
-            action_label = f"{action_verb} & Promote to {p_name}"
-
-            body_text = "Performing%20a%20special%20pawn%20promotion%20move!%0A%0APlease%20do%20not%20change%20the%20title.%20Just%20click%20'Submit%20new%20issue'.%20You%20don't%20need%20to%20do%20anything%20else%20:D"
-            link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{source}+to+{dest_sq}+{move_uci.lower()}&body={body_text}"
-            
-            icon = f"<img src='img/{color_str}/{p_name.lower()}.png' width='40' valign='middle'>"
-            markdown += f"| {icon} | **{p_name}** | [{action_label}]({link}) |\n"
+    for source, dest_dict in promo_groups.items():
+        markdown += f"### ♟️ Promote Pawn at `{source}`\n\n"
         
-        markdown += "\n" # Space between different pawns
-    
+        # Table Header
+        markdown += "| Action | Queen | Rook | Bishop | Knight |\n"
+        markdown += "| :--- | :---: | :---: | :---: | :---: |\n"
+
+        # Generate a row for each target square (Move / Capture)
+        for dest_sq, moves_by_piece in dest_dict.items():
+            # Check capture status using any move associated with this destination
+            sample_move = next(iter(moves_by_piece.values()))
+            is_capture = board.is_capture(sample_move)
+            
+            action_label = f"⚔️ Capture `{dest_sq}`" if is_capture else f"➡️ Move to `{dest_sq}`"
+            row_str = f"| **{action_label}** "
+
+            for p_char, p_name in pieces_order:
+                if p_char in moves_by_piece:
+                    move = moves_by_piece[p_char]
+                    move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
+                    
+                    link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{source}+to+{dest_sq}+{move_uci}&body={body_text}"
+                    img_tag = f"<img src='img/{color_str}/{p_name.lower()}.png' width='40' alt='Promote to {p_name}'>"
+                    
+                    row_str += f"| [{img_tag}]({link}) "
+                else:
+                    row_str += "| - "
+            
+            row_str += "|\n"
+            markdown += row_str
+        
+        markdown += "\n"
+
     return markdown + "---\n"
 
 def generate_moves_list(board):
