@@ -1,3 +1,4 @@
+f1e2: @madhavagarwal3012: 633: white: king
 d2d1r: @madhavagarwal3012: 632: black: pawn
 a1c1: @madhavagarwal3012: 631: white: rook
 e3d2: @madhavagarwal3012: 630: black: pawn
