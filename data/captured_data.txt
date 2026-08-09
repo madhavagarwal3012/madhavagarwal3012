@@ -15,3 +15,4 @@ white,rook,e5d4,620
 black,pawn,c3d4,621
 white,queen,c1f1,626
 black,rook,g1f1,627
+white,knight,e3d2,630
