@@ -20,3 +20,4 @@ white,pawn,d1d4,634
 white,pawn,d4b4,636
 white,pawn,d1a4,646
 black,rook,b1b4,647
+white,pawn,h3g2,664
