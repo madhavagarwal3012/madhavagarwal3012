@@ -83,11 +83,9 @@ def generate_last_moves():
     return markdown + "\n"
 
 def generate_promotion_table(board):
-    """Generates a compact matrix table for pawn promotion options."""
+    """Generates a matrix table for pawn promotion options sorted left-to-right based on board perspective."""
     from collections import defaultdict
     
-    # 1. Group moves: { source_square: { dest_square: { piece_symbol: move } } }
-    # Example: { 'D2': { 'D1': {'q': move1, 'r': move2...}, 'C1': {'q': move5...} } }
     promo_groups = defaultdict(lambda: defaultdict(dict))
     
     for m in board.legal_moves:
@@ -100,24 +98,38 @@ def generate_promotion_table(board):
     if not promo_groups:
         return ""
 
-    color_str = "white" if board.turn == chess.WHITE else "black"
+    is_black = (board.turn == chess.BLACK)
+    color_str = "black" if is_black else "white"
     repo = os.environ.get('GITHUB_REPOSITORY', 'your-user/your-repo')
     pieces_order = [('q', 'Queen'), ('r', 'Rook'), ('b', 'Bishop'), ('n', 'Knight')]
     
     markdown = "### 🌟 PAWN PROMOTION AVAILABLE!\n"
-    
     body_text = "Performing%20a%20special%20pawn%20promotion%20move!%0A%0APlease%20do%20not%20change%20the%20title.%20Just%20click%20'Submit%20new%20issue'.%20You%20don't%20need%20to%20do%20anything%20else%20:D"
 
-    for source, dest_dict in promo_groups.items():
+    # Helper function to sort files from left to right based on perspective:
+    # Black perspective (Board reads H -> A): 'H' is 0, 'G' is 1, ..., 'A' is 7
+    # White perspective (Board reads A -> H): 'A' is 0, 'B' is 1, ..., 'H' is 7
+    def get_file_order(sq):
+        file_char = sq[0] # e.g. 'H' from 'H2'
+        idx = ord(file_char) - ord('A') # 'A'=0, 'B'=1 ... 'H'=7
+        return (7 - idx) if is_black else idx
+
+    # 1. Sort Pawns from Left to Right (H2 -> G2 -> A2 for Black)
+    sorted_sources = sorted(promo_groups.keys(), key=get_file_order)
+
+    for source in sorted_sources:
+        dest_dict = promo_groups[source]
         markdown += f"### ♟️ Promote Pawn at `{source}`\n\n"
         
         # Table Header
         markdown += "| Action | Queen | Rook | Bishop | Knight |\n"
         markdown += "| :--- | :---: | :---: | :---: | :---: |\n"
 
-        # Generate a row for each target square (Move / Capture)
-        for dest_sq, moves_by_piece in dest_dict.items():
-            # Check capture status using any move associated with this destination
+        # 2. Sort Destination Rows from Left to Right (e.g., H1 -> G1 -> B1 -> A1)
+        sorted_dests = sorted(dest_dict.keys(), key=get_file_order)
+
+        for dest_sq in sorted_dests:
+            moves_by_piece = dest_dict[dest_sq]
             sample_move = next(iter(moves_by_piece.values()))
             is_capture = board.is_capture(sample_move)
             
