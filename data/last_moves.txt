@@ -1,3 +1,4 @@
+f2f4: @madhavagarwal3012: 651: white: pawn
 a7a5: @madhavagarwal3012: 650: black: pawn
 b4b1: @madhavagarwal3012: 649: white: rook
 a4b5: @madhavagarwal3012: 648: black: queen
