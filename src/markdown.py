@@ -142,7 +142,7 @@ def generate_promotion_table(board):
                     move_uci = f"{chess.SQUARE_NAMES[move.from_square]}{chess.SQUARE_NAMES[move.to_square]}{p_char}"
                     
                     link = f"https://github.com/{repo}/issues/new?title=Chess:+Move+{source}+to+{dest_sq}+{move_uci}&body={body_text}"
-                    img_tag = f"<img src='img/{color_str}/{p_name.lower()}.png' width='40' alt='Promote to {p_name}'>"
+                    img_tag = f"<img src='img/{color_str}/{p_name.lower()}.png' width='40' valign='middle' alt='Promote to {p_name}'>"
                     
                     row_str += f"| [{img_tag}]({link}) "
                 else:
