@@ -1,3 +1,4 @@
+c3d2: @madhavagarwal3012: 686: white: king
 a7a6: @madhavagarwal3012: 685: black: king
 b5a6: @madhavagarwal3012: 684: white: queen
 a6a7: @madhavagarwal3012: 683: black: king
