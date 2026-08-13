@@ -1,3 +1,4 @@
+b1b8: @madhavagarwal3012: 688: white: rook
 g2g1q: @madhavagarwal3012: 687: black: pawn
 c3d2: @madhavagarwal3012: 686: white: king
 a7a6: @madhavagarwal3012: 685: black: king
