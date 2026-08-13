@@ -1,3 +1,4 @@
+a2a1n: @madhavagarwal3012: 695: black: pawn
 d2d1: @madhavagarwal3012: 694: white: king
 h1h2: @madhavagarwal3012: 693: black: queen
 c2d2: @madhavagarwal3012: 692: white: king
