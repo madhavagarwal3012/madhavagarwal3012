@@ -1,3 +1,4 @@
+c8g4: @madhavagarwal3012: 702: black: bishop
 g2g4: @madhavagarwal3012: 701: white: pawn
 d7d5: @madhavagarwal3012: 700: black: pawn
 g1h3: @madhavagarwal3012: 699: white: knight
